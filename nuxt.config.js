@@ -37,6 +37,10 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
+    // https://github.com/ivodolenc/nuxt-animejs#readme
+    'nuxt-animejs',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -55,4 +59,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Google Fonts Configuration: https://google-fonts.nuxtjs.org/options
+  googleFonts: {
+    families: {
+      'Advent Pro': [400, 700],
+      Roboto: true,
+    },
+  },
 }
