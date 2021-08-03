@@ -41,6 +41,8 @@ export default {
     '@nuxtjs/google-fonts',
     // https://github.com/ivodolenc/nuxt-animejs#readme
     'nuxt-animejs',
+    // https://github.com/nuxtclub/feathericons
+    '@nuxtclub/feathericons',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
