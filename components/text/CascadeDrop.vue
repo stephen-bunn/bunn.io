@@ -29,9 +29,8 @@ export default Vue.extend({
     },
   },
   data() {
-    const animationTimeout: null | number = null
     return {
-      animationTimeout,
+      animationTimeout: null as null | ReturnType<typeof setTimeout>,
     }
   },
   computed: {
