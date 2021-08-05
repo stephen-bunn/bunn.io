@@ -4,9 +4,7 @@
       <NavigationItem
         v-for="(item, itemIndex) in left"
         :key="`nav-left-${itemIndex}`"
-        :to="item.to"
-        :label="item.label"
-        :icon="item.icon"
+        v-bind="item"
         :class="itemIndex === 0 ? 'rounded-br-lg' : 'rounded-b-lg'"
       />
     </div>
@@ -14,9 +12,7 @@
       <NavigationItem
         v-for="(item, itemIndex) in right"
         :key="`nav-right-${itemIndex}`"
-        :to="item.to"
-        :label="item.label"
-        :icon="item.icon"
+        v-bind="item"
       />
     </div>
   </nav>

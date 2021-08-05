@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-200">
     <Navigation :left="leftNav" :right="rightNav" />
-    <div class="mx-8 py-8 lg:mx-16">
+    <div class="mx-8 py-8 lg:mx-48">
       <Nuxt />
     </div>
   </div>
@@ -20,11 +20,13 @@ const RIGHT_NAV_ITEMS = [
     to: 'https://linkedin.com/in/stephen-bunn/',
     icon: 'linkedin',
     label: null,
+    target: '_blank',
   },
   {
     to: 'https://github.com/stephen-bunn/',
     icon: 'github',
     label: null,
+    target: '_blank',
   },
 ]
 

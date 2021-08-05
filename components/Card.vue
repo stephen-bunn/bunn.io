@@ -2,7 +2,7 @@
   <div class="Card bg-gray-50 shadow-xl rounded-lg p-8">
     <div v-if="title" class="Card_Title">{{ title }}</div>
     <div class="Card_Content">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

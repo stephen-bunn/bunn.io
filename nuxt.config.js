@@ -23,7 +23,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // Adds $resume plugin to pages
-    '@/plugins/resume',
+    '~/plugins/resume',
+    // https://github.com/Akryum/v-tooltip
+    '~/plugins/v-tooltip',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,7 +68,7 @@ export default {
   googleFonts: {
     families: {
       'Advent Pro': [400, 700],
-      Roboto: true,
+      Roboto: [400, 700],
     },
   },
 }

@@ -29,6 +29,7 @@
       "@nuxt/content",
       "@types/node",
       "@nuxtclub/feathericons",
+      "pluralize",
       "~/types/anime"
     ]
   },
