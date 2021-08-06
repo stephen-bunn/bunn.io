@@ -103,6 +103,11 @@ export default Vue.extend({
       resume: null as JsonResume.Resume | null,
     }
   },
+  head() {
+    return {
+      title: 'Stephen Bunn - Resume',
+    }
+  },
   mounted() {
     this.$anime({
       targets: '.ResumeHero',
