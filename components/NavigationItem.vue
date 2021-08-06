@@ -50,7 +50,7 @@ export default Vue.extend({
     },
     navitemClasses(): Object {
       return {
-        'bg-gray-300': this.isActive,
+        'bg-gray-300 text-black': this.isActive,
         'bg-transparent text-gray-400': !this.isActive,
       }
     },

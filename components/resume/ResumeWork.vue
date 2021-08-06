@@ -19,24 +19,14 @@
         </span>
       </div>
       <div class="ResumeWork_Subheading flex flex-col md:flex-row">
-        <Link :to="work.website" class="text-blue-500">
+        <Link :to="work.website">
           {{ work.company }}
         </Link>
-        <span
-          v-tooltip.right="{
-            content: workDuration,
-            classes: 'bg-gray-500 text-xs text-white px-2 ml-2 rounded-md',
-          }"
-          class="
-            w-max
-            cursor-pointer
-            text-gray-500 text-xs
-            md:self-center md:ml-2
-            border-dotted border-b-2 border-gray-500
-          "
-        >
-          {{ workPeriod }}
-        </span>
+        <TimePeriod
+          :start="work.startDate"
+          :end="work.endDate || null"
+          class="text-xs md:ml-2"
+        />
       </div>
     </div>
     <div class="ResumeWork_Content mt-4">
@@ -47,13 +37,14 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { JsonResume } from '~/types/JsonResume'
+import { JsonResume } from '~/plugins/resume/types'
 import Link from '~/components/Link.vue'
-import { getPeriod, getDuration } from '~/utils/duration'
+import TimePeriod from '~/components/TimePeriod.vue'
 
 export default Vue.extend({
   components: {
     Link,
+    TimePeriod,
   },
   props: {
     work: {
@@ -64,12 +55,6 @@ export default Vue.extend({
   computed: {
     isCurrent(): boolean {
       return !this.work?.endDate
-    },
-    workPeriod(): string {
-      return getPeriod(this.work.startDate, this.work?.endDate || null)
-    },
-    workDuration(): string {
-      return getDuration(this.work.startDate, this.work?.endDate || null)
     },
   },
 })

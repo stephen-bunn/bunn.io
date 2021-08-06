@@ -1,5 +1,5 @@
 import { Plugin, Context } from '@nuxt/types'
-import { JsonResume } from '~/types/JsonResume';
+import { JsonResume } from '~/plugins/resume/types';
 
 /**
  * Describes the available options through the `$resume` plugin.

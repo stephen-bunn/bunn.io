@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   theme: {
     fontFamily: {
       sans: ['Roboto', 'Arial', 'sans-serif'],

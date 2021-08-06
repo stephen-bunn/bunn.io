@@ -2,7 +2,13 @@
   <component
     :is="componentTag"
     v-bind="componentAttributes"
-    class="Link"
+    class="
+      Link
+      text-blue-500
+      hover:text-blue-700
+      transition-colors
+      duration-500
+    "
     v-on="$listeners"
   >
     <slot />

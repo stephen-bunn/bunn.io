@@ -113,7 +113,7 @@ export namespace JsonResume {
    */
   export type Language = {
     language: string
-    fluency: string
+    fluency?: string
   }
 
   /**

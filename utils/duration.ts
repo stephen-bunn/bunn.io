@@ -41,5 +41,5 @@ export function getDuration(startDate: string, endDate: string | null): string {
   const monthDuration = monthDelta > 0 ? `${monthDelta} ${pluralize('month', monthDelta)}` : null
 
   const duration = [yearDuration, monthDuration].filter((value) => Boolean(value)).join(' ')
-  return duration
+  return endDate ? duration : `${duration} ago`
 }
