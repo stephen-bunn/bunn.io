@@ -2,16 +2,9 @@
   <span
     v-tooltip.right="{
       content: workDuration,
-      classes: 'bg-gray-300 text-xs px-2 ml-2 rounded-md',
+      classes: 'bg-gray-300 text-xs px-2 py-1 ml-2 rounded-md',
     }"
-    class="
-      TimePeriod
-      w-max
-      cursor-pointer
-      text-gray-500
-      md:self-center
-      underline
-    "
+    class="TimePeriod w-max cursor-pointer text-gray-500 md:self-center"
   >
     {{ workPeriod }}
   </span>
@@ -50,9 +43,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style>
-.TimePeriod {
-  text-decoration-style: dotted;
-}
-</style>

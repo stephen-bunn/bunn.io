@@ -25,7 +25,7 @@
         <TimePeriod
           :start="work.startDate"
           :end="work.endDate || null"
-          class="text-xs md:ml-2"
+          class="ResumeWork_TimePeriod text-xs md:ml-2 underline"
         />
       </div>
     </div>
@@ -59,3 +59,9 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.ResumeWork_TimePeriod {
+  text-decoration-style: dotted;
+}
+</style>

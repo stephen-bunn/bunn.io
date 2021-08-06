@@ -67,7 +67,7 @@ export default {
   // Google Fonts Configuration: https://google-fonts.nuxtjs.org/options
   googleFonts: {
     families: {
-      'Advent Pro': [400, 700],
+      Rajdhani: [400, 700],
       Roboto: [400, 700],
     },
   },

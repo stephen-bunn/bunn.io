@@ -58,6 +58,7 @@
         </ResumeSection>
       </div>
     </div>
+    <ScrollFab />
   </main>
 </template>
 
@@ -75,6 +76,7 @@ import {
   ResumeWork,
   ResumeHero,
 } from '~/components/resume'
+import ScrollFab from '~/components/ScrollFab.vue'
 import { JsonResume } from '~/plugins/resume/types'
 
 export default Vue.extend({
@@ -89,6 +91,7 @@ export default Vue.extend({
     ResumeSkill,
     ResumeLanguage,
     ResumeHero,
+    ScrollFab,
   },
   layout: 'default',
   async asyncData({ $resume }) {

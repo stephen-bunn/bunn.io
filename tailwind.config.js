@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Roboto', 'Arial', 'sans-serif'],
-      serif: ['Advent Pro', 'Georgia Bold', 'serif'],
+      serif: ['Rajdhani', 'Georgia Bold', 'serif'],
     },
   },
 }
