@@ -12,8 +12,10 @@
       rounded-full
       fixed
       bottom-8
-      right-16
+      right-8
+      md:right-16
       transition-opacity
+      shadow-lg
     "
     :class="activeClasses"
     :disabled="!isActive"

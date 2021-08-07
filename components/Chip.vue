@@ -8,6 +8,7 @@
       py-1
       bg-blue-500
       rounded-full
+      self-center
     "
   >
     <slot />

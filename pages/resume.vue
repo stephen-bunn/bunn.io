@@ -1,6 +1,6 @@
 <template>
   <main>
-    <ResumeHero :basics="resume.basics" class="mb-16" />
+    <ResumeHero :basics="resume.basics" class="mb-8 md:mb-16" />
     <div class="ResumeContent flex flex-col lg:flex-row lg:space-x-16">
       <div class="ResumeContent_Left lg:w-3/5">
         <ResumeSection heading="About" icon="user">

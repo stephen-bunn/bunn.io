@@ -3,20 +3,7 @@
     <div class="ResumeWork_Heading">
       <div class="ResumeWork_Position flex">
         <h3 class="font-serif text-2xl">{{ work.position }}</h3>
-        <span
-          v-if="isCurrent"
-          class="
-            place-self-center
-            ml-4
-            px-2
-            py-1
-            bg-blue-500
-            rounded-full
-            text-white text-center text-xs
-          "
-        >
-          Current Position
-        </span>
+        <Chip v-if="isCurrent" class="ml-2">Current</Chip>
       </div>
       <div class="ResumeWork_Subheading flex flex-col md:flex-row">
         <Link :to="work.website">
@@ -40,10 +27,12 @@ import Vue, { PropOptions } from 'vue'
 import { JsonResume } from '~/plugins/resume/types'
 import Link from '~/components/Link.vue'
 import TimePeriod from '~/components/TimePeriod.vue'
+import Chip from '~/components/Chip.vue'
 
 export default Vue.extend({
   components: {
     Link,
+    Chip,
     TimePeriod,
   },
   props: {

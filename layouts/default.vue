@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-200">
     <Navigation :left="leftNav" :right="rightNav" />
-    <div class="mx-8 py-8 xl:mx-48">
+    <div class="p-8 lg:mx-auto lg:max-w-5xl">
       <Nuxt />
     </div>
   </div>

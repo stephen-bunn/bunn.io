@@ -1,10 +1,16 @@
 <template>
-  <section class="ResumeSection mb-16">
-    <div class="ResumeSection_Heading flex mb-8">
-      <Icon v-if="icon" :name="icon" class="transform scale-150 self-center" />
-      <h2 class="font-sans text-3xl uppercase font-bold ml-4">
+  <section class="ResumeSection mb-8 lg:mb-16">
+    <div class="ResumeSection_Heading flex mb-2 lg:mb-8">
+      <Icon
+        v-if="icon"
+        :name="icon"
+        class="transform self-center lg:scale-150"
+      />
+      <div
+        class="font-serif font-bold text-2xl uppercase ml-2 lg:text-3xl lg:ml-4"
+      >
         {{ heading }}
-      </h2>
+      </div>
     </div>
     <div class="ResumeSection_Content">
       <slot />

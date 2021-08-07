@@ -1,5 +1,6 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
-  <div class="Icon" v-html="content"></div>
+  <div v-if="svg" class="Icon" v-html="svg"></div>
 </template>
 
 <script lang="ts">
@@ -13,7 +14,7 @@ export default Vue.extend({
     },
   },
   computed: {
-    content(): string | null {
+    svg(): string | null {
       return this.$feathericons?.[this.name]?.toSvg()
     },
   },
