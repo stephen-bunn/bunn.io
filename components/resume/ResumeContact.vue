@@ -1,10 +1,10 @@
 <template>
   <div class="ResumeContact">
     <div class="ResumeContact_Content mb-4">
-      <strong>
+      <div class="font-bold">
         Feel free to send me an email if you are looking to contact me about
         recruitment.
-      </strong>
+      </div>
       I'm available
       <Link to="https://time.is/EDT" target="_blank"> EDT </Link>
       daytime hours and am open to hearing about any opportunities.

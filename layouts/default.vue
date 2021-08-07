@@ -12,8 +12,8 @@ import Vue from 'vue'
 import Navigation from '~/components/Navigation.vue'
 
 const LEFT_NAV_ITEMS = [
-  { to: '/', icon: 'home', label: 'Home' },
-  { to: '/resume', icon: 'book-open', label: 'Resume' },
+  { to: '/blog', icon: 'book-open', label: 'Blog' },
+  { to: '/resume', icon: 'bookmark', label: 'Resume' },
 ]
 const RIGHT_NAV_ITEMS = [
   {
