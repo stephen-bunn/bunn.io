@@ -11,7 +11,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropOptions } from 'vue'
+import { HumanizerOptions } from 'humanize-duration'
 import { getPeriod, getDuration } from '~/utils/duration'
 
 export default Vue.extend({
@@ -32,13 +33,17 @@ export default Vue.extend({
       type: String,
       default: ' - ',
     },
+    options: {
+      type: Object,
+      default: () => {},
+    } as PropOptions<HumanizerOptions>,
   },
   computed: {
     workPeriod(): string {
       return getPeriod(this.start, this.end, this.format, this.separator)
     },
     workDuration(): string {
-      return getDuration(this.start, this.end)
+      return getDuration(this.start, this.end, this.options)
     },
   },
 })

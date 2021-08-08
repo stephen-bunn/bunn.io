@@ -1,11 +1,44 @@
 <template>
-  <section class="BlogEntry" @click="handleClick">
-    <Card
-      class="cursor-pointer transition-shadow duration-700 hover:shadow-2xl"
-    >
-      <div class="font-serif font-bold text-3xl">{{ entry.title }}</div>
-      <div>{{ createdAt }}</div>
-    </Card>
+  <section
+    class="
+      BlogEntry
+      bg-gray-50
+      mx-auto
+      rounded-lg
+      overflow-hidden
+      cursor-pointer
+      transition-shadow
+      duration-700
+      shadow-xl
+      hover:shadow-2xl
+    "
+    @click="handleClick"
+    @keyup.enter="handleClick"
+  >
+    <div class="BlogEntry_Content md:flex">
+      <div v-if="entry.heroImage" class="BlogEntry_Media md:flex-shrink-0">
+        <img
+          class="h-48 w-full md:h-64 md:w-96 object-cover"
+          :src="entry.heroImage"
+        />
+      </div>
+      <div class="p-8">
+        <div v-if="entry.title" class="font-serif font-bold text-3xl">
+          {{ entry.title }}
+        </div>
+        <TimePeriod
+          :start="createdAt"
+          :options="{ units: ['y', 'mo', 'd'] }"
+          format="MMM DD YYYY"
+        />
+        <div
+          v-if="entry.excerpt"
+          class="BlogEntry_Excerpt pt-4 max-h-32 overflow-hidden"
+        >
+          <nuxt-content :document="{ body: entry.excerpt }" />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -13,8 +46,12 @@
 import Vue, { PropOptions } from 'vue'
 import { IContentDocument } from '@nuxt/content/types/content'
 import dayjs from 'dayjs'
+import TimePeriod from '~/components/TimePeriod.vue'
 
 export default Vue.extend({
+  components: {
+    TimePeriod,
+  },
   props: {
     entry: {
       type: Object,
@@ -23,7 +60,7 @@ export default Vue.extend({
   },
   computed: {
     createdAt(): string {
-      return dayjs(this.entry.createdAt).format('MMM DD YYYY')
+      return dayjs(this.entry.createdAt).format('YYYY-MM-DD')
     },
   },
   methods: {
@@ -33,3 +70,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.BlogEntry_Excerpt {
+  mask-image: linear-gradient(180deg, white, transparent);
+  -webkit-mask-image: linear-gradient(180deg, white, transparent);
+}
+</style>
