@@ -3,7 +3,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/bunn.io/',
+    mode: 'hash',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
