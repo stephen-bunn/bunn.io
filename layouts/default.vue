@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-200">
+  <div class="DefaultLayout min-h-screen bg-gray-200">
     <Navigation :left="leftNav" :right="rightNav" />
     <div class="p-8 lg:mx-auto lg:max-w-5xl">
       <Nuxt />
@@ -12,7 +12,7 @@ import Vue from 'vue'
 import Navigation from '~/components/Navigation.vue'
 
 const LEFT_NAV_ITEMS = [
-  { to: '/blog', icon: 'book-open', label: 'Blog' },
+  // { to: '/blog', icon: 'book-open', label: 'Blog' },
   { to: '/resume', icon: 'bookmark', label: 'Resume' },
 ]
 const RIGHT_NAV_ITEMS = [

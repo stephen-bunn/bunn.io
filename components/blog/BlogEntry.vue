@@ -19,7 +19,7 @@
     <div class="BlogEntry_Content md:flex">
       <div v-if="entry.heroImage" class="BlogEntry_Media md:flex-shrink-0">
         <img
-          class="w-full max-h-64 md:max-h-72 md:w-96 object-cover"
+          class="w-full h-full max-h-64 md:max-h-72 md:w-96 object-cover"
           :src="entry.heroImage"
         />
       </div>
@@ -34,7 +34,7 @@
         />
         <div
           v-if="entry.excerpt"
-          class="BlogEntry_Excerpt pt-4 max-h-40 overflow-hidden"
+          class="BlogEntry_Excerpt pt-4 h-40 overflow-hidden"
         >
           <nuxt-content :document="{ body: entry.excerpt }" />
         </div>
