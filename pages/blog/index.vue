@@ -1,10 +1,17 @@
 <template>
   <main class="Blog">
     <div
-      class="Blog_BlogControls mb-8 flex flex-col md:flex-row justify-between"
+      class="
+        Blog_BlogControls
+        opacity-0
+        mb-8
+        flex flex-col
+        md:flex-row
+        justify-between
+      "
     >
       <Search v-model="searchModel" class="mb-2 md:mb-0 w-full md:w-auto" />
-      <div class="Blog_BlogControls_Left flex justify-between md:justify-end">
+      <div class="flex justify-between md:justify-end">
         <Pagination
           v-model="paginationModel"
           :maximum="paginationMaximum"
@@ -72,24 +79,26 @@ export default Vue.extend({
     },
   },
   async mounted() {
-    this.paginationMaximum = Math.ceil(this.total / this.perPage)
+    let paginationMaximum = Math.ceil(this.total / this.perPage)
+    if (paginationMaximum <= 0) {
+      paginationMaximum = 1
+    }
+    this.paginationMaximum = paginationMaximum
 
     await this.updateBlogEntries()
-    this.animateBlogEntries()
+
+    this.$anime({
+      targets: ['.Blog_BlogControls', '.Blog_BlogEntry'],
+      easing: 'easeOutExpo',
+      opacity: [0, 1],
+      duration: 1500,
+      direction: 'normal',
+      delay: (_: Element, index: number) => {
+        return 100 * index
+      },
+    })
   },
   methods: {
-    animateBlogEntries() {
-      this.$anime({
-        targets: '.Blog_BlogEntry',
-        easing: 'easeOutExpo',
-        opacity: [0, 1],
-        duration: 1500,
-        direction: 'normal',
-        delay: (_: Element, index: number) => {
-          return 100 * index
-        },
-      })
-    },
     async updateBlogEntries() {
       const entries = await this.$content('blog')
         .search(this.searchModel)
