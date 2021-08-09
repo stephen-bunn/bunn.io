@@ -17,15 +17,15 @@
     @keyup.enter="handleClick"
   >
     <div class="BlogEntry_Content md:flex">
-      <div v-if="entry.heroImage" class="BlogEntry_Media md:flex-shrink-0">
+      <div v-if="document.tileImage" class="BlogEntry_Media md:flex-shrink-0">
         <img
           class="w-full h-full max-h-64 md:max-h-72 md:w-96 object-cover"
-          :src="entry.heroImage"
+          :src="document.tileImage"
         />
       </div>
       <div class="p-8">
-        <div v-if="entry.title" class="font-serif font-bold text-3xl">
-          {{ entry.title }}
+        <div v-if="document.title" class="font-serif font-bold text-3xl">
+          {{ document.title }}
         </div>
         <TimePeriod
           :start="createdAt"
@@ -33,10 +33,10 @@
           format="MMM DD YYYY"
         />
         <div
-          v-if="entry.excerpt"
+          v-if="document.excerpt"
           class="BlogEntry_Excerpt pt-4 h-40 overflow-hidden"
         >
-          <nuxt-content :document="{ body: entry.excerpt }" />
+          <nuxt-content :document="{ body: document.excerpt }" />
         </div>
       </div>
     </div>
@@ -54,19 +54,19 @@ export default Vue.extend({
     TimePeriod,
   },
   props: {
-    entry: {
+    document: {
       type: Object,
       required: true,
     } as PropOptions<IContentDocument>,
   },
   computed: {
     createdAt(): string {
-      return dayjs(this.entry.createdAt).format('YYYY-MM-DD')
+      return dayjs(this.document.createdAt).format('YYYY-MM-DD')
     },
   },
   methods: {
     handleClick() {
-      this.$router.push(`/blog/${this.entry.slug}`)
+      this.$router.push(`/blog/${this.document.slug}`)
     },
   },
 })

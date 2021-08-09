@@ -20,14 +20,20 @@
         <Ordering v-model="orderingModel" />
       </div>
     </div>
-    <div class="Blog_BlogEntries">
+    <div v-if="blogEntries.length > 0" class="Blog_BlogEntries">
       <BlogEntry
         v-for="entry in blogEntries"
         :key="entry.slug"
-        :entry="entry"
+        :document="entry"
         class="Blog_BlogEntry mb-8"
         tabindex="0"
       />
+    </div>
+    <div
+      v-else-if="searchModel.length > 0"
+      class="font-serif font-bold text-gray-400 text-5xl uppercase"
+    >
+      No blog entries found
     </div>
     <ScrollFab />
   </main>
@@ -65,10 +71,16 @@ export default Vue.extend({
       perPage: 10,
       total: 0,
       blogEntries: [] as IContentDocument | IContentDocument[],
+      searchTotal: 0,
     }
   },
   watch: {
     async searchModel() {
+      // Everytime the search model is updated, we need to ensure that the total
+      // discovered search entries are counted so we can keep pagination up to date
+      this.searchTotal = (
+        await this.$content('blog').search(this.searchModel).fetch()
+      ).length
       await this.updateBlogEntries()
     },
     async paginationModel() {
@@ -79,14 +91,7 @@ export default Vue.extend({
     },
   },
   async mounted() {
-    let paginationMaximum = Math.ceil(this.total / this.perPage)
-    if (paginationMaximum <= 0) {
-      paginationMaximum = 1
-    }
-    this.paginationMaximum = paginationMaximum
-
     await this.updateBlogEntries()
-
     this.$anime({
       targets: ['.Blog_BlogControls', '.Blog_BlogEntry'],
       easing: 'easeOutExpo',
@@ -99,6 +104,16 @@ export default Vue.extend({
     })
   },
   methods: {
+    updatePaginationMaximum() {
+      let paginationMaximum = Math.ceil(
+        (this.searchModel.length > 0 ? this.searchTotal : this.total) /
+          this.perPage
+      )
+      if (paginationMaximum <= 0) {
+        paginationMaximum = 1
+      }
+      this.paginationMaximum = paginationMaximum
+    },
     async updateBlogEntries() {
       const entries = await this.$content('blog')
         .search(this.searchModel)
@@ -108,6 +123,7 @@ export default Vue.extend({
         .fetch()
 
       this.blogEntries = Array.isArray(entries) ? entries : [entries]
+      this.updatePaginationMaximum()
     },
   },
 })
