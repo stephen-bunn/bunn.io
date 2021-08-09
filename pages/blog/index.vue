@@ -10,7 +10,7 @@
         justify-between
       "
     >
-      <Search v-model="searchModel" class="mb-2 md:mb-0 w-full md:w-auto" />
+      <Search v-model="searchModel" class="mb-2 md:mb-0 w-full md:w-72" />
       <div class="flex justify-between md:justify-end">
         <Pagination
           v-model="paginationModel"

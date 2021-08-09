@@ -1,11 +1,24 @@
 <template>
-  <div class="Ordering flex">
+  <div class="Ordering flex min-h-16">
     <div
-      class="font-serif font-bold text-lg p-4 uppercase rounded-l-md bg-gray-50"
+      class="
+        font-serif font-bold
+        text-lg
+        px-2
+        py-4
+        self-center
+        md:p-4
+        uppercase
+        rounded-l-md
+        bg-gray-50
+      "
     >
       {{ text || 'Sort' }}
     </div>
-    <button class="p-4 rounded-r-md bg-gray-50" @click="handleToggle">
+    <button
+      class="px-2 py-4 md:py-4 md:pr-4 rounded-r-md bg-gray-50"
+      @click="handleToggle"
+    >
       <Icon :name="iconName" />
     </button>
   </div>

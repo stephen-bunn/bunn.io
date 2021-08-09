@@ -1,20 +1,20 @@
 <template>
   <div class="Pagination flex">
     <button
-      class="Pagination_Left p-4 bg-gray-50 rounded-l-md"
+      class="Pagination_Left px-2 py-4 md:p-4 bg-gray-50 rounded-l-md"
       :class="leftClasses"
       :disabled="isMinimum"
       @click="updatePage(-1)"
     >
       <Icon name="chevron-left" />
     </button>
-    <div class="Pagination_Number p-4 bg-gray-50">
+    <div class="Pagination_Number px-2 py-4 md:p-4 bg-gray-50">
       <div class="font-bold text-lg w-8 outline-none text-center">
         {{ page }}
       </div>
     </div>
     <button
-      class="Pagination_Right p-4 bg-gray-50 rounded-r-md"
+      class="Pagination_Right px-2 py-4 md:p-4 bg-gray-50 rounded-r-md"
       :class="rightClasses"
       :disabled="isMaximum"
       @click="updatePage(1)"
