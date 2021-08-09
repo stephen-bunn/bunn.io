@@ -46,10 +46,7 @@ export default Vue.extend({
   },
   computed: {
     isActive(): boolean {
-      return (
-        this.$route.path.toLowerCase().split('/')[1] ===
-        this.to.toLowerCase().replace('/', '')
-      )
+      return this.$navigation.isActive(this.to, this.$route.fullPath)
     },
     navitemClasses(): Object {
       return {

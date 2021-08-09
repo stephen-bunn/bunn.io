@@ -26,6 +26,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // Adds $navigation plugin to pages
+    '~/plugins/navigation',
     // Adds $resume plugin to pages
     '~/plugins/resume',
     // https://github.com/Akryum/v-tooltip

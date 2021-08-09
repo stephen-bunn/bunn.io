@@ -1,6 +1,6 @@
 <template>
   <div class="DefaultLayout min-h-screen bg-gray-200">
-    <Navigation :left="leftNav" :right="rightNav" />
+    <Navigation :left="internal" :right="external" />
     <div class="p-8 lg:mx-auto lg:max-w-5xl">
       <Nuxt />
     </div>
@@ -10,25 +10,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Navigation from '~/components/Navigation.vue'
-
-const LEFT_NAV_ITEMS = [
-  // { to: '/blog', icon: 'book-open', label: 'Blog' },
-  { to: '/resume', icon: 'bookmark', label: 'Resume' },
-]
-const RIGHT_NAV_ITEMS = [
-  {
-    to: 'https://linkedin.com/in/stephen-bunn/',
-    icon: 'linkedin',
-    label: null,
-    target: '_blank',
-  },
-  {
-    to: 'https://github.com/stephen-bunn/',
-    icon: 'github',
-    label: null,
-    target: '_blank',
-  },
-]
+import { NavigationItem } from '~/plugins/navigation/types'
 
 export default Vue.extend({
   components: {
@@ -36,9 +18,14 @@ export default Vue.extend({
   },
   data() {
     return {
-      leftNav: LEFT_NAV_ITEMS,
-      rightNav: RIGHT_NAV_ITEMS,
+      internal: null as NavigationItem[] | null,
+      external: null as NavigationItem[] | null,
     }
+  },
+  created() {
+    const nav = this.$navigation.get()
+    this.internal = nav.internal
+    this.external = nav.external
   },
 })
 </script>

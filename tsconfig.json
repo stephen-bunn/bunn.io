@@ -31,7 +31,8 @@
       "@nuxtclub/feathericons",
       "pluralize",
       "~/types/vue-shim",
-      "~/types/anime"
+      "~/types/anime",
+      "~/types/navigation",
     ]
   },
   "exclude": [

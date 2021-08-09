@@ -21,12 +21,7 @@
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
 import NavigationItem from '~/components/NavigationItem.vue'
-
-export interface NavItem {
-  to: string
-  label: string | null
-  icon: string | null
-}
+import { NavigationItem as NavItem } from '~/plugins/navigation/types'
 
 export default Vue.extend({
   components: {
