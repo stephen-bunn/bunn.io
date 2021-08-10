@@ -36,9 +36,14 @@
         "url": "https://facebook.com/stephen.bunn.io"
       },
       {
-        "network": "Medium",
-        "username": "stephen-bunn",
-        "url": "https://medium.com/@stephen.bunn"
+        "network": "Discord",
+        "username": "StephenBunn#0001",
+        "url": "https://discordapp.com/users/220713104571367425"
+      },
+      {
+        "network": "Keybase",
+        "username": "stephenbunn",
+        "url": "https://keybase.io/stephenbunn"
       }
     ]
   },

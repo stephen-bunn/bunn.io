@@ -51,6 +51,8 @@ export default {
     'nuxt-animejs',
     // https://github.com/nuxtclub/feathericons
     '@nuxtclub/feathericons',
+    // https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -81,6 +83,7 @@ export default {
     families: {
       Rajdhani: [400, 700],
       Roboto: [400, 700],
+      'Fira Code': [500, 700],
     },
   },
 }
