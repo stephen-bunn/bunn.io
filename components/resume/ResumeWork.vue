@@ -6,7 +6,7 @@
         <Chip v-if="isCurrent" class="ml-2">Current</Chip>
       </div>
       <div class="ResumeWork_Subheading flex flex-col md:flex-row">
-        <Link :to="work.website">
+        <Link :to="work.website" target="_blank">
           {{ work.company }}
         </Link>
         <TimePeriod
