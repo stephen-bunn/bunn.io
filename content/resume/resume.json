@@ -50,9 +50,18 @@
   "work": [
     {
       "company": "Grove Collaborative",
+      "position": "Senior Software Engineer",
+      "website": "https://grove.co/",
+      "startDate": "2021-01-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "Grove Collaborative",
       "position": "Software Engineer 2",
       "website": "https://grove.co/",
       "startDate": "2019-04-22",
+      "endDate": "2021-01-01",
       "summary": "Design and develop features and enhancements primarily on the backend of the e-commerce platform which powers Grove.",
       "highlights": []
     },
@@ -125,8 +134,8 @@
         "CS1440 - Computer Science I",
         "CS2440 - Computer Science II",
         "CS2450 - Intro to Computer Systems",
-        "CS2490 - Intro to Theoretical Computer Science",
-        "CS3430 - Database",
+        "CS2490 - Theoretical Computer Science",
+        "CS3430 - Databases",
         "CS3460 - Data Structures",
         "CS3490 - Programming Languages",
         "CS3481 - Computer Systems I",
@@ -146,7 +155,7 @@
       "courses": [
         "CS5100 - Computer Science Seminar",
         "CS5450 - Computer Networking",
-        "CS5530 - Advanced Database",
+        "CS5530 - Advanced Databases",
         "CS5545 - Data Programming",
         "CS5110 - Design and Analysis of Algorithms",
         "CS5666 - Graduate Software Engineering",
@@ -185,50 +194,50 @@
       "name": "Deployment",
       "keywords": [
         "Docker",
-        "VMWare",
-        "Kubernetes"
+        "Kubernetes",
+        "HashiCorp",
+        "AWS",
+        "Heroku",
+        "Linode"
       ]
     },
     {
-      "name": "Version Control Systems",
+      "name": "Development Tooling",
       "keywords": [
         "Git",
         "GitHub",
         "GitLab",
         "Bitbucket",
-        "GitKraken"
-      ]
-    },
-    {
-      "name": "Agile Managment Software",
-      "keywords": [
+        "Jira",
         "Trello",
         "Slack",
-        "Axosoft",
-        "Jira"
+        "Axosoft"
       ]
     },
     {
       "name": "Software Development",
       "keywords": [
         "Python",
-        "Postgres",
-        "SQL",
-        "Java",
+        "PostgreSQL",
+        "CouchDB",
+        "Rust",
         "C",
+        "Java",
         "Ruby",
-        "Php"
+        "Golang",
+        "PHP"
       ]
     },
     {
       "name": "API Development",
       "keywords": [
-        "Python",
-        "NodeJS",
         "REST",
-        "JSON",
-        "XML",
-        "GraphQL"
+        "GraphQL",
+        "OpenAPI",
+        "FastAPI",
+        "Django",
+        "Flask",
+        "Express"
       ]
     },
     {
@@ -236,17 +245,12 @@
       "keywords": [
         "HTML",
         "CSS",
-        "SCSS",
-        "JS",
-        "TS"
-      ]
-    },
-    {
-      "name": "Web Frameworks",
-      "keywords": [
+        "JavaScript",
+        "TypeScript",
         "Vue.js",
-        "Angular",
-        "Electron"
+        "Nuxt.js",
+        "React",
+        "Angular"
       ]
     }
   ],
