@@ -18,6 +18,13 @@
     </div>
     <div class="ResumeWork_Content mt-4">
       <p>{{ work.summary }}</p>
+      <div v-if="work.highlights.length > 0" class="mt-2 ml-8">
+        <ul class="list-disc">
+          <li v-for="highlight in work.highlights" :key="highlight">
+            {{ highlight }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
