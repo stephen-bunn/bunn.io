@@ -21,13 +21,6 @@
             :publication="publication"
           />
         </ResumeSection>
-        <ResumeSection heading="Awards" icon="award">
-          <ResumeAward
-            v-for="(award, awardIndex) in resume.awards"
-            :key="`award-${awardIndex}`"
-            :award="award"
-          />
-        </ResumeSection>
       </div>
       <div class="ResumeContent_Right lg:w-2/5">
         <ResumeSection heading="Contact" icon="at-sign">
@@ -56,6 +49,21 @@
             class="mb-8"
           />
         </ResumeSection>
+        <ResumeSection heading="References" icon="message-square">
+          <ResumeReference
+            v-for="(reference, referenceIndex) in resume.references"
+            :key="`reference-${referenceIndex}`"
+            :reference="reference"
+            class="mb-8"
+          />
+        </ResumeSection>
+        <ResumeSection heading="Awards" icon="award">
+          <ResumeAward
+            v-for="(award, awardIndex) in resume.awards"
+            :key="`award-${awardIndex}`"
+            :award="award"
+          />
+        </ResumeSection>
       </div>
     </div>
     <ScrollFab />
@@ -75,6 +83,7 @@ import {
   ResumeSkill,
   ResumeWork,
   ResumeHero,
+  ResumeReference,
 } from '~/components/resume'
 import ScrollFab from '~/components/ScrollFab.vue'
 import { JsonResume } from '~/plugins/resume/types'
@@ -92,6 +101,7 @@ export default Vue.extend({
     ResumeLanguage,
     ResumeHero,
     ScrollFab,
+    ResumeReference,
   },
   layout: 'default',
   async asyncData({ $resume }) {

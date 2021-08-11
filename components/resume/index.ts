@@ -8,6 +8,7 @@ import ResumeLanguage from './ResumeLanguage.vue'
 import ResumeEducation from './ResumeEducation.vue'
 import ResumeSkill from './ResumeSkill.vue'
 import ResumeHero from './ResumeHero.vue'
+import ResumeReference from './ResumeReference.vue'
 
 export {
   ResumeAward,
@@ -19,5 +20,6 @@ export {
   ResumeLanguage,
   ResumeEducation,
   ResumeSkill,
-  ResumeHero
+  ResumeHero,
+  ResumeReference
 }

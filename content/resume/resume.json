@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Stephen Bunn",
-    "label": "Full Stack Designer and Developer",
+    "label": "Full Stack Engineer and Designer",
     "picture": "https://gravatar.com/avatar/02651d15ffdc3bb8e7cb4d20b33b7f1c",
     "email": "hiring@bunn.io",
     "phone": "(252) 955-9105",
-    "website": "http://stephen.bunn.io/",
-    "summary": "Stephen is an experienced full-stack developer with a specialty in code design and data structure. He has earned his Masters degree in Computer Science from Appalachian State University over the period of 4 years. During this time he has worked as a researcher in the areas of package dependency management and natural language analysis. He also worked on data gathering, management, and reporting software for Appalachian State University focused on the data provided from sustainable endpoints such as solar panel arrays, windmills, energy gauges, and many others. Following his education, he joined Sensus as a developer specializing in Python development and code structure focused on automating and improving faulty business practices and processes. Outside of work he finds himself enjoying preparing new foods, discovering new music, and contributing to open-source projects.",
+    "website": "https://bunn.io/",
+    "summary": "Stephen is an experienced full-stack engineer with a specialty in sustainable code structure and web UX. He has earned his Masters degree in Computer Science from Appalachian State University over the period of 4 years up until his graduation in 2017. Most recently, he has focused his experience working to build better user experiences at Grove Collaborative as a team-lead focused on customer acquisition. Outside of work he finds himself enjoying reading up on new design practices, discovering new music, and contributing to various open-source projects (mostly his own).",
     "location": {
       "address": "515 South Mangum St. Apt. 5563",
       "postalCode": "27701",
@@ -53,8 +53,13 @@
       "position": "Senior Software Engineer",
       "website": "https://grove.co/",
       "startDate": "2021-01-01",
-      "summary": "",
-      "highlights": []
+      "summary": "Acted as team lead of the Growth team at Grove. This team focuses primarily on supporting and improving customer acquisition by designing and producing features that entice guests to become long-lasting customers.",
+      "highlights": [
+        "Lead the design and development of a standardized component library. This library was engineered to be accessible and extensible in any Vue.js-based rendering environment (SPA, SSR, static page generation).",
+        "Lead the production of auto-generated static pages based on CMS content for all customer landing pages. This increased our PageSpeed ranking from single digits to being placed in the 90s on average.",
+        "Acted as a directly responsible individual in Grove's frontend guild helping to define and estimate North Stars for front-end minded teams.",
+        "Helped to facilitate communication between stakeholders as we had continual dependencies between marketing, design, analytics, and other engineering teams."
+      ]
     },
     {
       "company": "Grove Collaborative",
@@ -62,8 +67,12 @@
       "website": "https://grove.co/",
       "startDate": "2019-04-22",
       "endDate": "2021-01-01",
-      "summary": "Design and develop features and enhancements primarily on the backend of the e-commerce platform which powers Grove.",
-      "highlights": []
+      "summary": "Worked on a special-ops engineering team focused on building solutions, investigating problem areas, and architecting systems throughout various areas of the business.",
+      "highlights": [
+        "Helped to implement payment method fraud detection. Integrated with several third-party services to handle capturing payment from customers on first-time checkouts.",
+        "Constructed CMS content schemas and produce reusable presentational components to dynamically render full web pages.",
+        "Helped to establish effective code quality tooling and style guides throughout the engineering organization."
+      ]
     },
     {
       "company": "Sensus",
@@ -283,5 +292,10 @@
       ]
     }
   ],
-  "references": []
+  "references": [
+    {
+      "name": "David Dahl",
+      "reference": "I find it humorous that Stephen Bunn is not regarded as a Senior Engineer. His abilities are incredible. His deep understanding of both the JS and Python ecosystems are daunting. If Mr. Bunn says \"this how it should be\", it is based on countless hours of research *and* engineering experience. I do look forward to witnessing the trajectory of Stephen's career, as it will be incredible. If Stephan cannot solve your engineering problem, you should just give up."
+    }
+  ]
 }

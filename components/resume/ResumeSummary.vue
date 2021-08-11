@@ -1,6 +1,11 @@
 <template>
   <div class="ResumeSummary">
-    {{ basics.summary }}
+    <div class="ResumeSummary_Summary mb-2">
+      {{ summary }}
+    </div>
+    <div class="ResumeSummary_Location font-bold">
+      {{ name }} is currently located in {{ location }}.
+    </div>
   </div>
 </template>
 
@@ -14,6 +19,17 @@ export default Vue.extend({
       type: Object,
       required: true,
     } as PropOptions<JsonResume.Basics>,
+  },
+  computed: {
+    summary(): string {
+      return this.basics.summary
+    },
+    name(): string {
+      return this.basics.name
+    },
+    location(): string {
+      return `${this.basics.location.city}, ${this.basics.location.region}`
+    },
   },
 })
 </script>
