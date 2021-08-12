@@ -11,7 +11,7 @@
     font-family: 'Rajdhani', serif;
     font-weight: bold;
     line-height: 1;
-    margin: 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0;
   }
 
   h1 {
@@ -32,6 +32,45 @@
     &:hover {
       color: #2563eb;
     }
+  }
+
+  blockquote {
+    border-left: 4px solid #6b7280;
+    border-radius: 4px;
+    padding-left: 8px;
+    margin: 8px 0;
+    color: #6b7280;
+  }
+
+  ul {
+    li {
+      margin-left: 1rem;
+      list-style: disc inside none;
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  ol {
+    li {
+      margin-left: 1rem;
+      list-style: decimal inside none;
+      &::marker {
+        font-weight: bold;
+      }
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  code {
+    font-family: 'Fira Code', monospace;
+    padding: 1px 4px;
+    background: #282a36;
+    color: #f8f8f8;
+    border-radius: 4px;
   }
 
   img,

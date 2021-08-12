@@ -1,6 +1,6 @@
 <template>
   <main class="BlogPage">
-    <div class="BlogPage_Heading mb-8 md:mb-16">
+    <div class="BlogPage_Heading mb-8">
       <div class="font-serif font-bold text-4xl md:text-6xl mb-2 max-w-xl">
         {{ document.title }}
       </div>
