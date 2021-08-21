@@ -47,7 +47,8 @@
       margin-left: 1rem;
       list-style: disc inside none;
       p {
-        margin-left: 1rem;
+        display: inline-block;
+        margin-left: 0;
       }
     }
   }
@@ -60,9 +61,15 @@
         font-weight: bold;
       }
       p {
-        margin-left: 1rem;
+        display: inline-block;
+        margin-left: 0;
       }
     }
+  }
+
+  hr {
+    border-color: rgb(209, 213, 219);
+    margin: 1rem 0;
   }
 
   code {

@@ -1,8 +1,11 @@
 <template>
   <button
     v-tooltip.left="{
+      disabled: !isActive,
       content: tooltip,
-      classes: 'mr-2 px-2 py-1 bg-gray-300 rounded-md text-xs',
+      classes: `mr-2 px-2 py-1 bg-gray-300 rounded-md text-xs ${
+        isActive ? 'opacity-100' : 'opacity-0'
+      }`,
     }"
     class="
       ScrollFab
