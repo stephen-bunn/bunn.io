@@ -1,32 +1,31 @@
 import Vue from 'vue'
-import { Navigation, NavigationItem } from '~/plugins/navigation/types';
+import { Navigation, NavigationItem } from '~/plugins/navigation/types'
 
 const internalRoutes: NavigationItem[] = [
   {
     to: '/blog',
     disabled: true,
     icon: 'book-open',
-    label: 'Blog'
+    label: 'Blog',
   },
   {
     to: '/resume',
     icon: 'bookmark',
-    label: 'Resume'
-  }
+    label: 'Resume',
+  },
 ]
 const externalRoutes: NavigationItem[] = [
   {
     to: 'https://linkedin.com/in/stephen-bunn',
     icon: 'linkedin',
-    target: '_blank'
+    target: '_blank',
   },
   {
     to: 'https://github.com/stephen-bunn',
     icon: 'github',
-    target: '_blank'
-  }
+    target: '_blank',
+  },
 ]
-
 
 /**
  * Describes the available options through the `$navigation` plugin.
@@ -34,7 +33,7 @@ const externalRoutes: NavigationItem[] = [
  * @interface NavigationPlugin
  */
 export interface NavigationPlugin {
-  get(): Navigation,
+  get(): Navigation
   isActive(to: string, currentRoute: string): boolean
 }
 
@@ -60,7 +59,7 @@ export class NavigationPluginError extends Error {
 }
 
 function getPathFragments(path: string): string[] {
-  return path.split('/').filter(fragment => fragment.length > 0)
+  return path.split('/').filter((fragment) => fragment.length > 0)
 }
 
 Vue.use({
@@ -68,13 +67,13 @@ Vue.use({
     Vue.prototype.$navigation = {
       get: () => {
         return {
-          internal: internalRoutes.filter(item => !item?.disabled),
-          external: externalRoutes.filter(item => !item?.disabled)
+          internal: internalRoutes.filter((item) => !item?.disabled),
+          external: externalRoutes.filter((item) => !item?.disabled),
         }
       },
       isActive: (to: string, currentRoute: string): boolean => {
         return getPathFragments(to)[0] === getPathFragments(currentRoute)[0]
-      }
+      },
     }
-  }
+  },
 })

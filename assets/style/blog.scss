@@ -16,15 +16,23 @@
 
   h1 {
     font-size: 2.5rem;
+    line-height: 2.5rem;
   }
   h2 {
     font-size: 2rem;
+    line-height: 2rem;
   }
   h3,
   h4,
   h5,
   h6 {
     font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5;
   }
 
   a {
@@ -44,8 +52,12 @@
 
   ul {
     li {
-      margin-left: 1rem;
-      list-style: disc inside none;
+      margin-left: 2rem;
+      list-style: disc outside none;
+      font-size: 1.125rem;
+      &::marker {
+        font-weight: bold;
+      }
       p {
         display: inline-block;
         margin-left: 0;
@@ -55,8 +67,9 @@
 
   ol {
     li {
-      margin-left: 1rem;
-      list-style: decimal inside none;
+      margin-left: 2rem;
+      list-style: decimal outside none;
+      font-size: 1.125rem;
       &::marker {
         font-weight: bold;
       }
@@ -88,5 +101,36 @@
 
   .nuxt-content-highlight code {
     font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  }
+
+  table {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+  table > thead > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td,
+  table > tfoot > tr > th,
+  table > tfoot > tr > td {
+    padding: 12px;
+    line-height: 1.2;
+    vertical-align: top;
+    border-top: 1px solid #282a36;
+  }
+  table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #282a36;
+  }
+  table > caption + thead > tr:first-child > th,
+  table > caption + thead > tr:first-child > td,
+  table > colgroup + thead > tr:first-child > th,
+  table > colgroup + thead > tr:first-child > td,
+  table > thead:first-child > tr:first-child > th,
+  table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+  }
+  table > tbody + tbody {
+    border-top: 2px solid #282a36;
   }
 }

@@ -20,7 +20,7 @@ export default Vue.extend({
     },
     alt: {
       type: String,
-      required: true,
+      default: '',
     },
     srcset: {
       type: String,
