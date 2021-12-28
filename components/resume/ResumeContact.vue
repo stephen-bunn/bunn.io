@@ -6,7 +6,7 @@
         recruitment.
       </div>
       I'm available
-      <Link to="https://time.is/EDT" target="_blank"> EDT </Link>
+      <Link to="https://time.is/EST" target="_blank"> EST </Link>
       daytime hours and am open to hearing about any opportunities.
     </div>
     <div class="flex flex-col text-lg">

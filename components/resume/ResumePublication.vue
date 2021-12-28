@@ -5,7 +5,11 @@
     </Link>
     <div class="mb-4">
       Published by {{ publication.publisher }} on
-      <TimePeriod :start="publication.releaseDate" format="MMM DD YYYY" />
+      <TimePeriod
+        class="ResumePublication_TimePeriod underline"
+        :start="publication.releaseDate"
+        format="MMM DD YYYY"
+      />
     </div>
     <div>
       {{ publication.summary }}
@@ -38,3 +42,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.ResumePublication_TimePeriod {
+  text-decoration-style: dotted;
+  text-underline-offset: 0.125rem;
+}
+</style>

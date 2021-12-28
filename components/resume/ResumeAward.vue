@@ -3,7 +3,11 @@
     <div class="font-serif text-2xl">{{ award.title }}</div>
     <div class="mb-4">
       By {{ award.awarder }} on
-      <TimePeriod :start="award.date" format="MMM DD YYYY" />
+      <TimePeriod
+        class="ResumeAward_TimePeriod underline"
+        :start="award.date"
+        format="MMM DD YYYY"
+      />
     </div>
     <div>
       {{ award.summary }}
@@ -28,3 +32,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.ResumeAward_TimePeriod {
+  text-decoration-style: dotted;
+  text-underline-offset: 0.125rem;
+}
+</style>

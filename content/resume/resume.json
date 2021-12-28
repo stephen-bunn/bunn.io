@@ -57,6 +57,7 @@
       "highlights": [
         "Lead the design and development of a standardized component library. This library was engineered to be accessible and extensible in any Vue.js-based rendering environment (SPA, SSR, static page generation).",
         "Lead the production of auto-generated static pages based on CMS content for all customer landing pages. This increased our PageSpeed ranking from single digits to being placed in the 90s on average.",
+        "Functioned as a key contributor to address web accessibility concerns and assisted in creating guidelines for producing accessible features.",
         "Acted as a directly responsible individual in Grove's frontend guild helping to define and estimate North Stars for front-end minded teams.",
         "Helped to facilitate communication between stakeholders as we had continual dependencies between marketing, design, analytics, and other engineering teams."
       ]
@@ -80,8 +81,11 @@
       "website": "https://sensus.com/",
       "startDate": "2017-04-14",
       "endDate": "2019-04-08",
-      "summary": "Worked on a small team of engineers that focused on building a platform for customer-facing applications. These applications were built to provide existing customers with an improved environment for submitting and interacting with product returns.",
-      "highlights": []
+      "summary": "Worked on a small team of engineers that focused on building platforms for customer-facing applications. These applications were built to provide existing customers with an improved environment for submitting and interacting with product returns.",
+      "highlights": [
+        "Built and maintained the customer experience development platform used to consolidate user authentication, product management, and the return process for Sensus customers.",
+        "Assisted in the development of internal analytics and reporting tooling that Sensus uses to monitor peformance of most areas of the business."
+      ]
     },
     {
       "company": "Appalachian State University",
@@ -89,7 +93,7 @@
       "website": "https://sustain.appstate.edu/",
       "startDate": "2016-01-12",
       "endDate": "2017-04-12",
-      "summary": "Maintained the front-end of the sustain subdomain at appstate.edu. I also help to maintain the Office of Sustainability's Google presence.",
+      "summary": "Maintained the front-end of the sustain subdomain at appstate.edu. Also helped to maintain the Office of Sustainability's Google presence.",
       "highlights": []
     },
     {
@@ -104,10 +108,10 @@
     {
       "company": "East Carolina University",
       "position": "NSF REU Researcher, Department of Computer Science",
-      "website": "http://www.ecu.edu/cs-cet/csci/",
+      "website": "https://www.ecu.edu/",
       "startDate": "2015-04-01",
       "endDate": "2015-08-07",
-      "summary": "Performed research in both production level testing methods and the use of sentiment analysis in data mining. Specifically perfomed sentiment analysis on textual data taken from online resources such as Twitter, Facebook, and YouTube",
+      "summary": "Performed research in both production level testing methods and the use of sentiment analysis in data mining. Specifically perfomed sentiment analysis on textual data taken from online resources such as Twitter, Facebook, and YouTube.",
       "highlights": []
     },
     {
@@ -125,7 +129,7 @@
       "website": "http://carneyco.com/",
       "startDate": "2011-12-01",
       "endDate": "2013-03-21",
-      "summary": "Managed the upkeep of several simple file servers. Provided customer service to clients. Contributed research for several marketing and political projects, including a statewide homeschool convention and a North Carolina House of Representative candidate’s campaign.",
+      "summary": "Managed the upkeep of several simple file servers. Provided customer service to clients. Contributed research for several marketing and political projects, including a statewide homeschool convention and a North Carolina House of Representative candidate's campaign.",
       "highlights": []
     }
   ],

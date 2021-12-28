@@ -67,6 +67,7 @@
             <span v-if="published" class="BlogPage_Published">
               Published
               <TimePeriod
+                class="BlogPage_TimePeriod underline"
                 :start="published"
                 format="MMM DD YYYY hh:mm A"
                 :options="{ units: ['y', 'mo', 'd', 'h'] }"
@@ -151,5 +152,10 @@ export default Vue.extend({
 
 .BlogPage_Aside {
   min-width: 13rem;
+}
+
+.BlogPage_TimePeriod {
+  text-decoration-style: dotted;
+  text-underline-offset: 0.125rem;
 }
 </style>
