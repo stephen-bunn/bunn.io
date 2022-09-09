@@ -24,7 +24,10 @@
 import anime from 'animejs'
 definePageMeta({ layout: 'dense' })
 
+const resume = useResume()
 const { isBelowFold } = useScrollDepth()
+useHead({ title: `${resume.value.basics.name} Resume` })
+
 const isDesktop = ref(true)
 
 onMounted(() => {
