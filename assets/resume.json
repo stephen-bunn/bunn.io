@@ -47,12 +47,12 @@
       "position": "Senior Software Engineer",
       "website": "https://grove.co/",
       "startDate": "2021-01-01",
-      "summary": "Acted as the team lead of the Growth and Web engineering teams. Primary responsibilities were to plan and oversee technical improvements to Grove's web client.",
+      "summary": "Acted as the team lead of the Growth and Web engineering teams. Planned and oversaw technical improvements to Grove's web client.",
       "highlights": [
         "Led the design and development of a web component library. This library was engineered to meet accessibility guidelines and be extensible in any Vue-based rendering environment (SPA, SSR, static page generation).",
-        "Led the production of auto-generated static pages based on CMS content for all customer landing pages. Increased our PageSpeed ranking from single digits to being placed in the 90s.",
-        "Functioned as a key contributor in addressing web accessibility concerns and assisted in creating guidelines for producing accessible features.",
-        "Acted as a directly responsible individual in Grove’s frontend guild helping to define and estimate North Stars for frontend-minded teams.",
+        "Improved both site performance and SEO by transitioning most all landing pages to auto-generated static pages.",
+        "Key contributor in addressing web accessibility concerns and in creating guidelines for producing accessible features in the future.",
+        "Directly responsible SME in Grove's frontend guild helping to define and estimate North Stars for frontend-minded teams.",
         "Facilitated continuous communication between stakeholders in marketing, design, analytics, and other engineering teams."
       ]
     },
@@ -115,7 +115,8 @@
       "startDate": "2014-04-07",
       "endDate": "2014-08-07",
       "summary": "Imaged and distributed statewide computer systems for the NC Division of Motor Vehicles. Helped with the implementation of a new security protocol for the Triangle Transportation Management Center.",
-      "highlights": []
+      "highlights": [],
+      "hidden": true
     },
     {
       "company": "Carney & Co",
@@ -124,7 +125,8 @@
       "startDate": "2011-12-01",
       "endDate": "2013-03-21",
       "summary": "Managed the upkeep of several simple file servers. Provided customer service to clients. Contributed research for several marketing and political projects, including a statewide homeschool convention and a North Carolina House of Representative candidate's campaign.",
-      "highlights": []
+      "highlights": [],
+      "hidden": true
     }
   ],
   "volunteer": [],

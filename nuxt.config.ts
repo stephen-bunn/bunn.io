@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         download: true,
         families: {
           Rajdhani: [500, 700],
-          'Source Sans': true,
+          'Fira Sans': [400, 700],
           'Fira Code': true,
         },
       },

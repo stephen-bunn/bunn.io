@@ -14,11 +14,6 @@
           date-format="yyyy"
         />
       </h3>
-      <ul v-if="item.courses.length > 0" class="list-none">
-        <li v-for="(course, courseIndex) in item.courses" :key="courseIndex">
-          {{ course }}
-        </li>
-      </ul>
     </div>
   </ResumeSection>
 </template>
