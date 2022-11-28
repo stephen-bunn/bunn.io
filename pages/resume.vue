@@ -24,7 +24,7 @@
 <script setup>
 const resume = useResume()
 const { isBelowFold } = useScrollDepth()
-useHead({ title: `${resume.value.basics.name} Resume` })
+useHead({ title: `${resume.value.basics.name} | Resume` })
 
 const isDesktop = ref(true)
 

@@ -42,8 +42,12 @@ interface NavigationItem {
  */
 const internal: NavigationItem[] = [
   {
-    text: 'Home',
+    text: 'About',
     to: '/',
+  },
+  {
+    text: 'Posts',
+    to: '/posts',
   },
   {
     text: 'Resume',

@@ -52,5 +52,7 @@ const props = defineProps({
 })
 
 const { path } = useRoute()
-const isActive = computed(() => props.to === path)
+const isActive = computed(
+  () => props.to === path.split('/').slice(0, 2).join('/')
+)
 </script>

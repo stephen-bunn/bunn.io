@@ -1,12 +1,11 @@
 <template>
   <NuxtLayout>
     <Navigation />
-    <main class="lg:pt-8">
-      <BlogEntry v-for="entry in blogEntries" :key="entry._id" :value="entry" />
-    </main>
+    <h1>Hello World</h1>
   </NuxtLayout>
 </template>
 
 <script setup>
-const blogEntries = await queryContent('blog').find()
+const resume = useResume()
+useHead({ title: `${resume.value.basics.name} | About` })
 </script>
