@@ -10,6 +10,6 @@
 
 <script setup>
 defineProps({
-  to: { type: String, required: true },
+  to: { type: String },
 })
 </script>

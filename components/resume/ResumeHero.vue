@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-2 items-center sm:grid-cols-2">
+  <div class="grid gap-2 sm:grid-cols-2">
     <div class="font-serif">
       <h1 class="font-bold uppercase text-5xl lg:text-7xl">
         {{ resume.basics.name }}
@@ -22,38 +22,14 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const resume = useResume()
-
-const findProfile = (network: string) =>
-  resume.value.basics.profiles.find(
-    profile => profile.network.toLowerCase() === network.toLowerCase()
-  )
-
 const links = computed(() => {
-  const result = [
+  return [
     {
       to: `mailto:${resume.value.basics.email}`,
       text: resume.value.basics.email,
     },
   ]
-
-  const linkedinProfile = findProfile('linkedin')
-  if (linkedinProfile) {
-    result.push({
-      to: linkedinProfile.url,
-      text: `linkedin/${linkedinProfile.username}`,
-    })
-  }
-
-  const githubProfile = findProfile('github')
-  if (githubProfile) {
-    result.push({
-      to: githubProfile.url,
-      text: `github/${githubProfile.username}`,
-    })
-  }
-
-  return result
 })
 </script>

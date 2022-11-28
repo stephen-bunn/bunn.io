@@ -1,5 +1,12 @@
-<template></template>
+<template>
+  <NuxtLayout>
+    <Navigation />
+    <main class="lg:pt-8">
+      <BlogEntry v-for="entry in blogEntries" :key="entry._id" :value="entry" />
+    </main>
+  </NuxtLayout>
+</template>
 
 <script setup>
-navigateTo('/resume')
+const blogEntries = await queryContent('blog').find()
 </script>

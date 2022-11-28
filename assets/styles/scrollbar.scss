@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+
+/* Overlay scrollbars on top of content to avoid scrollbars repositioning content. */
+body {
+  overflow-y: overlay;
+  overflow-x: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+  &-track {
+    background-color: transparent;
+  }
+
+  &-thumb {
+    background-color: var(--b-color-scroll);
+    &:hover {
+      background-color: var(--b-color-scroll-hover);
+    }
+  }
+}

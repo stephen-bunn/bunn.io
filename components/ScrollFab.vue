@@ -8,6 +8,6 @@
   </button>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const onClick = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 </script>

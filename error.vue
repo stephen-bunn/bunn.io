@@ -1,11 +1,12 @@
 <template>
-  <div class="bg-gray-200 text-black">
-    <div
-      class="flex flex-col mx-auto min-h-screen justify-center items-center lg:max-w-screen-lg"
-    >
+  <div class="font-sans bg-gray-200 text-black">
+    <div class="container mx-auto p-4 lg:max-w-screen-lg">
+      <Navigation />
+    </div>
+    <div class="flex flex-col min-h-screen justify-center items-center">
       <h1 class="font-mono text-8xl">{{ error.statusCode }}</h1>
       <p class="mb-8">{{ error.message }}</p>
-      <StyledLink autofocus to="/">Back home</StyledLink>
+      <StyledLink autofocus to="/">Take me home</StyledLink>
     </div>
   </div>
 </template>

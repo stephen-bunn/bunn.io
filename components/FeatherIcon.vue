@@ -12,12 +12,6 @@ const props = defineProps({
     validator: name =>
       Object.prototype.hasOwnProperty.call(feather.icons, name),
   },
-  fallback: {
-    type: String,
-    default: 'x-octagon',
-    validator: name =>
-      Object.prototype.hasOwnProperty.call(feather.icons, name),
-  },
   size: {
     type: Number,
     default: 24,
@@ -30,10 +24,7 @@ const props = defineProps({
 })
 
 const iconSvg = computed(() =>
-  (Object.prototype.hasOwnProperty.call(feather.icons, props.name)
-    ? feather.icons[props.name]
-    : feather.icons[props.fallback]
-  ).toSvg({
+  feather.icons[props.name].toSvg({
     class: ['inline-block', props.class].join(' '),
     width: props.size,
     height: props.size,
