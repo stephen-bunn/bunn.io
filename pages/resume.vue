@@ -16,14 +16,12 @@
           <ResumeAwards />
         </div>
       </div>
-      <ScrollFab v-if="isBelowFold" />
     </div>
   </NuxtLayout>
 </template>
 
 <script setup>
 const resume = useResume()
-const { isBelowFold } = useScrollDepth()
 useHead({ title: `${resume.value.basics.name} | Resume` })
 
 const isDesktop = ref(true)

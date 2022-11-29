@@ -5,9 +5,9 @@
         <div class="mb-4">
           <h3 class="font-serif text-2xl">{{ work.position }}</h3>
           <p>
-            <StyledLink :to="work.website" target="_blank">
+            <VLink :to="work.website" target="_blank">
               {{ work.company }}
-            </StyledLink>
+            </VLink>
             &centerdot;
             <TimePeriod :start="work.startDate" :end="work.endDate" />
           </p>

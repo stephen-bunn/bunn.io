@@ -1,28 +1,27 @@
 <template>
   <div class="flex gap-4 mb-2 text-gray-500">
-    <div v-if="date" class="flex gap-1">
+    <div v-if="displayDate" class="flex gap-1">
       <FeatherIcon name="calendar" :size="16" />
-      {{ date }}
+      {{ displayDate }}
     </div>
     <div v-if="tags" class="flex gap-1">
       <FeatherIcon name="tag" :size="16" />
       <div class="flex gap-2">
-        <NuxtLink
-          v-for="(tag, tagIndex) in tags"
-          :key="tag"
-          :to="`/tags/${tag}`"
-          class="font-mono underline underline-offset-4 decoration-dotted"
-        >
-          #{{ tag }}{{ tagIndex !== tags.length - 1 ? ',' : '' }}
-        </NuxtLink>
+        <PostTag v-for="tag in tags" :key="tag" :name="tag" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
-  date: { type: String, required: false },
+import { format } from 'date-fns'
+
+const props = defineProps({
+  date: { type: Date, required: false },
   tags: { type: Array, required: false },
 })
+
+const displayDate = computed(() =>
+  props?.date ? format(props.date, 'PPP') : null
+)
 </script>

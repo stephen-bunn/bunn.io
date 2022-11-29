@@ -14,8 +14,12 @@
   }
 
   h1 {
-    font-size: theme('fontSize.7xl');
+    font-size: theme('fontSize.5xl');
     letter-spacing: -1.5px;
+
+    @media screen(lg) {
+      font-size: theme('fontSize.7xl');
+    }
   }
 
   h2 {

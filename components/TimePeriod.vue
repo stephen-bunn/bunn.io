@@ -1,7 +1,5 @@
 <template>
-  <span
-    class="underline underline-offset-2 decoration-dotted text-gray-500 text-sm"
-  >
+  <span class="text-sm text-gray-500">
     {{ format(startDate, dateFormat) }}
     <template v-if="endDate"> - {{ format(endDate, dateFormat) }} </template>
   </span>

@@ -1,3 +1,3 @@
 <template>
-  <NavigationHeader />
+  <NavigationHeader class="mb-12" />
 </template>

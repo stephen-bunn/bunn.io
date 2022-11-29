@@ -9,7 +9,7 @@
           <strong>#{{ route.params.tag }}</strong> tag.
         </p>
       </div>
-
+      <hr class="border-b border-gray-300" />
       <ContentList :query="query">
         <template #default="{ list }">
           <PostEntry v-for="post in list" :key="post._id" :value="post" />

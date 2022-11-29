@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="flex items-center px-2 font-serif rounded-lg outline-none outline-dashed outline-offset-4 transition-colors focus:outline-gray-700"
+    class="flex items-center px-2 font-serif rounded-lg outline-none outline-offset-4 transition-colors focus:outline-dashed focus:outline-gray-700"
     :class="{
       'text-white bg-gray-700 hover:bg-gray-700 focus:bg-gray-700': isActive,
       'bg-gray-300': !external,
@@ -52,7 +52,5 @@ const props = defineProps({
 })
 
 const { path } = useRoute()
-const isActive = computed(
-  () => props.to === path.split('/').slice(0, 2).join('/')
-)
+const isActive = computed(() => props.to === path)
 </script>

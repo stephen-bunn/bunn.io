@@ -8,7 +8,7 @@
     </div>
     <div class="font-mono sm:text-right">
       <div v-for="(link, linkIndex) in links" :key="linkIndex">
-        <StyledLink :to="link.to" target="_blank">{{ link.text }}</StyledLink>
+        <VLink :to="link.to" target="_blank">{{ link.text }}</VLink>
       </div>
       <a
         href="/resume.pdf"

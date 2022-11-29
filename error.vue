@@ -6,7 +6,7 @@
     <div class="flex flex-col min-h-screen justify-center items-center">
       <h1 class="font-mono text-8xl">{{ error.statusCode }}</h1>
       <p class="mb-8">{{ error.message }}</p>
-      <StyledLink autofocus to="/">Take me home</StyledLink>
+      <VLink autofocus to="/">Take me home</VLink>
     </div>
   </div>
 </template>

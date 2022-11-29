@@ -7,9 +7,9 @@
     >
       <div class="mb-2">
         <h3 class="font-serif text-2xl">
-          <StyledLink :to="publication.website" target="_blank">
+          <VLink :to="publication.website" target="_blank">
             {{ publication.name }}
-          </StyledLink>
+          </VLink>
         </h3>
         <p>
           {{ publication.publisher }} &centerdot;
