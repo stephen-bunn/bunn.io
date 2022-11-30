@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <Navigation />
-    <main class="flex flex-col gap-8 items-start lg:items-start lg:flex-row">
+    <main class="flex flex-col gap-8 items-start lg:flex-row">
       <NuxtImg
         class="rounded-full w-48 self-center lg:self-start lg:w-1/3"
         :src="profilePictureSrc"
