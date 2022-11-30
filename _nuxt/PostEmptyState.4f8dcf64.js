@@ -1,0 +1,1 @@
+import t from"./FeatherIcon.9c7ea359.js";import{_ as o,o as s,c,b as n,a}from"./entry.1eff09bc.js";const _={},r={class:"text-gray-400 text-center my-8"},m=a("p",{class:"text-xl mt-4"},"No posts found",-1);function i(x,d){const e=t;return s(),c("div",r,[n(e,{class:"text-inherit",name:"x-square",size:64}),m])}const l=o(_,[["render",i]]);export{l as default};
