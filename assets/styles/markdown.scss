@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 
 .markdown {
-  color: var(--b-color-text);
+  color: theme('colors.black');
 
   h1,
   h2,
@@ -65,10 +65,10 @@
   h3,
   h4 {
     a {
-      color: var(--b-color-text);
+      color: theme('colors.black');
       &:hover,
       &:focus {
-        color: var(--b-color-text);
+        color: theme('colors.black');
       }
 
       &:focus {
@@ -78,7 +78,12 @@
   }
 
   p {
+    margin-top: theme('spacing.2');
     font-family: theme('fontFamily.sans');
+
+    @media screen(lg) {
+      margin-top: theme('spacing.4');
+    }
   }
 
   ul,
@@ -122,7 +127,7 @@
     padding: theme('spacing.4');
     border-radius: 0 theme('borderRadius.md') theme('borderRadius.md') 0;
     border-left: 4px solid theme('colors.gray.700');
-    background-color: var(--b-surface-quote);
+    background-color: rgba(7, 8, 9, 0.05);
 
     p {
       margin: 0;
@@ -155,8 +160,8 @@
   pre {
     padding: theme('spacing.4');
     margin: theme('spacing.4') 0;
-    color: var(--b-color-code);
-    background-color: var(--b-surface-code);
+    color: #f8f8f2;
+    background-color: #282a36;
     border-radius: theme('borderRadius.md');
     font-family: theme('fontFamily.mono');
     overflow-x: auto;

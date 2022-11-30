@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxt/content',
   ],
-  css: ['~/assets/styles/variables.scss', '~/assets/styles/scrollbar.scss'],
+  css: ['~/assets/styles/scrollbar.scss'],
   // https://content.nuxtjs.org/api/configuration
   content: {
     base: 'content',

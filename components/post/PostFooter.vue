@@ -27,6 +27,8 @@ const props = defineProps({
 
 const { displayName, repositoryUrl } = useConstants()
 const postSourceUrl = computed(() =>
-  props.post._file ? `${repositoryUrl}/content/${props.post._file}` : null
+  props.post._file
+    ? `${repositoryUrl}/tree/master/content/${props.post._file}`
+    : null
 )
 </script>

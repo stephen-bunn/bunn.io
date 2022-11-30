@@ -7,15 +7,16 @@
         <p>Displaying all posts, newest first.</p>
       </div>
       <hr class="border-b border-b-gray-300" />
-
-      <ContentList :query="query">
-        <template #default="{ list: postList }">
-          <PostEntry v-for="post in postList" :key="post._id" :post="post" />
-        </template>
-        <template #not-found>
-          <PostEmptyState />
-        </template>
-      </ContentList>
+      <div>
+        <ContentList :query="query">
+          <template #default="{ list: postList }">
+            <PostEntry v-for="post in postList" :key="post._id" :post="post" />
+          </template>
+          <template #not-found>
+            <PostEmptyState />
+          </template>
+        </ContentList>
+      </div>
     </main>
   </NuxtLayout>
 </template>

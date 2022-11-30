@@ -8,7 +8,7 @@
         :alt="profilePictureAlt"
       />
       <div class="lg:w-2/3">
-        <div class="markdown mb-4">
+        <div class="text-xl markdown mb-4">
           <ContentDoc :head="null" />
         </div>
         <NuxtImg width="128" src="/initials.svg" :alt="signatureAlt" />

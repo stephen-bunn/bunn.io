@@ -10,14 +10,16 @@
         </p>
       </div>
       <hr class="border-b border-gray-300" />
-      <ContentList :query="query">
-        <template #default="{ list }">
-          <PostEntry v-for="post in list" :key="post._id" :value="post" />
-        </template>
-        <template #not-found>
-          <PostEmptyState />
-        </template>
-      </ContentList>
+      <div>
+        <ContentList :query="query">
+          <template #default="{ list: postList }">
+            <PostEntry v-for="post in postList" :key="post._id" :post="post" />
+          </template>
+          <template #not-found>
+            <PostEmptyState />
+          </template>
+        </ContentList>
+      </div>
     </main>
   </NuxtLayout>
 </template>
