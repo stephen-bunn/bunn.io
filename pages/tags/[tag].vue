@@ -6,7 +6,7 @@
         <h1 class="text-5xl font-bold font-serif">#{{ route.params.tag }}</h1>
         <p>
           Displaying all posts containing the
-          <strong>#{{ route.params.tag }}</strong> tag.
+          <strong>#{{ route.params.tag }}</strong> tag, newest first.
         </p>
       </div>
       <hr class="border-b border-gray-300" />
@@ -15,7 +15,7 @@
           <PostEntry v-for="post in list" :key="post._id" :value="post" />
         </template>
         <template #not-found>
-          <p>No posts found.</p>
+          <PostEmptyState />
         </template>
       </ContentList>
     </main>
@@ -23,10 +23,10 @@
 </template>
 
 <script setup>
-const resume = useResume()
+const { displayName } = useConstants()
 const route = useRoute()
 
-useHead({ title: `${resume.value.basics.name} | Tags` })
+useHead({ title: `${displayName} | Tags` })
 const query = {
   path: '/posts',
   where: { tags: { $contains: route.params.tag } },

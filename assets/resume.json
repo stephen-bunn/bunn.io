@@ -47,6 +47,7 @@
       "position": "Senior Software Engineer",
       "website": "https://grove.co/",
       "startDate": "2021-01-01",
+      "endDate": "2022-12-02",
       "summary": "Acted as the team lead of the Growth and Web engineering teams. Planned and oversaw technical improvements to Grove's web client.",
       "highlights": [
         "Led the design and development of a web component library. This library was engineered to meet accessibility guidelines and be extensible in any Vue-based rendering environment (SPA, SSR, static page generation).",

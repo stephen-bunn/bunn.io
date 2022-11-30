@@ -21,6 +21,7 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['update:modelValue'])
 const props = defineProps({
   id: {
     type: String,
@@ -42,7 +43,13 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  modelValue: {
+    required: false,
+  },
 })
+
+const model = ref(props.modelValue)
+watchEffect(model, value => emit('update:modelValue', value))
 
 const displayOptions = computed(() =>
   props.options.map(option => ({

@@ -4,33 +4,36 @@
     <main>
       <article>
         <div class="flex flex-col items-center mb-8">
-          <h1 class="text-5xl font-bold font-serif lg:text-7xl">
-            {{ page.title }}
+          <h1 class="text-5xl font-bold font-serif text-center lg:text-7xl">
+            {{ post.title }}
           </h1>
-          <PostDetails :date="date" :tags="tags" />
+          <PostDetails :date="postDate" :tags="postTags" />
         </div>
         <div class="markdown">
-          <ContentRenderer :value="content">
-            <ContentRendererMarkdown :value="content" />
+          <ContentRenderer :value="postContent">
+            <ContentRendererMarkdown :value="postContent" />
           </ContentRenderer>
         </div>
       </article>
     </main>
+    <PostFooter :post="post" />
   </NuxtLayout>
 </template>
 
 <script setup>
 const route = useRoute()
-const page = await queryContent(route.path).findOne()
-
-const content = computed(() => ({
+const post = await queryContent(route.path).findOne()
+const postContent = computed(() => ({
   body: {
-    ...page.body,
-    children: page.body.children.filter(({ tag }) => tag !== 'h1'),
+    ...post.body,
+    // filtering out any `h1` tags as there should only be one and we are representing it ourselves
+    children: post.body.children.filter(({ tag }) => tag !== 'h1'),
   },
 }))
-const date = computed(() => (page?.date ? new Date(page.date) : null))
-const tags = computed(() => page?.tags || null)
+const postDate = computed(() => (post?.date ? new Date(post.date) : null))
+const postTags = computed(() => post?.tags || null)
+
+useHead({ title: post.title })
 </script>
 
 <style>

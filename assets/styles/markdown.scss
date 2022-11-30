@@ -23,18 +23,30 @@
   }
 
   h2 {
-    font-size: theme('fontSize.5xl');
+    font-size: theme('fontSize.4xl');
     letter-spacing: -0.5px;
+
+    @media screen(lg) {
+      font-size: theme('fontSize.5xl');
+    }
   }
 
   h3 {
-    font-size: theme('fontSize.3xl');
+    font-size: theme('fontSize.2xl');
     letter-spacing: 0;
+
+    @media screen(lg) {
+      font-size: theme('fontSize.3xl');
+    }
   }
 
   h4 {
-    font-size: theme('fontSize.2xl');
+    font-size: theme('fontSize.xl');
     letter-spacing: 0.25px;
+
+    @media screen(lg) {
+      font-size: theme('fontSize.2xl');
+    }
   }
 
   h5 {
@@ -106,6 +118,7 @@
   }
 
   blockquote {
+    color: theme('colors.gray.700');
     padding: theme('spacing.4');
     border-radius: 0 theme('borderRadius.md') theme('borderRadius.md') 0;
     border-left: 4px solid theme('colors.gray.700');
@@ -118,7 +131,7 @@
 
   a {
     color: theme('colors.blue.500');
-    border-radius: theme('borderRadius.md');
+    border-radius: theme('borderRadius.sm');
     outline-style: dashed;
     outline-offset: theme('outlineOffset.2');
     outline-width: theme('outlineWidth.2');

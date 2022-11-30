@@ -3,8 +3,11 @@
     <Navigation />
     <main>
       <div class="text-center mb-8">
-        <h1 class="text-5xl font-bold font-serif">Posts</h1>
-        <p>Displaying all posts, newest first.</p>
+        <h1 class="text-5xl font-bold font-serif">{{ year }} Posts</h1>
+        <p>
+          Displaying all posts from the year <strong>{{ year }}</strong
+          >, newest first.
+        </p>
       </div>
       <hr class="border-b border-b-gray-300" />
 
@@ -22,10 +25,13 @@
 
 <script setup>
 const { displayName } = useConstants()
-useHead({ title: `${displayName} | Posts` })
+const route = useRoute()
+const year = computed(() => route.params.year)
+useHead({ title: `${displayName} | ${year} Posts` })
 
 const query = computed(() => ({
   path: '/posts',
+  where: { year: { $eq: Number(route.params.year) } },
   sort: { date: -1 },
 }))
 </script>
