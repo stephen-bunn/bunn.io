@@ -1,1 +1,0 @@
-import t from"./NavigationHeader.372c1e5a.js";import{_ as c,o as n,f as _}from"./entry.1eff09bc.js";import"./NavigationItem.de193707.js";import"./FeatherIcon.9c7ea359.js";const e={};function r(a,s){const o=t;return n(),_(o,{class:"mb-12"})}const d=c(e,[["render",r]]);export{d as default};
