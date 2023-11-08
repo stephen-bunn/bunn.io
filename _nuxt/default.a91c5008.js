@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,r as c}from"./entry.7b155ad5.js";const r={},a={class:"container mx-auto p-4 lg:max-w-screen-lg"};function n(e,l){return o(),s("div",a,[c(e.$slots,"default")])}const d=t(r,[["render",n]]);export{d as default};
