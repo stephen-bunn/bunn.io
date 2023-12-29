@@ -5,9 +5,8 @@
   "trailingComma": "es5",
   "arrowParens": "avoid",
   "printWidth": 100,
-  "plugins": [
-    "prettier-plugin-svelte"
-  ],
+  "semi": false,
+  "plugins": ["prettier-plugin-svelte"],
   "overrides": [
     {
       "files": "*.svelte",

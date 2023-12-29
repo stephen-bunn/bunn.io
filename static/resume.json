@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "meta": {},
+  "basics": {
+    "name": "Stephen Bunn",
+    "label": "Software Engineer",
+    "image": "https://gravatar.com/userimage/116117494/4e8ac61d79eda5b5646b51100d18bab9.jpeg?size=512",
+    "email": "hiring@bunn.io",
+    "url": "https://bunn.io",
+    "summary": "",
+    "location": {
+      "city": "Durham",
+      "region": "NC",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "stephen-bunn",
+        "url": "https://github.com/stephen-bunn"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "stephen-bunn",
+        "url": "https://linkedin.com/in/stephen-bunn"
+      },
+      {
+        "network": "omg.lol",
+        "username": "@st",
+        "url": "https://st.omg.lol"
+      }
+    ]
+  }
+}
