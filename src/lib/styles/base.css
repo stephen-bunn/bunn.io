@@ -1,0 +1,15 @@
+@import url("fonts.css");
+@import url("colors.css");
+@import url("space.css");
+@import url("animate.css");
+
+html {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-100);
+}
