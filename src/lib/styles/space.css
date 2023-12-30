@@ -13,4 +13,7 @@
 
   --radius-hard: 8px;
   --radius-soft: 20px;
+
+  --navigation-width: 200px;
+  --content-width: 700px;
 }

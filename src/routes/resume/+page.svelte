@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "$lib/styles/base.css"
   const resumeRequest = (async () => await (await fetch("/resume.json")).json())()
 </script>
 

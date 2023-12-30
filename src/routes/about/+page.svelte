@@ -5,15 +5,15 @@
 
 <div>
   <TheHeader />
-  <main></main>
+  <main>
+    <img
+      src="https://gravatar.com/userimage/116117494/4e8ac61d79eda5b5646b51100d18bab9.jpeg?size=512"
+      alt="Stephen Bunn Portrait"
+    />
+  </main>
 </div>
 
 <style>
-  div {
-    margin: var(--space-8x);
-    min-height: 100%;
-  }
-
   main {
     max-width: var(--content-width);
     margin: 0 auto;
