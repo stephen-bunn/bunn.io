@@ -1,0 +1,27 @@
+@import url("base.scss");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+  font-size: var(--font-700);
+  margin-bottom: var(--space-4x);
+}
+
+h2 {
+  font-size: var(--font-500);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-300);
+}
