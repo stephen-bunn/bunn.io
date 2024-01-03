@@ -27,11 +27,16 @@ h6 {
   font-size: var(--font-300);
 }
 
+hr {
+  border: 1px solid var(--color-text--disabled);
+  margin: var(--space-4x) 0;
+}
+
 p {
   font-family: var(--font-sans);
-  font-size: var(--font-100);
+  font-size: var(--font-300);
   line-height: var(--line-height-default);
-  margin-bottom: var(--space-2x);
+  margin-bottom: var(--space-4x);
 }
 
 strong {
@@ -40,22 +45,4 @@ strong {
 
 em {
   font-style: italic;
-}
-
-a {
-  transition: color var(--transition-duration-default);
-
-  &:link,
-  &:visited {
-    color: var(--color-link);
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus-visible {
-    color: var(--color-link--active);
-  }
-
-  @include dashed-outline(currentColor);
 }

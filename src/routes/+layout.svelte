@@ -1,7 +1,12 @@
 <script>
   import "$lib/styles/base.scss"
+  import "$lib/styles/content.scss"
   import Header from "$lib/components/Header.svelte"
 </script>
+
+<svelte:head>
+  <title>Stephen Bunn</title>
+</svelte:head>
 
 <Header />
 <main>
