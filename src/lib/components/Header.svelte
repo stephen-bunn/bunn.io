@@ -1,15 +1,17 @@
 <script lang="ts">
-  import { fly } from "svelte/transition"
   import Initials from "$lib/components/Initials.svelte"
   import NavigationDrawer from "$lib/components/NavigationDrawer.svelte"
+  import breakpoints from "$lib/utils/breakpoints"
 
+  import { fly } from "svelte/transition"
   import { MenuIcon, XIcon } from "lucide-svelte"
 
-  let isMenuOpen: boolean = false
+  let clientWidth: number
+  $: isMenuOpen = clientWidth >= breakpoints.lg
   const toggleMenuOpen = () => (isMenuOpen = !isMenuOpen)
 </script>
 
-<header>
+<header bind:clientWidth>
   <button class="menu-toggle" on:click={toggleMenuOpen}>
     {#if isMenuOpen}
       <XIcon />
@@ -17,22 +19,16 @@
       <MenuIcon />
     {/if}
   </button>
-  {#if isMenuOpen}
-    <div class="drawer-container" transition:fly={{ duration: 200, x: 0 }}>
-      <NavigationDrawer />
-    </div>
-  {/if}
   <div class="initials-container">
     <a href="/">
       <Initials />
     </a>
   </div>
-  <!-- <a href="/">
-    <div>
-      <Initials />
+  {#if isMenuOpen}
+    <div class="drawer-container" transition:fly={{ duration: 200, x: 0 }}>
+      <NavigationDrawer />
     </div>
-  </a>
-  <NavigationDrawer /> -->
+  {/if}
 </header>
 
 <style lang="scss">
@@ -55,6 +51,9 @@
     cursor: pointer;
 
     @include dashed-outline;
+    @include lg {
+      display: none;
+    }
   }
 
   .initials-container {
@@ -75,43 +74,24 @@
   .drawer-container {
     position: absolute;
     left: 0;
-    top: calc(24px + var(--space-8x) * 2);
-    height: 100vh;
-    padding-left: var(--space-8x);
-    width: var(--navigation-width);
+    // y padding of header + initials container height
+    top: calc(var(--space-4x) * 2 + 48px);
+    // 100vh - y padding of header - initials container height - y drawer container padding
+    height: calc(100vh - (var(--space-4x) * 2) - 48px - var(--space-8x));
+    padding: var(--space-8x) 0 0 var(--space-8x);
+    width: calc(100% - (var(--space-8x) * 2));
     background: var(--color-surface);
     background: linear-gradient(
       90deg,
       var(--color-surface) 0%,
-      var(--color-surface) 50%,
+      var(--color-surface) 30%,
+      rgba(245, 245, 245, 0.5) 70%,
       transparent 100%
     );
+
+    @include lg {
+      width: var(--navigation-width);
+      background: transparent;
+    }
   }
-
-  // header {
-  //   width: var(--navigation-width);
-  //   box-sizing: border-box;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   margin: var(--space-8x) 0 0 var(--space-8x);
-  // }
-
-  // a {
-  //   display: inline-block;
-  //   color: var(--color-text);
-  //   width: 100%;
-  //   padding: var(--space-4x) 0;
-  //   outline: none;
-  //   margin-bottom: var(--space-8x);
-
-  //   &:focus-visible {
-  //     outline: var(--space-1x) dashed var(--color-text);
-  //     outline-offset: var(--space-2x);
-  //   }
-  // }
-
-  // div {
-  //   margin-right: var(--space-8x);
-  // }
 </style>
