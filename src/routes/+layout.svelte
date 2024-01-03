@@ -15,7 +15,7 @@
     max-width: var(--content-width);
     margin: 0 var(--space-8x);
 
-    @include lg {
+    @include md {
       margin: 0 auto;
     }
   }

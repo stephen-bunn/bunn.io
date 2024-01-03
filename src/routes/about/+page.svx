@@ -55,5 +55,6 @@ If you are looking to talk about career opprotunities, please check out my [resu
 
   p {
     font-size: var(--font-300);
+    margin-bottom: var(--space-4x);
   }
 </style>
