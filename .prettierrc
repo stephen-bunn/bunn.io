@@ -6,7 +6,9 @@
   "arrowParens": "avoid",
   "printWidth": 100,
   "semi": false,
-  "plugins": ["prettier-plugin-svelte"],
+  "plugins": [
+    "prettier-plugin-svelte"
+  ],
   "overrides": [
     {
       "files": "*.svelte",

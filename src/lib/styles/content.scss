@@ -1,3 +1,4 @@
+@use "mixins.scss" as *;
 @import url("base.scss");
 
 h1,
@@ -24,4 +25,37 @@ h4,
 h5,
 h6 {
   font-size: var(--font-300);
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: var(--font-100);
+  line-height: var(--line-height-default);
+  margin-bottom: var(--space-2x);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  transition: color var(--transition-duration-default);
+
+  &:link,
+  &:visited {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    color: var(--color-link--active);
+  }
+
+  @include dashed-outline(currentColor);
 }

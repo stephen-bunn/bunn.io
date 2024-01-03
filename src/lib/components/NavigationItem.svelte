@@ -15,9 +15,8 @@
   a {
     transition-property: color;
     transition-duration: var(--transition-duration-default);
-    display: block;
+    display: inline-block;
     padding: var(--space-3x) 0;
-    width: 100%;
     text-decoration: none;
     outline: none;
     color: var(--color-text--disabled);

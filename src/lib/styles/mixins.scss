@@ -12,11 +12,11 @@
   }
 }
 
-@mixin dashed-outline {
+@mixin dashed-outline($color: var(--color-text)) {
   outline: none;
 
   &:focus-visible {
-    outline: var(--space-1x) dashed var(--color-text);
+    outline: var(--space-1x) dashed $color;
     outline-offset: var(--space-1x);
   }
 }

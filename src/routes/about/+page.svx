@@ -1,0 +1,59 @@
+<script>
+  import "$lib/styles/content.scss"
+</script>
+
+
+<div class="container">
+
+  ![Stephen Bunn Portrait](https://gravatar.com/userimage/116117494/4e8ac61d79eda5b5646b51100d18bab9.jpeg?size=512)
+
+  <div>
+
+    # Stephen Bunn
+
+    I'm a software developer building *small* and **intuitive** solutions to try and better the health and happiness of others.
+
+  </div>
+</div>
+
+Occasionally I [write](https://weblog.lol/st) about things I'm exploring or the products I'm using.
+These are mostly just opinion pieces that act as notes while I try to figure out what the heck is going on.
+
+If you are looking to talk about career opprotunities, please check out my [resume](/resume) or [reach out to me](/contact).
+
+**Hope you have a great day!**
+
+<style lang="scss">
+  @use "$lib/styles/mixins.scss" as *;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include lg {
+      gap: var(--space-8x);
+      margin-bottom: var(--space-4x);
+      align-items: left;
+      flex-direction: row;
+    }
+  }
+
+  img {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    text-align: center;
+
+    @include lg {
+      text-align: left;
+    }
+  }
+
+  p {
+    font-size: var(--font-300);
+  }
+</style>
