@@ -2,12 +2,10 @@
   import { page } from "$app/stores"
 
   export let href: string
-  export let external: boolean = false
-
   $: isActive = (() => $page.url.pathname.toLowerCase() === href.toLowerCase())()
 </script>
 
-<a {href} target={external ? "_blank" : ""} class:active={isActive} tabindex={isActive ? -1 : 0}>
+<a {href} class:active={isActive} tabindex={isActive ? -1 : 0} {...$$restProps}>
   <slot />
 </a>
 
@@ -22,7 +20,7 @@
     color: var(--color-text--disabled);
     font-size: var(--font-400);
     font-family: var(--font-serif);
-    font-weight: var(--font-weight-bold);
+    font-weight: bold;
 
     &:hover,
     &:active,

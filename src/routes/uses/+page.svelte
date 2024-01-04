@@ -1,7 +1,13 @@
 <script>
   import Link from "$lib/components/Link.svelte"
 
-  const uses = [["Hardware", ["Ubuntu Linux"]], [""]]
+  const uses = [
+    {
+      title: "Hardware",
+      description: "The physical things that help me.",
+      items: ["Ubuntu Linux"],
+    },
+  ]
 </script>
 
 <svelte:head>
@@ -16,10 +22,12 @@
 </p>
 
 {#each uses as category}
-  {@const [categoryName, ...categoryItems] = category}
-  <h2>{categoryName}</h2>
+  <h2>{category.title}</h2>
+  {#if category.description}
+    <p>{category.description}</p>
+  {/if}
   <ul>
-    {#each categoryItems as item}
+    {#each category.items as item}
       <li>{item}</li>
     {/each}
   </ul>

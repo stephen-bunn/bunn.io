@@ -1,7 +1,11 @@
 <script lang="ts">
+  import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
   import NavigationDrawer from "$lib/components/NavigationDrawer.svelte"
   import breakpoints from "$lib/utils/breakpoints"
+  import MastodonIcon from "$lib/components/icons/MastodonIcon.svelte"
+  import GithubIcon from "$lib/components/icons/GithubIcon.svelte"
+  import LinkedinIcon from "$lib/components/icons/LinkedinIcon.svelte"
 
   import { fly } from "svelte/transition"
   import { MenuIcon, XIcon } from "lucide-svelte"
@@ -29,6 +33,17 @@
       <NavigationDrawer />
     </div>
   {/if}
+  <div class="right">
+    <NavigationItem href="https://github.com/stephen-bunn" target="_blank">
+      <GithubIcon />
+    </NavigationItem>
+    <NavigationItem href="https://linkedin.com/in/stephen-bunn" target="_blank">
+      <LinkedinIcon />
+    </NavigationItem>
+    <NavigationItem href="https://social.lol/@st" target="_blank">
+      <MastodonIcon />
+    </NavigationItem>
+  </div>
 </header>
 
 <style lang="scss">
@@ -37,6 +52,13 @@
   header {
     padding: var(--space-4x);
     display: flex;
+  }
+
+  .right {
+    display: flex;
+    gap: var(--space-4x);
+    margin-left: auto;
+    align-items: center;
   }
 
   .menu-toggle {

@@ -4,11 +4,11 @@
 
 <nav>
   <ul>
-    <li><NavigationItem href="/about">About</NavigationItem></li>
+    <li><NavigationItem href="/">About</NavigationItem></li>
     <li><NavigationItem href="/resume">Resume</NavigationItem></li>
     <li><NavigationItem href="/contact">Contact</NavigationItem></li>
     <li><NavigationItem href="/uses">Uses</NavigationItem></li>
-    <li><NavigationItem href="https://st.omg.lol/now" external>Now</NavigationItem></li>
+    <li><NavigationItem href="https://st.omg.lol/now" target="_blank">Now</NavigationItem></li>
   </ul>
 </nav>
 

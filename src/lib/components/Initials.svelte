@@ -4,7 +4,7 @@
   preserveAspectRatio="xMidYMid meet"
   fill="none"
 >
-  <title>Stephen Bunn's Signature</title>
+  <title>Stephen Bunn</title>
   <path
     fill="currentColor"
     fill-rule="evenodd"
