@@ -11,8 +11,16 @@
   import { MenuIcon, XIcon } from "lucide-svelte"
 
   let clientWidth: number
-  $: isMenuOpen = clientWidth >= breakpoints.lg
-  const toggleMenuOpen = () => (isMenuOpen = !isMenuOpen)
+  $: isDesktopWidth = clientWidth >= breakpoints.lg
+  $: isMenuOpen = isDesktopWidth
+  const toggleMenuOpen = () => (isMenuOpen = isDesktopWidth ? true : !isMenuOpen)
+  const handleKeyUp = (event: KeyboardEvent) => {
+    if (event.defaultPrevented) return
+    if ([" ", "Enter"].includes(event.key)) {
+      toggleMenuOpen()
+      event.preventDefault()
+    }
+  }
 </script>
 
 <header bind:clientWidth>
@@ -29,8 +37,17 @@
     </a>
   </div>
   {#if isMenuOpen}
-    <div class="drawer-container" transition:fly={{ duration: 200, x: 0 }}>
-      <NavigationDrawer />
+    <div
+      class="drawer-container"
+      transition:fly={{ duration: 200, x: 0 }}
+      on:click={toggleMenuOpen}
+      on:keyup={handleKeyUp}
+      tabindex={isDesktopWidth ? -1 : 0}
+      role="menu"
+    >
+      <div class="drawer">
+        <NavigationDrawer />
+      </div>
     </div>
   {/if}
   <div class="right">
@@ -101,7 +118,7 @@
     // 100vh - y padding of header - initials container height - y drawer container padding
     height: calc(100vh - (var(--space-4x) * 2) - 48px - var(--space-8x));
     padding: var(--space-8x) 0 0 var(--space-8x);
-    width: calc(100% - (var(--space-8x) * 2));
+    width: calc((100% - (var(--space-8x) * 2)));
     background: var(--color-surface);
     background: linear-gradient(
       90deg,
@@ -111,9 +128,14 @@
       transparent 100%
     );
 
+    @include dashed-outline;
     @include lg {
       width: var(--navigation-width);
       background: transparent;
     }
+  }
+
+  .drawer {
+    width: 200px;
   }
 </style>
