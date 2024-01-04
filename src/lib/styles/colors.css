@@ -8,7 +8,7 @@
   --color-errie-black: #1b1b1b;
   --color-french-gray: #bebfc5;
   --color-byzantine-blue: #3759be;
-  --color-vista-blue: #8197da;
+  --color-marian-blue: #2a418d;
   --color-fire-engine-red: #ce2029;
   --color-mindaro: #fffd98;
 
@@ -19,5 +19,5 @@
   --color-text--highlight: var(--color-mindaro);
   --color-text--error: var(--color-fire-engine-red);
   --color-link: var(--color-byzantine-blue);
-  --color-link--active: var(--color-vista-blue);
+  --color-link--active: var(--color-marian-blue);
 }
