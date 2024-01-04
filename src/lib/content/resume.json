@@ -191,41 +191,15 @@
   "skills": [
     {
       "name": "Web Development",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "Vue",
-        "Nuxt",
-        "React",
-        "Angular"
-      ]
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Angular"]
     },
     {
       "name": "API Development",
-      "keywords": [
-        "REST",
-        "GraphQL",
-        "OpenAPI",
-        "FastAPI",
-        "Django",
-        "Flask"
-      ]
+      "keywords": ["REST", "GraphQL", "OpenAPI", "FastAPI", "Django", "Flask"]
     },
     {
       "name": "Software Development",
-      "keywords": [
-        "Python",
-        "PostgreSQL",
-        "CouchDB",
-        "Rust",
-        "C",
-        "Java",
-        "Ruby",
-        "Golang",
-        "PHP"
-      ]
+      "keywords": ["Python", "PostgreSQL", "CouchDB", "Rust", "C", "Java", "Ruby", "Golang", "PHP"]
     }
   ],
   "languages": [
