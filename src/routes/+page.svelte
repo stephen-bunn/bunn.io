@@ -8,10 +8,7 @@
 </svelte:head>
 
 <div class="container">
-  <img
-    src="https://gravatar.com/avatar/02651d15ffdc3bb8e7cb4d20b33b7f1c?s=512"
-    alt="Stephen Bunn Portrait"
-  />
+  <img src="/img/profile.png" alt="Stephen Bunn Portrait" />
   <div>
     <h1>Stephen Bunn</h1>
     <p>
@@ -59,5 +56,10 @@
     @include lg {
       text-align: left;
     }
+  }
+
+  p {
+    font-size: var(--font-300);
+    margin-bottom: var(--space-4x);
   }
 </style>

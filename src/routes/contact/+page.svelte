@@ -20,3 +20,10 @@
   Instead, if you just want to chat about technology and things, you can find me on Mastodon as
   <Link href="https://social.lol/@st" target="_blank">@st@social.lol</Link>.
 </p>
+
+<style>
+  p {
+    font-size: var(--font-300);
+    margin-bottom: var(--space-4x);
+  }
+</style>

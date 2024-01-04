@@ -34,9 +34,9 @@ hr {
 
 p {
   font-family: var(--font-sans);
-  font-size: var(--font-300);
+  font-size: var(--font-100);
   line-height: var(--line-height-default);
-  margin-bottom: var(--space-4x);
+  margin-bottom: var(--space-2x);
 }
 
 strong {
@@ -45,4 +45,14 @@ strong {
 
 em {
   font-style: italic;
+}
+
+ul {
+  margin-left: var(--space-4x);
+  list-style: disc;
+}
+
+li {
+  margin-bottom: var(--space-2x);
+  line-height: var(--line-height-tight);
 }

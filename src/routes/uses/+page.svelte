@@ -32,3 +32,10 @@
     {/each}
   </ul>
 {/each}
+
+<style>
+  p {
+    font-size: var(--font-300);
+    margin-bottom: var(--space-4x);
+  }
+</style>
