@@ -13,7 +13,7 @@
   <ul>
     {#each navigationItems as item}
       <li>
-        <NavigationItem href={item.href} target={item?.target || null}>
+        <NavigationItem href={item.href}>
           {item.text}
         </NavigationItem>
       </li>
