@@ -9,6 +9,7 @@
     text-decoration: none;
     transition: color var(--transition-duration-default);
     outline: none;
+    outline-offset: var(--space-1x);
 
     &:link,
     &:visited {

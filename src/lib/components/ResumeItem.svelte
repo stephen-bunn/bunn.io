@@ -1,8 +1,9 @@
 <script lang="ts">
   export let name: string | undefined = undefined
+  export let dense: boolean = false
 </script>
 
-<div class="resume-item">
+<div class="resume-item" class:resume-item-dense={dense}>
   <h3 class="name">
     <slot name="name">
       {#if name}{name}{/if}
@@ -16,9 +17,13 @@
   </p>
 </div>
 
-<style>
+<style lang="scss">
   .resume-item {
     margin-bottom: var(--space-8x);
+
+    &-dense {
+      margin-bottom: var(--space-4x);
+    }
   }
 
   .name {

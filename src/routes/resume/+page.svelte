@@ -3,8 +3,8 @@
 
   import resume from "$lib/content/resume.json"
   import Link from "$lib/components/Link.svelte"
-  import ResumeSection from "$lib/components/resume/ResumeSection.svelte"
-  import ResumeItem from "$lib/components/resume/ResumeItem.svelte"
+  import ResumeSection from "$lib/components/ResumeSection.svelte"
+  import ResumeItem from "$lib/components/ResumeItem.svelte"
 
   export const formatDate = (date: string, format: string) => dayjs(date).format(format)
   export const truncate = (value: string, length: number, end: string = "...") =>
@@ -17,7 +17,7 @@
 
 <h1 class="name">{resume.basics.name}</h1>
 <p class="label">{resume.basics.label}</p>
-<p>{resume.basics.summary}</p>
+<p class="summary">{resume.basics.summary}</p>
 
 {#if resume.work}
   <ResumeSection name="Experience">
@@ -109,7 +109,7 @@
 {#if resume.skills}
   <ResumeSection name="Skills">
     {#each resume.skills as skill}
-      <ResumeItem name={skill.name}>
+      <ResumeItem name={skill.name} dense>
         <ul class="skills">
           {#each skill.keywords as keyword}
             <li class="skills-keyword">{keyword}</li>
@@ -130,14 +130,16 @@
     font-family: var(--font-serif);
   }
 
+  .summary {
+    margin-bottom: var(--space-8x);
+  }
+
   .delimiter {
     margin: 0 var(--space-halfx);
   }
 
   .skills {
     list-style: none;
-    display: flex;
-    gap: var(--space-2x);
     margin: 0;
 
     &-keyword {
@@ -146,6 +148,7 @@
       color: var(--color-white);
       padding: var(--space-halfx) var(--space-2x);
       border-radius: var(--radius-hard);
+      margin-left: var(--space-2x);
     }
   }
 </style>

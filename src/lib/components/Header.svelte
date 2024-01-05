@@ -13,6 +13,10 @@
   let clientWidth: number
   $: isDesktopWidth = clientWidth >= breakpoints.lg
   $: isMenuOpen = isDesktopWidth
+  $: if (globalThis.document)
+    document.getElementsByTagName("body")[0].style.overflowY =
+      !isDesktopWidth && isMenuOpen ? "hidden" : "scroll"
+
   const toggleMenuOpen = () => (isMenuOpen = isDesktopWidth ? true : !isMenuOpen)
   const handleKeyUp = (event: KeyboardEvent) => {
     if (event.defaultPrevented) return
@@ -111,7 +115,7 @@
   }
 
   .drawer-container {
-    position: absolute;
+    position: fixed;
     left: 0;
     // y padding of header + initials container height
     top: calc(var(--space-4x) * 2 + 48px);

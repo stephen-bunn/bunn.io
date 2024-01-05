@@ -6,7 +6,6 @@
     { text: "Resume", href: "/resume" },
     { text: "Contact", href: "/contact" },
     { text: "Uses", href: "/uses" },
-    { text: "Now", href: "https://st.omg.lol/now", target: "_blank" },
   ]
 </script>
 

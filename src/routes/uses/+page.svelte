@@ -1,13 +1,6 @@
 <script>
   import Link from "$lib/components/Link.svelte"
-
-  const uses = [
-    {
-      title: "Hardware",
-      description: "The physical things that help me.",
-      items: ["Ubuntu Linux"],
-    },
-  ]
+  import uses from "$lib/content/uses.json"
 </script>
 
 <svelte:head>
@@ -22,20 +15,42 @@
 </p>
 
 {#each uses as category}
-  <h2>{category.title}</h2>
-  {#if category.description}
-    <p>{category.description}</p>
-  {/if}
-  <ul>
-    {#each category.items as item}
-      <li>{item}</li>
-    {/each}
-  </ul>
+  <div class="uses-container">
+    <h2>{category.title}</h2>
+    <ul class="uses-list">
+      {#each category.items as item}
+        <li>
+          {#if typeof item === "string"}
+            {item}
+          {:else}
+            <Link href={item.href} target="_blank">{item.text}</Link>
+            {#if item.description}
+              {item.description}
+            {/if}
+          {/if}
+        </li>
+      {/each}
+    </ul>
+  </div>
 {/each}
 
-<style>
+<style lang="scss">
   p {
     font-size: var(--font-300);
     margin-bottom: var(--space-4x);
+  }
+
+  .uses {
+    &-container {
+      margin-bottom: var(--space-8x);
+    }
+
+    &-list {
+      margin-left: 0;
+    }
+  }
+
+  .uses-list {
+    list-style: none;
   }
 </style>
