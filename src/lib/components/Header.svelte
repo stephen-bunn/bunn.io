@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte"
+  import { writable } from "svelte/store"
 
   import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
@@ -12,17 +13,21 @@
   import { fly, slide } from "svelte/transition"
   import { MenuIcon, XIcon } from "lucide-svelte"
 
+  let scrollLock = writable(false)
   let clientWidth: number
   $: isDesktopWidth = clientWidth >= breakpoints.lg
   $: isMenuOpen = isDesktopWidth
-  $: if (globalThis.document)
-    document.getElementsByTagName("body")[0].style.overflowY =
-      !isDesktopWidth && isMenuOpen ? "hidden" : "scroll"
+  $: isMenuOpen, scrollLock.set(!isDesktopWidth && isMenuOpen)
 
   let headerObserver: IntersectionObserver
   let isHeaderVisible: boolean = true
 
   onMount(() => {
+    scrollLock.subscribe((isLocked: boolean) => {
+      const bodyEl = document.querySelector("body")
+      if (bodyEl) bodyEl.style.overflowY = isLocked ? "hidden" : "scroll"
+    })
+
     const headerEl = document.querySelector("header")
     if (!headerEl) return
 

@@ -1,0 +1,25 @@
+name: GitHub Pages
+on:
+  push:
+    branches:
+      - master
+jobs:
+  gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - name: Install Dependencies
+        run: |
+          npm install
+      - name: Build Pages
+        run: |
+          npm run generate
+      - name: Deploy Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.output/public
+          cname: bunn.io
