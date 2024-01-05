@@ -9,7 +9,7 @@
   import GithubIcon from "$lib/components/icons/GithubIcon.svelte"
   import LinkedinIcon from "$lib/components/icons/LinkedinIcon.svelte"
 
-  import { fly } from "svelte/transition"
+  import { fly, slide } from "svelte/transition"
   import { MenuIcon, XIcon } from "lucide-svelte"
 
   let clientWidth: number
@@ -52,13 +52,19 @@
 </script>
 
 <header bind:clientWidth>
-  <button class="menu-toggle" on:click={toggleMenuOpen}>
-    {#if isMenuOpen}
-      <XIcon />
-    {:else}
-      <MenuIcon />
-    {/if}
-  </button>
+  {#if !isDesktopWidth}
+    <button
+      class="menu-toggle"
+      on:click={toggleMenuOpen}
+      transition:slide={{ duration: 200, axis: "x" }}
+    >
+      {#if isMenuOpen}
+        <XIcon />
+      {:else}
+        <MenuIcon />
+      {/if}
+    </button>
+  {/if}
   <div class="initials-container">
     <a href="/">
       <Initials />
@@ -119,9 +125,6 @@
     cursor: pointer;
 
     @include dashed-outline;
-    @include lg {
-      display: none;
-    }
   }
 
   .initials-container {
