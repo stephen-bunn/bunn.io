@@ -2,7 +2,8 @@
   import { page } from "$app/stores"
 
   export let href: string
-  $: isActive = (() => $page.url.pathname.toLowerCase() === href.toLowerCase())()
+  const hrefPattern = new RegExp(`^${href}/?$`, "i")
+  $: isActive = (() => hrefPattern.test($page.url.pathname))()
 </script>
 
 <a {href} class:active={isActive} tabindex={isActive ? -1 : 0} {...$$restProps}>
