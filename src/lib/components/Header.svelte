@@ -17,7 +17,7 @@
   let clientWidth: number
   $: isDesktopWidth = clientWidth >= breakpoints.lg
   $: isMenuOpen = isDesktopWidth
-  $: isMenuOpen, scrollLock.set(!isDesktopWidth && isMenuOpen)
+  $: scrollLock.set(!isDesktopWidth && isMenuOpen)
 
   let headerObserver: IntersectionObserver
   let isHeaderVisible: boolean = true
