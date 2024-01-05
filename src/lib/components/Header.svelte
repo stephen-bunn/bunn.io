@@ -37,7 +37,9 @@
     headerObserver.observe(headerEl)
   })
 
-  onDestroy(() => headerObserver.disconnect())
+  onDestroy(() => {
+    if (headerObserver) headerObserver.disconnect()
+  })
 
   const toggleMenuOpen = () => (isMenuOpen = isDesktopWidth ? true : !isMenuOpen)
   const handleKeyUp = (event: KeyboardEvent) => {
