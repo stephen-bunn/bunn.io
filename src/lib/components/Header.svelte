@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onDestroy, onMount } from "svelte"
+
   import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
   import NavigationDrawer from "$lib/components/NavigationDrawer.svelte"
@@ -16,6 +18,26 @@
   $: if (globalThis.document)
     document.getElementsByTagName("body")[0].style.overflowY =
       !isDesktopWidth && isMenuOpen ? "hidden" : "scroll"
+
+  let headerObserver: IntersectionObserver
+  let isHeaderVisible: boolean = true
+
+  onMount(() => {
+    const headerEl = document.querySelector("header")
+    if (!headerEl) return
+
+    headerObserver = new IntersectionObserver(
+      entries => {
+        if (entries.length < 1) return
+        const [entry] = entries
+        isHeaderVisible = entry.isIntersecting
+      },
+      { threshold: 0 }
+    )
+    headerObserver.observe(headerEl)
+  })
+
+  onDestroy(() => headerObserver.disconnect())
 
   const toggleMenuOpen = () => (isMenuOpen = isDesktopWidth ? true : !isMenuOpen)
   const handleKeyUp = (event: KeyboardEvent) => {
@@ -46,12 +68,13 @@
       transition:fly={{ duration: 200, x: 0 }}
       on:click={toggleMenuOpen}
       on:keyup={handleKeyUp}
+      class:drawer-container-top={!isHeaderVisible}
       tabindex={isDesktopWidth ? -1 : 0}
       role="menu"
     >
-      <div class="drawer">
+      <aside class="drawer">
         <NavigationDrawer />
-      </div>
+      </aside>
     </div>
   {/if}
   <div class="right">
@@ -115,10 +138,11 @@
   }
 
   .drawer-container {
+    transition: all var(--transition-duration-default);
     position: fixed;
     left: 0;
     // y padding of header + initials container height
-    top: calc(var(--space-4x) * 2 + 48px);
+    top: calc((var(--space-4x) * 2) + 48px);
     // 100vh - y padding of header - initials container height - y drawer container padding
     height: calc(100vh - (var(--space-4x) * 2) - 48px - var(--space-8x));
     padding: var(--space-8x) 0 0 var(--space-8x);
@@ -131,6 +155,10 @@
       rgba(245, 245, 245, 0.5) 70%,
       transparent 100%
     );
+
+    &-top {
+      top: 0;
+    }
 
     @include dashed-outline;
     @include lg {
