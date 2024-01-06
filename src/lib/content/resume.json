@@ -5,11 +5,9 @@
     "label": "Software Engineer",
     "picture": "https://gravatar.com/avatar/02651d15ffdc3bb8e7cb4d20b33b7f1c?s=512",
     "email": "hiring@bunn.io",
-    "phone": "252.955.9105",
     "website": "https://bunn.io/",
-    "summary": "Highly driven engineer passionate about simple and sustainable software development. Experience with backend system engineering, web development, and team leadership. Seeking a fulfilling role with a group of dedicated people where our work with modern technology can be impactful.",
+    "summary": "Highly driven engineer, passionate about building easily sustainable solutions. Experienced with system engineering, web development, and team leadership. Seeking a fulfilling role alongside a group of dedicated peers where our work with modern technology seeks to benefit others.",
     "location": {
-      "postalCode": "27707",
       "city": "Durham",
       "countryCode": "US",
       "region": "North Carolina"
@@ -38,7 +36,7 @@
       "position": "Lead Software Engineer",
       "url": "https://www.capitalone.com/",
       "startDate": "2022-12-12",
-      "summary": "Working with the Cloud Productivity Engineering group to better Capital One's goal of operating fully on the cloud.",
+      "summary": "Working to better Capital One's ability to monitor their cloud architecture through the use of custom built solutions and vendor-bought tooling. Operating as the lead engineer for a team focused on adapting infrastructure monitoring technologies to the cloud.",
       "highlights": []
     },
     {
@@ -47,7 +45,7 @@
       "url": "https://grove.co/",
       "startDate": "2021-01-01",
       "endDate": "2022-12-02",
-      "summary": "Acted as the team lead of the Growth and Web engineering teams. Planned and oversaw technical improvements to Grove's web client.",
+      "summary": "Acted as the team lead of the Growth and Web engineering teams. Planned and oversaw the implementation of technical refactors and feature improvements to Grove's web client.",
       "highlights": [
         "Led the design and development of a web component library. This library was engineered to meet accessibility guidelines and be extensible in any Vue-based rendering environment (SPA, SSR, static page generation).",
         "Improved both site performance and SEO by transitioning most all landing pages to auto-generated static pages.",
@@ -62,7 +60,7 @@
       "url": "https://grove.co/",
       "startDate": "2019-04-22",
       "endDate": "2021-01-01",
-      "summary": "Worked on a special-ops engineering team focused on solving complex business requirements and investigating technical issues.",
+      "summary": "Worked on a SWAT engineering team focused on building solutions for complex business requirements and investigating and solving technical issues as they arose.",
       "highlights": [
         "Helped to implement payment method fraud detection. Integrated with several third-party services to handle capturing payment from customers on first-time checkouts.",
         "Constructed CMS content schemas and produced reusable presentational components to allow content managers to construct and publish web pages.",
@@ -124,7 +122,7 @@
       "url": "http://carneyco.com/",
       "startDate": "2011-12-01",
       "endDate": "2013-03-21",
-      "summary": "Managed the upkeep of several simple file servers. Provided customer service to clients. Contributed research for several marketing and political projects, including a statewide homeschool convention and a North Carolina House of Representative candidate's campaign.",
+      "summary": "Managed the upkeep of file servers and provided customer service to clients. Contributed research for several marketing and political projects, including state conventions and political candidate campaigns.",
       "highlights": [],
       "hidden": true
     }
@@ -176,7 +174,7 @@
       "title": "SSTEM Scholarship Recipient",
       "date": "2017-03-20",
       "awarder": "Appalachian State University",
-      "summary": "Awarded the SSTEM scholarship due to great performance in his studies."
+      "summary": "Awarded the SSTEM scholarship due to strong performance in course work and extracurricular research and study groups."
     }
   ],
   "publications": [
@@ -188,18 +186,47 @@
       "summary": "Package management automates the discovery and installation of software that can coexist within an operating system. The methods used by package management can also address other instances where the installation of software needs to be automated. One example of this is the environment produced by third party video game modifications. An adapted application of package management practices can help to solve the difficult problem of finding and installing a set of video game modifications that do not conflict with each other. This greatly benefits the environment by allowing third party contributions to be easily installed which fosters growth in both the developer and user community surrounding the environment. This thesis presents the theory and complexities behind package management and shows how it can be effectively applied to managing video game modifications by presenting examples of software that can extract relevant metadata from video game modifications and discover conflict free installation solutions."
     }
   ],
+  "certificates": [
+    {
+      "issuer": "Amazon Web Services",
+      "name": "AWS Certified Solutions Architect - Associate",
+      "date": "2023-08-30",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    }
+  ],
   "skills": [
     {
       "name": "Web Development",
-      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Angular"]
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Vue",
+        "Nuxt",
+        "Svelte",
+        "React"
+      ]
     },
     {
       "name": "API Development",
-      "keywords": ["REST", "GraphQL", "OpenAPI", "FastAPI", "Django", "Flask"]
+      "keywords": [
+        "REST",
+        "GraphQL",
+        "OpenAPI",
+        "FastAPI",
+        "Django"
+      ]
     },
     {
       "name": "Software Development",
-      "keywords": ["Python", "PostgreSQL", "CouchDB", "Rust", "C", "Java", "Ruby", "Golang", "PHP"]
+      "keywords": [
+        "Python",
+        "Rust",
+        "Java",
+        "PostgreSQL",
+        "MySQL"
+      ]
     }
   ],
   "languages": [

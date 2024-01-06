@@ -19,12 +19,12 @@
 </div>
 <p>
   Occasionally I <Link href="https://weblog.lol/st">write</Link> about things I'm exploring or the products
-  I'm using. These are mostly just opinion pieces that act as notes while I try to figure out what the
-  heck is going on.
+  I'm using. These are just small opinion peices that highlight topics I think are interesting or worth
+  discussing.
 </p>
 <p>
   If you are looking to talk about career opprotunities, please check out my
-  <Link href="/resume">resume</Link> or <Link href="/contact">reach out to me</Link>.
+  <Link href="/resume">resume</Link> or feel free to <Link href="/contact">reach out to me</Link>.
 </p>
 <p><strong>Hope you have a great day!</strong></p>
 

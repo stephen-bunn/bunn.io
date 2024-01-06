@@ -17,7 +17,12 @@
 
 <h1 class="name">{resume.basics.name}</h1>
 <p class="label">{resume.basics.label}</p>
-<p class="summary">{resume.basics.summary}</p>
+<p class="summary">
+  {resume.basics.summary}
+  <strong>
+    Located in {resume.basics.location.city}, {resume.basics.location.region}
+  </strong>
+</p>
 
 {#if resume.work}
   <ResumeSection name="Experience">
@@ -86,6 +91,23 @@
           {/if}
         </span>
         <p>{truncate(publication.summary, 480)}</p>
+      </ResumeItem>
+    {/each}
+  </ResumeSection>
+{/if}
+
+{#if resume.certificates}
+  <ResumeSection name="Certificates">
+    {#each resume.certificates as certificate}
+      <ResumeItem>
+        <span slot="name">
+          <Link href={certificate.url} target="_blank">{certificate.name}</Link>
+        </span>
+        <span slot="detail">
+          {certificate.issuer}
+          <span class="delimiter">&bull;</span>
+          {formatDate(certificate.date, "MMM D YYYY")}
+        </span>
       </ResumeItem>
     {/each}
   </ResumeSection>
