@@ -23,7 +23,7 @@
     }
 
     &:focus-visible {
-      outline: var(--color-current) dashed var(--space-halfx);
+      outline: currentColor dashed var(--space-halfx);
     }
   }
 </style>

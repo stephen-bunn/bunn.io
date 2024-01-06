@@ -79,6 +79,10 @@
       toggleMenuOpen()
       event.preventDefault()
     }
+    if (["Escape"].includes(event.key) && isMenuOpen) {
+      toggleMenuOpen()
+      event.preventDefault()
+    }
   }
 </script>
 
@@ -133,8 +137,16 @@
   @use "$lib/styles/mixins.scss" as *;
 
   header {
+    transition: background-color var(--transition-duration-default);
+    position: sticky;
+    top: 0;
     padding: var(--space-4x);
     display: flex;
+    background-color: var(--color-surface);
+
+    @include lg {
+      background-color: transparent;
+    }
   }
 
   .right {
@@ -182,7 +194,8 @@
     top: calc((var(--space-4x) * 2) + 48px);
     // 100vh - y padding of header - initials container height - y drawer container padding
     height: calc(100vh - (var(--space-4x) * 2) - 48px - var(--space-8x));
-    padding: var(--space-8x) 0 0 var(--space-8x);
+    margin-left: var(--space-8x);
+    padding-top: var(--space-8x);
     width: calc((100% - (var(--space-8x) * 2)));
     background: var(--color-surface);
     background: linear-gradient(
