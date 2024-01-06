@@ -48,7 +48,19 @@
     }
 
     if (htmlEl) {
-      gesture = new TinyGesture(htmlEl, { mouseSupport: true })
+      gesture = new TinyGesture(htmlEl, {
+        threshold: (type, _) =>
+          Math.max(
+            5,
+            Math.floor(
+              0.1 *
+                (type === "x"
+                  ? window.innerWidth || document.body.clientWidth
+                  : window.innerHeight || document.body.clientHeight)
+            )
+          ),
+        velocityThreshold: 5,
+      })
       gesture.on("swiperight", () => (isMenuOpen = true))
       gesture.on("swipeleft", () => (isMenuOpen = false))
     }
