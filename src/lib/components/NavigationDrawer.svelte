@@ -6,6 +6,7 @@
     { text: "Resume", href: "/resume" },
     { text: "Contact", href: "/contact" },
     { text: "Uses", href: "/uses" },
+    { text: "Blog", href: "https://st.weblog.lol/", target: "_blank" },
   ]
 </script>
 
@@ -13,7 +14,7 @@
   <ul>
     {#each navigationItems as item}
       <li>
-        <NavigationItem href={item.href}>
+        <NavigationItem href={item.href} target={item.target}>
           {item.text}
         </NavigationItem>
       </li>
