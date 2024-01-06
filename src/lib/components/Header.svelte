@@ -27,6 +27,7 @@
   let isHeaderVisible: boolean = true
 
   onMount(() => {
+    const htmlEl = document.querySelector("html")
     const bodyEl = document.querySelector("body")
     scrollLock.subscribe((isLocked: boolean) => {
       if (!bodyEl) return
@@ -46,16 +47,10 @@
       headerObserver.observe(headerEl)
     }
 
-    if (bodyEl) {
-      gesture = new TinyGesture(bodyEl, { mouseSupport: true })
-      gesture.on("swiperight", () => {
-        if (gesture.swipedVertical) return
-        isMenuOpen = true
-      })
-      gesture.on("swipeleft", () => {
-        if (gesture.swipedVertical) return
-        isMenuOpen = false
-      })
+    if (htmlEl) {
+      gesture = new TinyGesture(htmlEl, { mouseSupport: true })
+      gesture.on("swiperight", () => (isMenuOpen = true))
+      gesture.on("swipeleft", () => (isMenuOpen = false))
     }
 
     isReady = true
