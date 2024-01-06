@@ -48,11 +48,11 @@
 
     if (bodyEl) {
       gesture = new TinyGesture(bodyEl, { mouseSupport: true })
-      gesture.on("swiperight", event => {
+      gesture.on("swiperight", () => {
         if (gesture.swipedVertical) return
         isMenuOpen = true
       })
-      gesture.on("swipeleft", event => {
+      gesture.on("swipeleft", () => {
         if (gesture.swipedVertical) return
         isMenuOpen = false
       })
