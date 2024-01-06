@@ -1,6 +1,10 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte"
   import { writable } from "svelte/store"
+  import { fly, slide } from "svelte/transition"
+  import { MenuIcon, XIcon } from "lucide-svelte"
+  import TinyGesture from "tinygesture"
+  import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock"
 
   import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
@@ -10,11 +14,9 @@
   import GithubIcon from "$lib/components/icons/GithubIcon.svelte"
   import LinkedinIcon from "$lib/components/icons/LinkedinIcon.svelte"
 
-  import { fly, slide } from "svelte/transition"
-  import { MenuIcon, XIcon } from "lucide-svelte"
-
   const scrollLock = writable(false)
 
+  let gesture: TinyGesture
   let isReady: boolean = false
   let clientWidth: number
   $: isDesktopWidth = clientWidth >= breakpoints.lg
@@ -25,23 +27,37 @@
   let isHeaderVisible: boolean = true
 
   onMount(() => {
+    const bodyEl = document.querySelector("body")
     scrollLock.subscribe((isLocked: boolean) => {
-      const bodyEl = document.querySelector("body")
-      if (bodyEl) bodyEl.style.overflowY = isLocked ? "hidden" : "scroll"
+      if (!bodyEl) return
+      isLocked ? disableBodyScroll(bodyEl) : enableBodyScroll(bodyEl)
     })
 
     const headerEl = document.querySelector("header")
-    if (!headerEl) return
+    if (headerEl) {
+      headerObserver = new IntersectionObserver(
+        entries => {
+          if (entries.length < 1) return
+          const [entry] = entries
+          isHeaderVisible = entry.isIntersecting
+        },
+        { threshold: 0 }
+      )
+      headerObserver.observe(headerEl)
+    }
 
-    headerObserver = new IntersectionObserver(
-      entries => {
-        if (entries.length < 1) return
-        const [entry] = entries
-        isHeaderVisible = entry.isIntersecting
-      },
-      { threshold: 0 }
-    )
-    headerObserver.observe(headerEl)
+    if (bodyEl) {
+      gesture = new TinyGesture(bodyEl, { mouseSupport: true })
+      gesture.on("swiperight", event => {
+        if (gesture.swipedVertical) return
+        isMenuOpen = true
+      })
+      gesture.on("swipeleft", event => {
+        if (gesture.swipedVertical) return
+        isMenuOpen = false
+      })
+    }
+
     isReady = true
   })
 
@@ -84,7 +100,7 @@
       transition:fly={{ duration: 200, x: 0 }}
       on:click={toggleMenuOpen}
       on:keyup={handleKeyUp}
-      class:drawer-container-top={!isHeaderVisible}
+      class:drawer-container-full={!isHeaderVisible}
       tabindex={isDesktopWidth ? -1 : 0}
       role="menu"
     >
@@ -170,8 +186,9 @@
       transparent 100%
     );
 
-    &-top {
+    &-full {
       top: 0;
+      height: 100vh;
     }
 
     @include dashed-outline;

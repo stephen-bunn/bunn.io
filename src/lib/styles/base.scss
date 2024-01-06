@@ -11,14 +11,6 @@
 html {
   background-color: var(--color-surface);
   color: var(--color-text);
-
-  // Hide native scrollbars
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 body {
