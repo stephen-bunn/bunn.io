@@ -13,7 +13,9 @@
   import { fly, slide } from "svelte/transition"
   import { MenuIcon, XIcon } from "lucide-svelte"
 
-  let scrollLock = writable(false)
+  const scrollLock = writable(false)
+
+  let isReady: boolean = false
   let clientWidth: number
   $: isDesktopWidth = clientWidth >= breakpoints.lg
   $: isMenuOpen = isDesktopWidth
@@ -40,6 +42,7 @@
       { threshold: 0 }
     )
     headerObserver.observe(headerEl)
+    isReady = true
   })
 
   onDestroy(() => {
@@ -57,7 +60,7 @@
 </script>
 
 <header bind:clientWidth>
-  {#if !isDesktopWidth}
+  {#if isReady && !isDesktopWidth}
     <button
       class="menu-toggle"
       on:click={toggleMenuOpen}
@@ -120,6 +123,7 @@
 
   .menu-toggle {
     height: 100%;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     justify-items: center;
