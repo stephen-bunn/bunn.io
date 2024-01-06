@@ -207,6 +207,7 @@
       var(--color-surface) 30%,
       transparent 100%
     );
+    pointer-events: auto;
 
     &-full {
       top: 0;
