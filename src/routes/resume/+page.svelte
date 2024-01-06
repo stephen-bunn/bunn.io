@@ -167,7 +167,7 @@
     &-keyword {
       display: inline-block;
       background-color: var(--color-text);
-      color: var(--color-white);
+      color: var(--color-surface);
       padding: var(--space-halfx) var(--space-2x);
       border-radius: var(--radius-hard);
       margin-left: var(--space-2x);

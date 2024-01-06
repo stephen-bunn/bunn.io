@@ -189,7 +189,6 @@
       90deg,
       var(--color-surface) 0%,
       var(--color-surface) 30%,
-      rgba(245, 245, 245, 0.5) 70%,
       transparent 100%
     );
 
