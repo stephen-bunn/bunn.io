@@ -146,6 +146,7 @@
 
     @include lg {
       background-color: transparent;
+      pointer-events: none;
     }
   }
 
@@ -154,6 +155,7 @@
     gap: var(--space-4x);
     margin-left: auto;
     align-items: center;
+    pointer-events: auto;
   }
 
   .menu-toggle {
@@ -181,6 +183,7 @@
       height: 100%;
       width: 100%;
       color: var(--color-text);
+      pointer-events: auto;
 
       @include dashed-outline;
     }
