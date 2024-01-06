@@ -111,7 +111,7 @@
     <NavigationItem href="https://linkedin.com/in/stephen-bunn" target="_blank">
       <LinkedinIcon />
     </NavigationItem>
-    <NavigationItem href="https://social.lol/@st" target="_blank">
+    <NavigationItem href="https://social.lol/@st" target="_blank" rel="me">
       <MastodonIcon />
     </NavigationItem>
   </div>
