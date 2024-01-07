@@ -4,7 +4,9 @@
 
 <div>
   <h1>Error {$page.status}</h1>
-  <p>{$page.error?.message}</p>
+  {#if $page.error?.message}
+    <p>{$page.error.message}</p>
+  {/if}
 </div>
 
 <style lang="scss">

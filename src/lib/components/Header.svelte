@@ -137,7 +137,7 @@
   @use "$lib/styles/mixins.scss" as *;
 
   header {
-    transition: background-color var(--transition-duration-default);
+    transition: background-color var(--duration-default);
     position: sticky;
     top: 0;
     padding: var(--space-4x);
@@ -190,7 +190,7 @@
   }
 
   .drawer-container {
-    transition: all var(--transition-duration-default);
+    transition: all var(--duration-default);
     position: fixed;
     left: 0;
     // y padding of header + initials container height

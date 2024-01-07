@@ -1,5 +1,4 @@
 <script>
-  import "$lib/styles/content.scss"
   import Link from "$lib/components/Link.svelte"
 </script>
 
@@ -7,7 +6,7 @@
   <title>Stephen Bunn &ndash; About</title>
 </svelte:head>
 
-<div class="container">
+<div class="profile-container">
   <img src="/img/profile.png" alt="Stephen Bunn Portrait" />
   <div>
     <h1>Stephen Bunn</h1>
@@ -31,7 +30,7 @@
 <style lang="scss">
   @use "$lib/styles/mixins.scss" as *;
 
-  .container {
+  .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -5,11 +5,13 @@
 <a {href} {...$$restProps}><slot /></a>
 
 <style lang="scss">
+  @use "$lib/styles/mixins.scss" as *;
+
   a {
+    @include dashed-outline;
+
+    transition: color var(--duration-default);
     text-decoration: none;
-    transition: color var(--transition-duration-default);
-    outline: none;
-    outline-offset: var(--space-1x);
 
     &:link,
     &:visited {
@@ -19,11 +21,7 @@
     &:hover,
     &:active,
     &:focus-visible {
-      color: var(--color-link--active);
-    }
-
-    &:focus-visible {
-      outline: currentColor dashed var(--space-halfx);
+      color: var(--color-link-active);
     }
   }
 </style>

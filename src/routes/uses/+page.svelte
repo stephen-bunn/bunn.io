@@ -15,9 +15,9 @@
 </p>
 
 {#each uses as category}
-  <div class="uses-container">
+  <div>
     <h2>{category.title}</h2>
-    <ul class="uses-list">
+    <ul>
       {#each category.items as item}
         <li>
           {#if typeof item === "string"}
@@ -34,23 +34,18 @@
   </div>
 {/each}
 
-<style lang="scss">
+<style>
+  div {
+    margin-bottom: var(--space-8x);
+  }
+
   p {
     font-size: var(--font-300);
     margin-bottom: var(--space-4x);
   }
 
-  .uses {
-    &-container {
-      margin-bottom: var(--space-8x);
-    }
-
-    &-list {
-      margin-left: 0;
-    }
-  }
-
-  .uses-list {
+  ul {
     list-style: none;
+    margin-left: 0;
   }
 </style>

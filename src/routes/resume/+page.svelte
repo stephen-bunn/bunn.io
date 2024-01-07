@@ -15,12 +15,12 @@
   <title>Stephen Bunn &ndash; Resume</title>
 </svelte:head>
 
-<h1 class="name">{resume.basics.name}</h1>
+<h1>{resume.basics.name}</h1>
 <p class="label">{resume.basics.label}</p>
 <p class="summary">
   {resume.basics.summary}
   <strong>
-    Located in {resume.basics.location.city}, {resume.basics.location.region}
+    Located in {resume.basics.location.city}, {resume.basics.location.region}.
   </strong>
 </p>
 
@@ -143,7 +143,7 @@
 {/if}
 
 <style lang="scss">
-  .name {
+  h1 {
     margin-bottom: 0;
     line-height: var(--line-height-tight);
   }
@@ -166,11 +166,11 @@
 
     &-keyword {
       display: inline-block;
+      padding: var(--space-halfx) var(--space-2x);
+      margin-left: var(--space-2x);
+      border-radius: var(--radius-hard);
       background-color: var(--color-text);
       color: var(--color-surface);
-      padding: var(--space-halfx) var(--space-2x);
-      border-radius: var(--radius-hard);
-      margin-left: var(--space-2x);
     }
   }
 </style>

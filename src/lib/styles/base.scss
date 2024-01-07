@@ -1,7 +1,10 @@
 @use "colors.scss";
-@import url("fonts.css");
-@import url("space.css");
-@import url("animate.css");
+@use "fonts.scss";
+@use "space.scss";
+
+:root {
+  --duration-default: 0.2s;
+}
 
 * {
   margin: 0;
@@ -14,7 +17,54 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: var(--font-sans);
   font-size: var(--font-100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: var(--font-700);
+  margin-bottom: var(--space-4x);
+}
+
+h2 {
+  font-size: var(--font-500);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-300);
+}
+
+hr {
+  border: 1px solid var(--color-text-disabled);
+  margin: var(--space-4x) 0;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: var(--font-100);
+  line-height: var(--line-height-default);
+  margin-bottom: var(--space-2x);
+}
+
+ul {
+  margin-left: var(--space-4x);
+  list-style: disc;
+}
+
+li {
+  margin-bottom: var(--space-2x);
+  line-height: var(--line-height-tight);
 }

@@ -3,8 +3,8 @@
   export let dense: boolean = false
 </script>
 
-<div class="resume-item" class:resume-item-dense={dense}>
-  <h3 class="name">
+<div class:dense>
+  <h3>
     <slot name="name">
       {#if name}{name}{/if}
     </slot>
@@ -12,29 +12,23 @@
   <p class="detail">
     <slot name="detail" />
   </p>
-  <p class="content">
-    <slot />
-  </p>
+  <p><slot /></p>
 </div>
 
 <style lang="scss">
-  .resume-item {
+  div {
     margin-bottom: var(--space-8x);
 
-    &-dense {
+    &.dense {
       margin-bottom: var(--space-4x);
     }
   }
 
-  .name {
+  h3 {
     font-weight: normal;
   }
 
   .detail {
     font-size: var(--font-050);
-  }
-
-  .content {
-    font-size: var(--font-100);
   }
 </style>
