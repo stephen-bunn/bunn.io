@@ -14,7 +14,7 @@
   <ul>
     {#each navigationItems as item}
       <li>
-        <NavigationItem href={item.href} target={item.target}>
+        <NavigationItem href={item.href}>
           {item.text}
         </NavigationItem>
       </li>
