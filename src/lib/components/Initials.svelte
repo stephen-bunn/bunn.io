@@ -1,9 +1,4 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 732 358"
-  preserveAspectRatio="xMidYMid meet"
-  fill="none"
->
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 732 358">
   <title>Stephen Bunn</title>
   <path
     fill="currentColor"
