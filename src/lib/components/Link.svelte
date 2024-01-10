@@ -1,8 +1,9 @@
 <script lang="ts">
   export let href: string
+  export let small: boolean = false
 </script>
 
-<a {href} {...$$restProps}><slot /></a>
+<a class:small {href} {...$$restProps}><slot /></a>
 
 <style lang="scss">
   @use "$lib/styles/mixins.scss" as *;
@@ -11,7 +12,8 @@
     @include dashed-outline;
 
     transition: color var(--duration-default);
-    text-decoration: none;
+    text-decoration: underline dotted currentColor 2px;
+    text-underline-offset: 3px;
 
     &:link,
     &:visited {
@@ -22,6 +24,12 @@
     &:active,
     &:focus-visible {
       color: var(--color-link-active);
+    }
+
+    &.small {
+      font-size: var(--font-050);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
     }
   }
 </style>

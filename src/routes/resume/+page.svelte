@@ -31,7 +31,7 @@
         <span slot="detail">
           {#if work.name}
             {#if work.url}
-              <Link href={work.url} target="_blank">{work.name}</Link>
+              <Link small href={work.url} target="_blank">{work.name}</Link>
             {:else}
               {work.name}
             {/if}
