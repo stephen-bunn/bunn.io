@@ -28,7 +28,7 @@
   <ResumeSection name="Experience">
     {#each resume.work as work}
       <ResumeItem name={work.position}>
-        <span slot="detail">
+        <span class="work-detail" slot="detail">
           {#if work.name}
             {#if work.url}
               <Link small href={work.url} target="_blank">{work.name}</Link>
@@ -158,6 +158,12 @@
 
   .delimiter {
     margin: 0 var(--space-halfx);
+  }
+
+  .work {
+    &-detail {
+      color: var(--color-text-disabled);
+    }
   }
 
   .skills {
