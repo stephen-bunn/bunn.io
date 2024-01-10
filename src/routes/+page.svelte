@@ -17,9 +17,9 @@
   </div>
 </div>
 <p>
-  Occasionally I <Link href="https://st.weblog.lol/" target="_blank">write</Link> about things I'm exploring
-  or the products I'm using. These are just small opinion peices that highlight topics I think are interesting
-  or worth discussing.
+  Occasionally I <Link href="https://st.weblog.lol/">write</Link> about things I'm exploring or the products
+  I'm using. These are just small opinion peices that highlight topics I think are interesting or worth
+  discussing.
 </p>
 <p>
   If you are looking to talk about career opprotunities, please check out my
