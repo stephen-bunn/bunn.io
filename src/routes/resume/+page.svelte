@@ -28,7 +28,7 @@
   <ResumeSection name="Experience">
     {#each resume.work as work}
       <ResumeItem name={work.position}>
-        <span class="work-detail" slot="detail">
+        <span class="dim" slot="detail">
           {#if work.name}
             {#if work.url}
               <Link small href={work.url} target="_blank">{work.name}</Link>
@@ -63,12 +63,14 @@
         <span slot="detail">
           {education.studyType} of {education.area}
           {#if education.startDate}
-            <span class="delimiter">&bull;</span>
-            {formatDate(education.startDate, "YYYY")}
-            {#if education.endDate}
-              &dash;
-              {education.endDate ? formatDate(education.endDate, "YYYY") : "Current"}
-            {/if}
+            <span class="dim">
+              <span class="delimiter">&bull;</span>
+              {formatDate(education.startDate, "YYYY")}
+              {#if education.endDate}
+                &dash;
+                {education.endDate ? formatDate(education.endDate, "YYYY") : "Current"}
+              {/if}
+            </span>
           {/if}
         </span>
       </ResumeItem>
@@ -86,8 +88,10 @@
         <span slot="detail">
           {publication.publisher}
           {#if publication.releaseDate}
-            <span class="delimiter">&bull;</span>
-            {formatDate(publication.releaseDate, "MMM D YYYY")}
+            <span class="dim">
+              <span class="delimiter">&bull;</span>
+              {formatDate(publication.releaseDate, "MMM D YYYY")}
+            </span>
           {/if}
         </span>
         <p>{truncate(publication.summary, 480)}</p>
@@ -105,8 +109,10 @@
         </span>
         <span slot="detail">
           {certificate.issuer}
-          <span class="delimiter">&bull;</span>
-          {formatDate(certificate.date, "MMM D YYYY")}
+          <span class="dim">
+            <span class="delimiter">&bull;</span>
+            {formatDate(certificate.date, "MMM D YYYY")}
+          </span>
         </span>
       </ResumeItem>
     {/each}
@@ -119,8 +125,10 @@
       <ResumeItem name={award.title}>
         <span slot="detail">
           {award.awarder}
-          <span class="delimiter">&bull;</span>
-          {formatDate(award.date, "MMM D YYYY")}
+          <span class="dim">
+            <span class="delimiter">&bull;</span>
+            {formatDate(award.date, "MMM D YYYY")}
+          </span>
         </span>
         <p>{award.summary}</p>
       </ResumeItem>
@@ -160,10 +168,8 @@
     margin: 0 var(--space-halfx);
   }
 
-  .work {
-    &-detail {
-      color: var(--color-text-disabled);
-    }
+  .dim {
+    color: var(--color-text-disabled);
   }
 
   .skills {
