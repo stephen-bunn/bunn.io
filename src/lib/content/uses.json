@@ -256,6 +256,11 @@
         "text": "just",
         "href": "https://github.com/casey/just",
         "description": "for executing project commands (replaces make)"
+      },
+      {
+        "text": "atuin",
+        "href": "https://github.com/atuinsh/atuin",
+        "description": "for magical shell history"
       }
     ]
   },
