@@ -1,6 +1,7 @@
 <script lang="ts">
   import "$lib/styles/base.scss"
   import Header from "$lib/components/Header.svelte"
+  import Footer from "$lib/components/Footer.svelte"
 </script>
 
 <svelte:head>
@@ -11,6 +12,7 @@
 <main>
   <slot />
 </main>
+<Footer />
 
 <style lang="scss">
   @use "$lib/styles/mixins.scss" as *;

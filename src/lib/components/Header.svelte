@@ -62,7 +62,7 @@
         velocityThreshold: 5,
       })
       gesture.on("swiperight", () => (isMenuOpen = true))
-      gesture.on("swipeleft", () => (isMenuOpen = false))
+      gesture.on("swipeleft", () => (isMenuOpen = isDesktopWidth ? true : false))
     }
 
     isReady = true
