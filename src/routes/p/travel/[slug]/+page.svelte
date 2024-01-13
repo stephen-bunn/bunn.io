@@ -6,6 +6,10 @@
   const { post, Content } = data
 </script>
 
+<svelte:head>
+  <title>{post.title}</title>
+</svelte:head>
+
 <article>
   <span class="detail"
     >Published in <Link small href={post.plot.href}>{post.plot.name}</Link>

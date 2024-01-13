@@ -1,6 +1,8 @@
 <script lang="ts">
   import PostItem from "$lib/components/PostItem.svelte"
+
   export let data
+  const { posts } = data
 </script>
 
 <svelte:head>
@@ -10,8 +12,8 @@
 <h1>Travel</h1>
 <p>Sometimes I take trips to recharge my will to live.</p>
 <div class="posts">
-  {#if data.posts.length > 0}
-    {#each data.posts as post}
+  {#if posts.length > 0}
+    {#each posts as post}
       <PostItem {post} />
     {/each}
   {:else}
