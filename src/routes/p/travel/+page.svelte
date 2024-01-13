@@ -15,7 +15,7 @@
       <PostItem {post} />
     {/each}
   {:else}
-    <p class="missing">Uh oh, nothing here yet...</p>
+    <p class="missing">Nothing here quite yet...</p>
   {/if}
 </div>
 

@@ -1,9 +1,6 @@
 <script lang="ts">
   import Link from "$lib/components/Link.svelte"
-
-  const plots = [
-    { slug: "travel", title: "Travel", text: "Sometimes I travel and find things to write about" },
-  ]
+  import plots from "$lib/content/plots.json"
 </script>
 
 <svelte:head>
@@ -25,7 +22,7 @@
 
 {#each plots as plot}
   <div class="plot">
-    <h2><Link href={`/p/${plot.slug}`}>{plot.title}</Link></h2>
+    <h2><Link href={plot.href}>{plot.title}</Link></h2>
     <p>{plot.text}</p>
   </div>
 {/each}

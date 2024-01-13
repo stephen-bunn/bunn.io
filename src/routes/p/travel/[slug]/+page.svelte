@@ -3,14 +3,15 @@
   import Link from "$lib/components/Link.svelte"
 
   export let data
-  const { metadata, Content } = data
+  const { post, Content } = data
 </script>
 
 <article>
   <span class="detail"
-    >Published in <Link small href="/p/travel">Travel</Link>
-    on {formatDate(metadata.published, "MMM DD YYYY")}.</span
+    >Published in <Link small href={post.plot.href}>{post.plot.name}</Link>
+    on {formatDate(post.published, "MMM DD YYYY")}.</span
   >
+  <h1>{post.title}</h1>
   <Content />
 </article>
 

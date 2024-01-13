@@ -8,12 +8,10 @@
 
 <div class="container">
   <div class="date">
-    {#if post.metadata?.published}
-      <span class="published">{formatDate(post.metadata.published, "MMM D YYYY")}</span>
-    {/if}
+    <span class="published">{formatDate(post.published, "MMM D YYYY")}</span>
   </div>
   <div class="content">
-    <h2><Link href={post.slug}>{post.metadata?.title}</Link></h2>
+    <h2><Link href={post.href}>{post.title}</Link></h2>
     {#if post.metadata?.description}
       <p class="description">{post.metadata.description}</p>
     {/if}
