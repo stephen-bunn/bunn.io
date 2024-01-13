@@ -7,6 +7,7 @@
     { text: "Contact", href: "/contact" },
     { text: "Uses", href: "/uses" },
     { text: "Plots", href: "/p" },
+    { text: "Colophon", href: "/colophon" },
   ]
 </script>
 
