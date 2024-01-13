@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn - Travel</title>
+  <title>Stephen &ndash; Travel</title>
 </svelte:head>
 
 <h1>Travel</h1>

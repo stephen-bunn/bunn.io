@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn &ndash; Contact</title>
+  <title>Stephen &ndash; Contact</title>
 </svelte:head>
 
 <h1>Contact</h1>

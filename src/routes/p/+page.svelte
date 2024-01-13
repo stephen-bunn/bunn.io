@@ -4,14 +4,14 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn - Plots</title>
+  <title>Stephen &ndash; Plots</title>
 </svelte:head>
 
 <div class="summary">
   <h1>Plots</h1>
   <p>
     These <em>plots</em> are generic topics within my <Link
-      href="https://blog.erlend.sh/communal-bonfires"
+      href="https://maggieappleton.com/garden-history"
       target="_blank">digital garden</Link
     >. I sneakily stole this terminology and organization <Link
       href="https://www.fromjason.xyz"

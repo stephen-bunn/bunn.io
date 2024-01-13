@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn &ndash; Uses</title>
+  <title>Stephen &ndash; Uses</title>
 </svelte:head>
 
 <h1>Uses</h1>

@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn</title>
+  <title>Stephen</title>
 </svelte:head>
 
 <Header />

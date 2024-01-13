@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen Bunn &ndash; Resume</title>
+  <title>Stephen &ndash; Resume</title>
 </svelte:head>
 
 <h1>{resume.basics.name}</h1>

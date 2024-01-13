@@ -7,15 +7,19 @@
 </script>
 
 <article>
+  <h1>{post.title}</h1>
   <span class="detail"
     >Published in <Link small href={post.plot.href}>{post.plot.name}</Link>
     on {formatDate(post.published, "MMM DD YYYY")}.</span
   >
-  <h1>{post.title}</h1>
   <slot />
 </article>
 
 <style lang="scss">
+  h1 {
+    line-height: var(--line-height-tight);
+  }
+
   .detail {
     font-size: var(--font-050);
     color: var(--color-text-disabled);
