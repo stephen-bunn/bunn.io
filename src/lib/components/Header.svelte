@@ -49,7 +49,7 @@
 
     if (htmlEl) {
       gesture = new TinyGesture(htmlEl, {
-        threshold: (type, _) =>
+        threshold: type =>
           Math.max(
             5,
             Math.floor(

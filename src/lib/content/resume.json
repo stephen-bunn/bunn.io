@@ -197,36 +197,15 @@
   "skills": [
     {
       "name": "Web Development",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "Vue",
-        "Nuxt",
-        "Svelte",
-        "React"
-      ]
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "Nuxt", "Svelte", "React"]
     },
     {
       "name": "API Development",
-      "keywords": [
-        "REST",
-        "GraphQL",
-        "OpenAPI",
-        "FastAPI",
-        "Django"
-      ]
+      "keywords": ["REST", "GraphQL", "OpenAPI", "FastAPI", "Django"]
     },
     {
       "name": "Software Development",
-      "keywords": [
-        "Python",
-        "Rust",
-        "Java",
-        "PostgreSQL",
-        "MySQL"
-      ]
+      "keywords": ["Python", "Rust", "Java", "PostgreSQL", "MySQL"]
     }
   ],
   "languages": [
