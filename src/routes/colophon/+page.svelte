@@ -49,7 +49,7 @@
   This site was last built on
   <strong>{formatDate(new Date(), "MMM DD YYYY")}</strong>
   {#if data.github}
-    via Github Action <Link href={data.github.actionUrl} target="_blank">
+    via Github Action <Link small href={data.github.actionUrl} target="_blank">
       {data.github.actionId}
     </Link>.
   {:else}
@@ -57,6 +57,7 @@
   {/if}
   <br />
   Source code is viewable on GitHub at <Link
+    small
     href="https://github.com/stephen-bunn/bunn.io"
     target="_blank">stephen-bunn/bunn.io</Link
   >.
