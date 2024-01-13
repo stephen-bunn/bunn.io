@@ -19,6 +19,8 @@
 </div>
 
 <style lang="scss">
+  @use "$lib/styles/mixins" as *;
+
   h2 {
     font-size: var(--font-300);
   }
@@ -48,5 +50,11 @@
 
   .description {
     color: var(--color-text-disabled);
+    line-height: var(--line-height-tight);
+    font-size: var(--font-050);
+
+    @include md {
+      font-size: var(--font-100);
+    }
   }
 </style>

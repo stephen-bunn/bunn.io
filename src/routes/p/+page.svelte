@@ -46,6 +46,7 @@
     p {
       font-size: var(--font-100);
       color: var(--color-text-disabled);
+      line-height: var(--line-height-tight);
     }
   }
 </style>

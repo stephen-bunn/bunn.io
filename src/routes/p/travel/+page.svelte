@@ -10,7 +10,7 @@
 </svelte:head>
 
 <h1>Travel</h1>
-<p>Sometimes I take trips to recharge my will to live.</p>
+<p>I take trips to escape technology. Unfortunately, it hasn't stuck.</p>
 <div class="posts">
   {#if posts.length > 0}
     {#each posts as post}

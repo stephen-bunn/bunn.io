@@ -1,6 +1,8 @@
 ---
 title: Iceland Photography
 published: 2024-01-12
+description:
+  We ate tebirkis and saw a bunch of sheep.
 ---
 
 I went to Iceland once.

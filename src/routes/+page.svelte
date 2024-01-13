@@ -50,6 +50,7 @@
 
   h1 {
     text-align: center;
+    line-height: var(--line-height-tight);
 
     @include lg {
       text-align: left;
