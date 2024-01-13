@@ -10,16 +10,18 @@
   <title>Stephen &ndash; Colophon</title>
 </svelte:head>
 
-<h1>Colophon</h1>
-<p>
-  This <Link href="https://en.wikipedia.org/wiki/Colophon_(publishing)" target="_blank">
-    <em>colophon</em>
-  </Link> describes how I created this site, the technologies used, and who helped or inspired me.
-</p>
-<p>
-  I had previously just used a single blog post to describe this, but I prefer the approach of
-  keeping a top-level route available for easy reference.
-</p>
+<div>
+  <h1>Colophon</h1>
+  <p>
+    This <Link href="https://en.wikipedia.org/wiki/Colophon_(publishing)" target="_blank">
+      <em>colophon</em>
+    </Link> describes how I created this site, the technologies used, and who helped or inspired me.
+  </p>
+  <p>
+    I had previously just used a single blog post to describe this, but I prefer the approach of
+    keeping a top-level route available for easy reference.
+  </p>
+</div>
 
 <div class="section">
   <h2>Resources</h2>
@@ -55,7 +57,7 @@
   {:else}
     <em>in development</em>.
   {/if}
-  <br />
+  <br class="detail-break" />
   Source code is viewable on GitHub at <Link
     small
     href="https://github.com/stephen-bunn/bunn.io"
@@ -83,5 +85,13 @@
     margin-top: var(--space-8x);
     font-size: var(--font-050);
     color: var(--color-text-disabled);
+
+    &-break {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
   }
 </style>
