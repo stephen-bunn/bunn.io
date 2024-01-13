@@ -2,15 +2,18 @@
   import Link from "$lib/components/Link.svelte"
 
   const plots = [
-    { slug: "notes", title: "Notes", text: "I write about stuff." },
     { slug: "travel", title: "Travel", text: "Sometimes I travel and find things to write about" },
   ]
 </script>
 
+<svelte:head>
+  <title>Stephen Bunn - Plots</title>
+</svelte:head>
+
 <div class="summary">
   <h1>Plots</h1>
   <p>
-    These <em>plots</em> are the general topics within my <Link
+    These <em>plots</em> are generic topics within my <Link
       href="https://blog.erlend.sh/communal-bonfires"
       target="_blank">digital garden</Link
     >. I sneakily stole this terminology and organization <Link
@@ -29,7 +32,7 @@
 
 <style lang="scss">
   .summary {
-    margin-bottom: var(--space-10x);
+    margin-bottom: var(--space-8x);
 
     p {
       font-size: var(--font-300);
@@ -37,6 +40,8 @@
   }
 
   .plot {
+    margin-top: var(--space-4x);
+
     h2 {
       font-size: var(--font-300);
     }

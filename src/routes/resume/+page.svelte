@@ -1,14 +1,9 @@
 <script lang="ts">
-  import dayjs from "dayjs"
-
+  import { formatDate, truncate } from "$lib/utils/format"
   import resume from "$lib/content/resume.json"
   import Link from "$lib/components/Link.svelte"
   import ResumeSection from "$lib/components/ResumeSection.svelte"
   import ResumeItem from "$lib/components/ResumeItem.svelte"
-
-  export const formatDate = (date: string, format: string) => dayjs(date).format(format)
-  export const truncate = (value: string, length: number, end: string = "...") =>
-    value.length < length ? value : value.substring(0, length) + end
 </script>
 
 <svelte:head>

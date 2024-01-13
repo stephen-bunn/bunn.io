@@ -11,6 +11,7 @@
   a {
     @include dashed-outline;
 
+    color: currentColor;
     transition: color var(--duration-default);
     text-decoration: underline dotted currentColor 2px;
     text-underline-offset: 3px;

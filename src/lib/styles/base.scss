@@ -2,6 +2,8 @@
 @use "fonts.scss";
 @use "space.scss";
 
+@use "code.css";
+
 :root {
   --duration-default: 0.2s;
 }
@@ -68,4 +70,14 @@ ul {
 li {
   margin-bottom: var(--space-2x);
   line-height: var(--line-height-tight);
+}
+
+img {
+  width: 100%;
+  margin: var(--space-4x) 0;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
 }

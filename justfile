@@ -1,6 +1,10 @@
 _default: dev
 
 # Run the development application
+serve:
+  npm run dev
+
+# Run and open the development application
 dev:
   npm run dev -- --open
 

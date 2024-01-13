@@ -6,7 +6,7 @@
     { text: "Resume", href: "/resume" },
     { text: "Contact", href: "/contact" },
     { text: "Uses", href: "/uses" },
-    { text: "Blog", href: "https://st.weblog.lol/" },
+    { text: "Plots", href: "/p" },
   ]
 </script>
 
