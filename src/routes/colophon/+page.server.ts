@@ -5,6 +5,7 @@ import { CI, GITHUB_SERVER_URL, GITHUB_REPOSITORY, GITHUB_RUN_ID } from "$env/st
 export const load = async () => ({
   isProduction: NODE_ENV === "production",
   ci: Boolean(CI || false),
+  currentDate: new Date(),
   github: GITHUB_SERVER_URL
     ? {
         actionId: String(GITHUB_RUN_ID),

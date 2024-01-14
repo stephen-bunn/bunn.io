@@ -49,7 +49,7 @@
 
 <div class="detail">
   This site was last built on
-  <strong>{formatDate(new Date(), "MMM DD YYYY")}</strong>
+  <strong>{formatDate(data.currentDate, "MMM DD YYYY")}</strong>
   {#if data.github}
     via Github Action <Link small href={data.github.actionUrl} target="_blank">
       {data.github.actionId}
