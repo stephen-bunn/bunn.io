@@ -13,12 +13,14 @@ format:
   npm run format
   npm run lint
 
+# Check the current source
+check:
+  npm run check
+
 # Build the production application
-build:
-  @just format
+build: format check
   npm run build
 
 # Build and preview the production application
-preview:
-  @just build
+preview: build
   npm run preview -- --open

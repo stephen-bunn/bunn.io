@@ -29,8 +29,7 @@ export function buildPost(filepath: string, data: unknown): Post | undefined {
 
 /** Fetches all posts for the travel plot. */
 export default async function fetchPosts(): Promise<Post[]> {
-  return await transformImportedFiles<Post>(
-    import.meta.glob("/src/routes/p/travel/*.svx"),
-    buildPost
-  )
+  return (
+    await transformImportedFiles<Post>(import.meta.glob("/src/routes/p/travel/*.svx"), buildPost)
+  ).sort((a, b) => a.published.getTime() - b.published.getTime())
 }
