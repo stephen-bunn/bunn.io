@@ -126,6 +126,11 @@
         "text": "Raindrop",
         "href": "https://raindrop.io/",
         "description": "for cross-browser bookmarks"
+      },
+      {
+        "text": "YNAB",
+        "href": "https://ynab.com/",
+        "description": "for basic monthly finance management"
       }
     ]
   },
