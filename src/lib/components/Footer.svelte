@@ -15,6 +15,7 @@
     margin-right: var(--space-3x);
     font-family: var(--font-serif);
     font-size: var(--font-050);
+    font-weight: bold;
     color: var(--color-text-disabled);
   }
 </style>
