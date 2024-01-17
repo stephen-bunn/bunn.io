@@ -73,10 +73,15 @@ li {
 
 img {
   width: 100%;
-  margin: var(--space-4x) 0;
 }
 
 code,
 pre {
   font-family: var(--font-mono);
+}
+
+blockquote {
+  color: var(--color-text-disabled);
+  padding-left: var(--space-4x);
+  border-left: 4px solid var(--color-text-disabled);
 }

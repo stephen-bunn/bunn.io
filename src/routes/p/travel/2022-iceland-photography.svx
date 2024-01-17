@@ -1,8 +1,17 @@
 ---
 title: Iceland Photography
 published: 2024-01-12
-description:
-  We ate tebirkis and saw a bunch of sheep.
+description: We ate tebirkis and saw a cat.
 ---
 
-I went to Iceland once.
+In 2022, I took a trip to Iceland with some friends.
+Our primary goals were to see some beautiful landscapes and take some pretty pictures.
+
+## Day 1
+
+The first day we spent in Reykjavík.
+> The cat in question.
+
+![A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík](https://cdn.some.pics/st/65a7c193b0d2f.jpg)
+
+We also ate some tebirkis (my new favorite pastry).
