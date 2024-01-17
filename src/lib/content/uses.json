@@ -143,9 +143,14 @@
         "description": "for writing software"
       },
       {
+        "text": "JetBrains Mono",
+        "href": "https://www.jetbrains.com/lp/mono/",
+        "description": "for a beautiful monospaced font with ligatures"
+      },
+      {
         "text": "Fira Code",
         "href": "https://github.com/tonsky/FiraCode",
-        "description": "for a beautiful monospaced font with ligatures"
+        "description": "for another amazing monospaced font with ligatures"
       },
       {
         "text": "Catppuccin",
