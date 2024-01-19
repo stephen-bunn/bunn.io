@@ -73,6 +73,9 @@ li {
 
 img {
   width: 100%;
+  color: var(--color-text-disabled);
+  font-size: var(--font-050);
+  font-style: italic;
 }
 
 code,
