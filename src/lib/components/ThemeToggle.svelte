@@ -2,21 +2,34 @@
   import { onMount } from "svelte"
   import { SunIcon, MoonIcon } from "lucide-svelte"
 
+  const storageKey = "theme"
+  const lightClass = "light"
+  const darkClass = "dark"
   let isReady = false
   let isDarkMode = false
+
   onMount(() => {
-    isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    const storedThemeClass = localStorage.getItem(storageKey)
+    isDarkMode = storedThemeClass
+      ? storedThemeClass === darkClass
+      : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+
+    setThemeClass(isDarkMode ? darkClass : lightClass, isDarkMode ? lightClass : darkClass)
     isReady = true
   })
 
-  const handleToggle = () => {
-    if (!isReady) return
-
+  const setThemeClass = (newClass: string, oldClass?: string) => {
     const [htmlEl] = document.getElementsByTagName("html")
     if (!htmlEl) return
 
-    htmlEl.classList.add(isDarkMode ? "light" : "dark")
-    htmlEl.classList.remove(isDarkMode ? "dark" : "light")
+    htmlEl.classList.add(newClass)
+    localStorage.setItem(storageKey, newClass)
+    if (oldClass) htmlEl.classList.remove(oldClass)
+  }
+
+  const handleToggle = () => {
+    if (!isReady) return
+    setThemeClass(isDarkMode ? lightClass : darkClass, isDarkMode ? darkClass : lightClass)
     isDarkMode = !isDarkMode
   }
 </script>
