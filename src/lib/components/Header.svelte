@@ -9,6 +9,7 @@
   import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
   import NavigationDrawer from "$lib/components/NavigationDrawer.svelte"
+  import ThemeToggle from "$lib/components/ThemeToggle.svelte"
   import breakpoints from "$lib/utils/breakpoints"
   import MastodonIcon from "$lib/components/icons/MastodonIcon.svelte"
   import GithubIcon from "$lib/components/icons/GithubIcon.svelte"
@@ -121,6 +122,7 @@
     </div>
   {/if}
   <div class="right">
+    <ThemeToggle />
     <NavigationItem href="https://github.com/stephen-bunn" target="_blank">
       <GithubIcon />
     </NavigationItem>
@@ -174,7 +176,6 @@
   }
 
   .initials-container {
-    margin-left: var(--space-4x);
     height: 48px;
     width: 100px;
 
@@ -186,6 +187,10 @@
       pointer-events: auto;
 
       @include dashed-outline;
+    }
+
+    @include md {
+      margin-left: var(--space-4x);
     }
   }
 
