@@ -156,7 +156,7 @@
     display: flex;
     gap: var(--space-4x);
     margin-left: auto;
-    align-items: center;
+    align-items: baseline;
     pointer-events: auto;
   }
 
