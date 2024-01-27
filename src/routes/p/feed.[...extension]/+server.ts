@@ -5,7 +5,7 @@ import fetchPosts from "$lib/api/plots/travel"
 export const GET = async ({ params }) => {
   // Limiting feed to the latest 10 posts
   const feed = buildFeed((await fetchPosts()).slice(0, 10))
-  switch (params.extension.toLowerCase()) {
+  switch (params.extension.toLowerCase().replace(/\/+$/, "")) {
     case "json":
       return json(JSON.parse(feed.json1()))
     case "rss":
