@@ -22,9 +22,9 @@
   </p>
   <div class="feed">
     <RssIcon size={14} />
-    <Link href="feed.rss" target="_blank">RSS</Link>
-    <Link href="feed.atom" target="_blank">ATOM</Link>
-    <Link href="feed.json" target="_blank">JSON</Link>
+    <Link href="feed/rss" target="_blank">RSS</Link>
+    <Link href="feed/atom" target="_blank">ATOM</Link>
+    <Link href="feed/json" target="_blank">JSON</Link>
   </div>
 </div>
 
