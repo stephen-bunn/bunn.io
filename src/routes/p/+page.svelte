@@ -20,12 +20,12 @@
       target="_blank">from Jason</Link
     >.
   </p>
-  <div class="feed">
+  <!-- <div class="feed">
     <RssIcon size={14} />
     <Link href="feed/rss" target="_blank">RSS</Link>
     <Link href="feed/atom" target="_blank">ATOM</Link>
     <Link href="feed/json" target="_blank">JSON</Link>
-  </div>
+  </div> -->
 </div>
 
 {#each plots as plot}
@@ -58,11 +58,11 @@
     }
   }
 
-  .feed {
-    font-size: var(--font-050);
-    font-family: var(--font-mono);
-    display: flex;
-    gap: var(--space-2x);
-    align-items: center;
-  }
+  // .feed {
+  //   font-size: var(--font-050);
+  //   font-family: var(--font-mono);
+  //   display: flex;
+  //   gap: var(--space-2x);
+  //   align-items: center;
+  // }
 </style>
