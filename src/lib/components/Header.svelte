@@ -6,6 +6,7 @@
   import TinyGesture from "tinygesture"
   import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock"
 
+  import { SOCIALS } from "$lib/utils/constants"
   import NavigationItem from "$lib/components/NavigationItem.svelte"
   import Initials from "$lib/components/Initials.svelte"
   import NavigationDrawer from "$lib/components/NavigationDrawer.svelte"
@@ -123,13 +124,13 @@
   {/if}
   <div class="right">
     <ThemeToggle />
-    <NavigationItem href="https://github.com/stephen-bunn" target="_blank">
+    <NavigationItem href={SOCIALS.github.url} target="_blank">
       <GithubIcon />
     </NavigationItem>
-    <NavigationItem href="https://linkedin.com/in/stephen-bunn" target="_blank">
+    <NavigationItem href={SOCIALS.linkedin.url} target="_blank">
       <LinkedinIcon />
     </NavigationItem>
-    <NavigationItem href="https://social.lol/@st" target="_blank" rel="me">
+    <NavigationItem href={SOCIALS.mastodon.url} target="_blank" rel="me">
       <MastodonIcon />
     </NavigationItem>
   </div>

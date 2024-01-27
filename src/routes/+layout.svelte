@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { FIRST_NAME } from "$lib/utils/constants"
   import "$lib/styles/base.scss"
   import Header from "$lib/components/Header.svelte"
   import Footer from "$lib/components/Footer.svelte"
 </script>
 
 <svelte:head>
-  <title>Stephen</title>
+  <title>{FIRST_NAME}</title>
 </svelte:head>
 
 <Header />

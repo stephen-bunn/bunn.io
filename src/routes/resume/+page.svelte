@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { FIRST_NAME } from "$lib/utils/constants"
   import { formatDate, truncate } from "$lib/utils/format"
   import resume from "$lib/content/resume.json"
   import Link from "$lib/components/Link.svelte"
@@ -7,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen &ndash; Resume</title>
+  <title>{FIRST_NAME} &ndash; Resume</title>
 </svelte:head>
 
 <h1>{resume.basics.name}</h1>

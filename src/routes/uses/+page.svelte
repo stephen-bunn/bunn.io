@@ -1,10 +1,11 @@
 <script>
+  import { FIRST_NAME } from "$lib/utils/constants"
   import Link from "$lib/components/Link.svelte"
   import uses from "$lib/content/uses.json"
 </script>
 
 <svelte:head>
-  <title>Stephen &ndash; Uses</title>
+  <title>{FIRST_NAME} &ndash; Uses</title>
 </svelte:head>
 
 <h1>Uses</h1>
