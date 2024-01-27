@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { FULL_NAME } from "$lib/utils/constants"
   const currentYear = new Date().getFullYear()
 </script>
 
 <footer>
-  {currentYear} &copy; Stephen Bunn
+  {currentYear} &copy; {FULL_NAME}
 </footer>
 
 <style lang="scss">

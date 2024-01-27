@@ -1,15 +1,16 @@
 <script>
+  import { FULL_NAME, FIRST_NAME } from "$lib/utils/constants"
   import Link from "$lib/components/Link.svelte"
 </script>
 
 <svelte:head>
-  <title>Stephen &ndash; About</title>
+  <title>{FIRST_NAME} &ndash; About</title>
 </svelte:head>
 
 <div class="profile-container">
-  <img src="/img/profile.png" alt="Stephen Bunn Portrait" />
+  <img src="/img/profile.png" alt={`${FULL_NAME} Portrait`} />
   <div>
-    <h1>Stephen Bunn</h1>
+    <h1>{FULL_NAME}</h1>
     <p>
       I'm a software developer building <em>small</em> and <strong>intuitive</strong> solutions to try
       and better the health and happiness of others.

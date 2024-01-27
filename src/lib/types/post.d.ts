@@ -4,8 +4,16 @@ export interface PostMetadata {
   title?: string
   /** The post's published date. */
   published?: string
+  /** The post's updated date. */
+  updated?: string
   /** The post's description. */
   description?: string
+  /** The post's tags. */
+  tags?: string[]
+  /** The post's default display image URL. */
+  imageUrl?: string
+  /** The post's default display image alternate text. */
+  imageAlt?: string
 }
 
 /** Describes the plot for a given post. */
@@ -24,8 +32,14 @@ export interface Post {
   title: string
   /** The post's published date. */
   published: Date
+  /** The post's updated date. */
+  updated: Date
+  /** The post's tags. */
+  tags: string[]
   /** The absolute href of the post. */
   href: string
   /** Any metadata associated to the post. */
   metadata?: PostMetadata
+  /** The rendered and sanitized HTML of the post. */
+  content?: string
 }

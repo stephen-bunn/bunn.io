@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { FIRST_NAME } from "$lib/utils/constants"
   import PostItem from "$lib/components/PostItem.svelte"
 
   export let data
@@ -6,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen &ndash; Travel</title>
+  <title>{FIRST_NAME} &ndash; Travel</title>
 </svelte:head>
 
 <h1>Travel</h1>

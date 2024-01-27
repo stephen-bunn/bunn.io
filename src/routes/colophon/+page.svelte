@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { FIRST_NAME } from "$lib/utils/constants"
   import { formatDate } from "$lib/utils/format"
   import Link from "$lib/components/Link.svelte"
   import { inspirations, resources } from "$lib/content/colophon.json"
@@ -7,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Stephen &ndash; Colophon</title>
+  <title>{FIRST_NAME} &ndash; Colophon</title>
 </svelte:head>
 
 <div>
