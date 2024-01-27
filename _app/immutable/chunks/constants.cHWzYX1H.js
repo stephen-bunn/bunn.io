@@ -1,0 +1,1 @@
+const n="Stephen",t="Bunn",s=`${n} ${t}`,e="hiring@bunn.io";`${new Date().getFullYear()}${s}`;const o={github:{name:"stephen-bunn",url:"https://github.com/stephen-bunn"},linkedin:{name:"stephen-bunn",url:"https://linkedin.com/in/stephen-bunn"},mastodon:{name:"@st@social.lol",url:"https://social.lol/@st"}};export{e as C,n as F,o as S,s as a};
