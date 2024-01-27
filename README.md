@@ -16,7 +16,7 @@ just dev
 # or npm run dev
 ```
 
-The site is built and published on commits to the `master` branch via GitHub Actions.
+The site is built and published on commits to the `main` branch via GitHub Actions.
 
 ## Building Production
 
