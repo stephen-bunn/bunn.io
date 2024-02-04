@@ -1,1 +1,1 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"ci":1,"currentDate":2,"github":3},true,["Date","2024-02-04T15:59:41.723Z"],{"actionId":4,"actionUrl":5},"7775193217","https://github.com/stephen-bunn/bunn.io/actions/runs/7775193217"],"uses":{}}]}
+{"type":"data","nodes":[null,{"type":"data","data":[{"ci":1,"currentDate":2,"github":3,"metaTagsOverride":6},true,["Date","2024-02-04T19:02:11.615Z"],{"actionId":4,"actionUrl":5},"7776128861","https://github.com/stephen-bunn/bunn.io/actions/runs/7776128861",{"title":7},"Stephen Bunn - Colophon"],"uses":{}}]}
