@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bunn.io</id>
+    <title>Stephen Bunn</title>
+    <updated>2024-02-04T15:59:41.713Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Stephen Bunn</name>
+        <email>https://bunn.io</email>
+        <uri>https://bunn.io</uri>
+    </author>
+    <link rel="alternate" href="https://bunn.io"/>
+    <subtitle>Build as intuitively as possible.</subtitle>
+    <rights>2024 © Stephen Bunn</rights>
+    <entry>
+        <title type="html"><![CDATA[Iceland Photography]]></title>
+        <id>https://bunn.io/p/travel/2022-iceland-photography</id>
+        <link href="https://bunn.io/p/travel/2022-iceland-photography"/>
+        <updated>2024-01-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We ate tebirkis and saw a cat.]]></summary>
+        <content type="html"><![CDATA[<p>In 2022, I took a trip to Iceland with some friends.
+Our primary goals were to see some beautiful landscapes and take some pretty pictures.</p> <h2>Day 1</h2> <p>The first day we spent in Reykjavík.</p> <blockquote><p>The cat in question.</p></blockquote> <p><img src="https://cdn.some.pics/st/65a7c193b0d2f.jpg" alt="A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík" /></p> <p>We also ate some tebirkis (my new favorite pastry).</p>]]></content>
+        <published>2024-01-12T00:00:00.000Z</published>
+        <rights>2024 © Stephen Bunn</rights>
+    </entry>
+</feed>
