@@ -3,14 +3,9 @@
     "title": "Hardware",
     "items": [
       {
-        "text": "Apple MacBook Pro M2",
+        "text": "Apple MacBook Pro M3",
         "href": "https://www.apple.com/macbook-pro/",
-        "description": "for work"
-      },
-      {
-        "text": "Lenovo ThinkPad X1 Extreme",
-        "href": "https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/x1-extreme-g4/22tp2x1x1e4",
-        "description": "for personal use"
+        "description": "for my daily workhorse"
       },
       {
         "text": "Mode Designs Envoy",
