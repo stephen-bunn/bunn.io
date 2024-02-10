@@ -14,6 +14,8 @@ export interface PostMetadata {
   imageUrl?: string
   /** The post's default display image alternate text. */
   imageAlt?: string
+  /** The post's stage. */
+  stage?: string
 }
 
 /** Describes the plot for a given post. */

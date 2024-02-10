@@ -2,8 +2,37 @@ import type { Post, PostMetadata, PostPlot } from "$lib/types/post"
 import { sanitizeHtml } from "$lib/utils/sanitize"
 import { error } from "@sveltejs/kit"
 
+/** Describes the posts completeness. */
+export enum PostStage {
+  /** Very rough work, to be refined later. */
+  SEEDLING,
+  /** Cleaned up work, will be finalized later. */
+  BUDDING,
+  /** Finalized work, unlikely to change. */
+  EVERGREEN,
+}
+
 /** The supported post plot names. */
 export type PostPlotName = "travel"
+
+/**
+ * Get the appropriate `PostStage` enum from a given string.
+ *
+ * @param postStage The string stage to get as a `PostStage` enum.
+ * @returns The determined `PostStage` enum
+ */
+export const getPostStage = (postStage?: string): PostStage => {
+  if (!postStage) return PostStage.SEEDLING
+
+  switch (postStage.toLowerCase()) {
+    case "budding":
+      return PostStage.BUDDING
+    case "evergreen":
+      return PostStage.EVERGREEN
+    default:
+      return PostStage.SEEDLING
+  }
+}
 
 /**
  * Get the plot structure for a post given a plot's name.
