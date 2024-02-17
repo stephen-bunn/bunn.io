@@ -19,4 +19,12 @@ export const SOCIALS = {
     name: "@st@social.lol",
     url: "https://social.lol/@st",
   },
+  omg: {
+    name: "@st",
+    url: "https://st.omg.lol",
+  },
+  proven: {
+    name: "@st",
+    url: "https://proven.lol/@st",
+  },
 }

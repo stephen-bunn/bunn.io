@@ -19,7 +19,10 @@
 <hr />
 <p>
   Instead, if you just want to chat about technology and things, you can find me on Mastodon as
-  <Link href={SOCIALS.mastodon.url} target="_blank">{SOCIALS.mastodon.name}</Link>.
+  <Link href={SOCIALS.mastodon.url} target="_blank">{SOCIALS.mastodon.name}</Link> or at <Link
+    href={SOCIALS.omg.url}
+    target="_blank">{SOCIALS.omg.name}@omg.lol</Link
+  >.
 </p>
 
 <style>
