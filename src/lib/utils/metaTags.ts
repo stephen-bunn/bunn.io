@@ -8,6 +8,13 @@ import {
   SITE_DOMAIN,
 } from "$lib/utils/constants"
 
+/**
+ * Construct the necessary meta tags for a given rout with any additional overrides.
+ *
+ * @param route The route being loaded for the meta tags.
+ * @param overrides Override values for the meta tags used for current route.
+ * @returns The constructed meta tags for the given route.
+ */
 export const buildMetaTags = (
   route: { id: string | null },
   overrides: Partial<MetaTagsProps> = {}
