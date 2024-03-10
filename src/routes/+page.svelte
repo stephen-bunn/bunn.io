@@ -1,5 +1,5 @@
 <script>
-  import { FULL_NAME, FIRST_NAME } from "$lib/utils/constants"
+  import { FULL_NAME, FIRST_NAME, AVATAR_URL } from "$lib/utils/constants"
   import Link from "$lib/components/Link.svelte"
 </script>
 
@@ -8,7 +8,7 @@
 </svelte:head>
 
 <div class="profile-container">
-  <img src="/img/profile.png" alt={`${FULL_NAME} Portrait`} />
+  <img src={AVATAR_URL} alt={`${FULL_NAME} Portrait`} />
   <div>
     <h1>{FULL_NAME}</h1>
     <p>
