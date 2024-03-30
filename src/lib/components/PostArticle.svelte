@@ -4,17 +4,15 @@
   import { PostStage, getPostStage } from "$lib/utils/post"
   import { formatDate } from "$lib/utils/format"
   import Link from "$lib/components/Link.svelte"
+  import { SproutIcon, LeafIcon, TreePineIcon } from "lucide-svelte"
 
   export let post: Post
   const postStage = getPostStage(post.metadata?.stage)
 
-  let stageEmoji = "🌱"
   let stageDetail = "Growing; expect many changes"
   if (postStage === PostStage.BUDDING) {
-    stageEmoji = "🌿"
     stageDetail = "Taking form; not yet fully grown"
   } else if (postStage === PostStage.EVERGREEN) {
-    stageEmoji = "🌳"
     stageDetail = "Fully grown"
   }
 </script>
@@ -22,11 +20,23 @@
 <article>
   <h1>{post.title}</h1>
   <span class="detail"
-    >Published in <Link small href={post.plot.href}>{post.plot.name}</Link>
+    >Published in <Link small padded href={post.plot.href}>{post.plot.name}</Link>
     on {formatDate(post.published, "MMM DD YYYY")}.
     <span class="stage">
-      <Tooltip content={stageDetail} arrow={false} position="right" maxWidth={300}>
-        {stageEmoji}
+      <Tooltip
+        content={stageDetail}
+        theme="stage-tooltip"
+        arrow={false}
+        position="right"
+        maxWidth={300}
+      >
+        {#if postStage === PostStage.BUDDING}
+          <LeafIcon size={16} />
+        {:else if postStage === PostStage.EVERGREEN}
+          <TreePineIcon size={16} />
+        {:else}
+          <SproutIcon size={16} />
+        {/if}
       </Tooltip>
     </span>
   </span>
@@ -39,6 +49,7 @@
   }
 
   .detail {
+    display: flex;
     font-size: var(--font-050);
     color: var(--color-text-disabled);
     font-family: var(--font-serif);
@@ -47,5 +58,10 @@
   .stage {
     margin-left: var(--space-1x);
     cursor: default;
+  }
+
+  :global(.tooltip.stage-tooltip) {
+    --tooltip-font-family: var(--font-serif);
+    --tooltip-color: var(--color-text-disabled);
   }
 </style>

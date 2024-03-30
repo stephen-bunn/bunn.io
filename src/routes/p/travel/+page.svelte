@@ -1,6 +1,7 @@
 <script lang="ts">
   import { FIRST_NAME } from "$lib/utils/constants"
   import PostItem from "$lib/components/PostItem.svelte"
+  import Link from "$lib/components/Link.svelte"
 
   export let data
   const { posts } = data
@@ -11,7 +12,9 @@
 </svelte:head>
 
 <h1>Travel</h1>
-<p>I take trips to escape technology. Unfortunately, it hasn't stuck.</p>
+<p>
+  I use this <Link href="/p">plot</Link> to talk about little getaways and interesting adventures.
+</p>
 <div class="posts">
   {#if posts.length > 0}
     {#each posts as post}

@@ -6,8 +6,14 @@ imageUrl: https://cdn.some.pics/st/65a7c193b0d2f.jpg
 imageAlt: A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík
 ---
 
-In 2022, I took a trip to Iceland with some friends.
-Our primary goals were to see some beautiful landscapes and take some pretty pictures.
+<!-- markdownlint-disable MD033 -->
+<script>
+  import Link from "$lib/components/Link.svelte"
+</script>
+
+In the summer of 2022, I took a trip to Iceland with some friends.
+Our primary goals were to see some beautiful landscapes and take some pretty pictures (like most tourists in Iceland).
+I find it nice to just **_be a tourist_** in a country like Iceland whose tourism industry is well established.
 
 ## Day 1
 
@@ -16,4 +22,4 @@ The first day we spent in Reykjavík.
 
 ![A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík](https://cdn.some.pics/st/65a7c193b0d2f.jpg)
 
-We also ate some tebirkis (my new favorite pastry).
+We also ate some <Link href="https://skandibaking.com/tebirkes-danish-pastry-with-poppy-seeds/" target="_blank">tebirkis</Link> (my new favorite pastry).

@@ -1,9 +1,10 @@
 <script lang="ts">
   export let href: string
   export let small: boolean = false
+  export let padded: boolean = false
 </script>
 
-<a class:small {href} {...$$restProps}><slot /></a>
+<a class:small class:padded {href} {...$$restProps}><slot /></a>
 
 <style lang="scss">
   @use "$lib/styles/mixins.scss" as *;
@@ -31,6 +32,10 @@
       font-size: var(--font-050);
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
+    }
+
+    &.padded {
+      margin: 0 var(--space-1x);
     }
   }
 </style>

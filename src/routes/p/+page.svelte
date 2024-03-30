@@ -15,9 +15,6 @@
     These <em>plots</em> are generic topics within my <Link
       href="https://maggieappleton.com/garden-history"
       target="_blank">digital garden</Link
-    >. I sneakily stole this terminology and organization <Link
-      href="https://www.fromjason.xyz"
-      target="_blank">from Jason</Link
     >.
   </p>
   <div class="feed">
