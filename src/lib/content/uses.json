@@ -38,6 +38,11 @@
     "title": "Web Browsing",
     "items": [
       {
+        "text": "Arc",
+        "href": "https://arc.net/",
+        "description": "for a Chromium browser with AI tooling"
+      },
+      {
         "text": "Firefox",
         "href": "https://www.mozilla.org/en-US/firefox/new/",
         "description": "for a Google-free, fast browser"
@@ -123,6 +128,11 @@
         "description": "for cross-browser bookmarks"
       },
       {
+        "text": "Inoreader",
+        "href": "https://www.inoreader.com/",
+        "description": "for RSS feed aggregation"
+      },
+      {
         "text": "YNAB",
         "href": "https://ynab.com/",
         "description": "for basic monthly finance management"
@@ -171,6 +181,11 @@
         "text": "Todoist",
         "href": "https://todoist.com/",
         "description": "for planning my day"
+      },
+      {
+        "text": "Raycast",
+        "href": "https://raycast.com/",
+        "description": "for a modern macOS command palette"
       }
     ]
   },
