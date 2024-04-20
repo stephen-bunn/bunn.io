@@ -4,7 +4,7 @@
         <title>Stephen Bunn</title>
         <link>https://bunn.io</link>
         <description>Build as intuitively as possible.</description>
-        <lastBuildDate>Sat, 20 Apr 2024 12:31:26 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Apr 2024 13:46:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>2024 © Stephen Bunn</copyright>
@@ -18,6 +18,19 @@
 Our primary goals were to see some beautiful landscapes and take some pretty pictures (like most tourists in Iceland).
 I find it nice to just <strong><em>be a tourist</em></strong> in a country like Iceland whose tourism industry is well established.</p> <h2>Day 1</h2> <p>The first day we spent in Reykjavík.</p> <blockquote><p>The cat in question.</p></blockquote> <p><img src="https://cdn.some.pics/st/65a7c193b0d2f.jpg" alt="A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík" /></p> <p>We also ate some <a href="https://skandibaking.com/tebirkes-danish-pastry-with-poppy-seeds/" target="_blank">tebirkis</a> (my new favorite pastry).</p>]]></content:encoded>
             <enclosure length="0" type="image/jpg" url="https://cdn.some.pics/st/65a7c193b0d2f.jpg" title="A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík"/>
+        </item>
+        <item>
+            <title><![CDATA[My Career Colors My Reading]]></title>
+            <link>https://bunn.io/p/musing/how-my-career-colors-my-reading</link>
+            <guid>https://bunn.io/p/musing/how-my-career-colors-my-reading</guid>
+            <pubDate>Sat, 20 Apr 2024 11:49:37 GMT</pubDate>
+            <description><![CDATA[Avoid a software-colored reading monochrome]]></description>
+            <content:encoded><![CDATA[<p>I avoid hyper-focusing on this software engineering gig we all seem to be wedged into.
+My day-to-day is a constant deluge of algorithms, design patterns, code critique, and unnecessary ceremonial meetings that could easily be done ad hoc.
+At the end of the day, or week rather, when it’s time to actually focus on learning new things, the last thing I want to read about is the latest web framework that is barely different from its predecessors.</p> <p>Don’t get me wrong, I love the <strong>creative side</strong> of software development, and my day job provides me with a lot of challenging and stimulating problems to tackle, but I’m scared of becoming an engineer wearing horse blinders; never able to see past the technology.
+For the sake of avoiding a software-colored reading monochrome, life outside my IDE matters too.</p> <p>I’ve found that focusing on reading/researching alternative topics — anything from nutrition, fitness, philosophy, to business and economics — provides me with the mental stimulation I crave.
+Cultivating a diverse perspective helps me not only to stay well-rounded as an engineer but also helps me to take off my engineering-tinted glasses every once in a while.
+More technology isn’t the correct hammer for every nail; in fact, I believe the less complex technology we need to create, the better the outcome will likely be.</p> <p>To me, it’s all about a broad, multifaceted spectrum of knowledge/interests and avoidance of a technology tunnel-vision that makes a truly talented engineer.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
