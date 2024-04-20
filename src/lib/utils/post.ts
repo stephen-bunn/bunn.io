@@ -1,4 +1,6 @@
 import type { Post, PostMetadata, PostPlot } from "$lib/types/post"
+import type { MetaTagsProps } from "svelte-meta-tags"
+import { FULL_NAME, SITE_DOMAIN } from "$lib/utils/constants"
 import { sanitizeHtml } from "$lib/utils/sanitize"
 import { error } from "@sveltejs/kit"
 
@@ -13,7 +15,7 @@ export enum PostStage {
 }
 
 /** The supported post plot names. */
-export type PostPlotName = "travel"
+export type PostPlotName = "travel" | "musing"
 
 /**
  * Get the appropriate `PostStage` enum from a given string.
@@ -46,6 +48,11 @@ export const getPostPlot = (plotName: PostPlotName): PostPlot => {
       return {
         name: "Travel",
         href: "/p/travel",
+      }
+    case "musing":
+      return {
+        name: "Musing",
+        href: "/p/musing",
       }
     default:
       error(500, `Unhandled plot ${plotName}`)
@@ -84,5 +91,50 @@ export const buildPost = (filepath: string, data: unknown, plot?: PostPlot): Pos
     metadata,
     // @ts-expect-error `data` is not going to be implicitly known by TS at this point
     content: data.default?.render ? sanitizeHtml(data.default.render().html) : undefined,
+  }
+}
+
+/**
+ * Builds the data structure for loading a post.
+ *
+ * @param post The post object.
+ * @param data The data object containing the default component constructor.
+ * @returns A n object containing the post, meta tags override, and the content constructor.
+ */
+export function buildPostLoad(
+  post: Post,
+  data: { default: ConstructorOfATypedSvelteComponent }
+): {
+  post: Post
+  metaTagsOverride: MetaTagsProps
+  Content: ConstructorOfATypedSvelteComponent
+} {
+  const canonical = `${SITE_DOMAIN}${post.href}`
+  const metaTagsOverride: MetaTagsProps = Object.freeze({
+    title: post.title,
+    description: post.metadata?.description,
+    canonical,
+    openGraph: {
+      type: "article",
+      siteName: FULL_NAME,
+      url: canonical,
+      title: post.title,
+      description: post.metadata?.description,
+      images: post.metadata?.imageUrl
+        ? [{ url: post.metadata.imageUrl, alt: post.metadata?.imageAlt }]
+        : [],
+      article: {
+        publishedTime: post.published.toISOString(),
+        modifiedTime: post.updated.toISOString(),
+        authors: [FULL_NAME],
+        tags: post.metadata?.tags,
+      },
+    },
+  })
+
+  return {
+    post,
+    metaTagsOverride,
+    Content: data.default,
   }
 }

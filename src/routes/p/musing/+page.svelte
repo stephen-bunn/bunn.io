@@ -5,6 +5,6 @@
   const { posts } = data
 </script>
 
-<PostPage title="Travel" {posts}>
-  Here I talk about little getaways and interesting adventures.
+<PostPage title="Musing" {posts}>
+  Here I write short thoughts on whatever catches my attention.
 </PostPage>
