@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit"
 import { buildFeed } from "$lib/utils/feed"
-import fetchPosts from "$lib/api/plots/travel"
+import fetchPosts from "$lib/api/plots/all"
 
 export const prerender = true
 export const GET = async () => {
