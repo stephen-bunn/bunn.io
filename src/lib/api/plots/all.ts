@@ -6,5 +6,5 @@ import { transformImportedFiles } from "$lib/utils/transform"
 export default async function fetchPosts(): Promise<Post[]> {
   return (
     await transformImportedFiles<Post>(import.meta.glob("/src/routes/p/**/*.svx"), buildPost)
-  ).sort((a, b) => a.published.getTime() - b.published.getTime())
+  ).sort((a, b) => b.published.getTime() - a.published.getTime())
 }
