@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bunn.io</id>
     <title>Stephen Bunn</title>
-    <updated>2024-04-20T14:14:28.978Z</updated>
+    <updated>2024-05-05T12:25:23.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Stephen Bunn</name>
@@ -13,15 +13,20 @@
     <subtitle>Build as intuitively as possible.</subtitle>
     <rights>2024 © Stephen Bunn</rights>
     <entry>
-        <title type="html"><![CDATA[Iceland Photography]]></title>
-        <id>https://bunn.io/p/travel/2022-iceland-photography</id>
-        <link href="https://bunn.io/p/travel/2022-iceland-photography"/>
-        <updated>2024-01-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We ate tebirkis and saw a cat.]]></summary>
-        <content type="html"><![CDATA[ <p>In the summer of 2022, I took a trip to Iceland with some friends.
-Our primary goals were to see some beautiful landscapes and take some pretty pictures (like most tourists in Iceland).
-I find it nice to just <strong><em>be a tourist</em></strong> in a country like Iceland whose tourism industry is well established.</p> <h2>Day 1</h2> <p>The first day we spent in Reykjavík.</p> <blockquote><p>The cat in question.</p></blockquote> <p><img src="https://cdn.some.pics/st/65a7c193b0d2f.jpg" alt="A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík" /></p> <p>We also ate some <a href="https://skandibaking.com/tebirkes-danish-pastry-with-poppy-seeds/" target="_blank">tebirkis</a> (my new favorite pastry).</p>]]></content>
-        <published>2024-01-12T00:00:00.000Z</published>
+        <title type="html"><![CDATA[Help Me Retain Project Motivation]]></title>
+        <id>https://bunn.io/p/musing/help-retain-project-motivation</id>
+        <link href="https://bunn.io/p/musing/help-retain-project-motivation"/>
+        <updated>2024-05-05T12:14:56.000Z</updated>
+        <summary type="html"><![CDATA[I have difficulty holding onto my aspirations in the face of competition]]></summary>
+        <content type="html"><![CDATA[<p>I go through phases where I have a strong desire to build and sustain a project that goes beyond basic personal tools; around the scale that demands a small company for upkeep and enhancement.
+The idea of running a thriving small company where I can address the problems that I want to focus on and steer development towards my own goals sounds both exciting and daunting.</p> <p>The perceived challenge and risk is where I seem to stumble; cliche no?
+When I get into one of these <em>moods</em> where I am interested in creating a revenue-driving product, I get into performing some basic market research and run into existing companies with solutions that are already actively being worked on.
+These are already staffed, driving revenue, and have community adoption.
+The simple fact that there is competition kills motivation.
+Not because I want a non-competitive market to participate in, but more because I don’t have a stream of throwaway capital, an excess of time, or interested parties to help me create something new (it’s just me).
+I know, in the back of my head, that these are common challenges for starting any new venture, but I still don’t know how to retain strong motivation in the face of these barriers.</p> <p>My question is, how to you effectively mitigate apprehension to creating a new product/service when existing well-funded and well-staffed competition exists and is <em>seemingly</em> thriving?</p> <p>Here is the only real distilled advice that I can find:</p> <blockquote><p>Differentiate yourself from the competition by conducting competitive analysis of the market landscape, discovering and defining a target niche in the market, and make a simple product that offers 10x more value to consumers than the competition in that niche.</p></blockquote> <p>The competition sounds a little bit more digestible when framed like that. However, the little pessimist inside me still feels as though this insight is presuming that you have the immediate means to fund and build the product.
+Rationally, I think if you have good people working with you (inspiring you day-to-day), the fears of tackling the competition alone are no longer such a significant hurdle.</p>]]></content>
+        <published>2024-05-05T12:14:56.000Z</published>
         <rights>2024 © Stephen Bunn</rights>
     </entry>
     <entry>
@@ -37,6 +42,18 @@ For the sake of avoiding a software-colored reading monochrome, my life outside 
 Cultivating a diverse perspective helps me not only to stay well-rounded as an engineer but also helps me to take off my engineering-tinted glasses every once in a while.
 Technology isn’t the correct hammer for every nail; in fact, I believe the less complex technology we need to create, the better the outcome will likely be.</p> <p>To me, it’s all about the broad, multifaceted spectrum of knowledge/interests and avoidance of a technology tunnel-vision that makes a truly talented engineer.</p>]]></content>
         <published>2024-04-20T11:49:37.000Z</published>
+        <rights>2024 © Stephen Bunn</rights>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Iceland Photography]]></title>
+        <id>https://bunn.io/p/travel/2022-iceland-photography</id>
+        <link href="https://bunn.io/p/travel/2022-iceland-photography"/>
+        <updated>2024-01-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We ate tebirkis and saw a cat.]]></summary>
+        <content type="html"><![CDATA[ <p>In the summer of 2022, I took a trip to Iceland with some friends.
+Our primary goals were to see some beautiful landscapes and take some pretty pictures (like most tourists in Iceland).
+I find it nice to just <strong><em>be a tourist</em></strong> in a country like Iceland whose tourism industry is well established.</p> <h2>Day 1</h2> <p>The first day we spent in Reykjavík.</p> <blockquote><p>The cat in question.</p></blockquote> <p><img src="https://cdn.some.pics/st/65a7c193b0d2f.jpg" alt="A black and white cat sitting on a sidewalk in front of the Rainbow Street in Reykjavík" /></p> <p>We also ate some <a href="https://skandibaking.com/tebirkes-danish-pastry-with-poppy-seeds/" target="_blank">tebirkis</a> (my new favorite pastry).</p>]]></content>
+        <published>2024-01-12T00:00:00.000Z</published>
         <rights>2024 © Stephen Bunn</rights>
     </entry>
 </feed>
