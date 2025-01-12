@@ -3,7 +3,7 @@
 @use 'font.scss';
 @use 'space.scss';
 
-html {
+:global(html) {
   box-sizing: border-box;
   background-color: var(--color-surface);
   color: var(--color-text);
@@ -11,16 +11,16 @@ html {
   transition-duration: var(--duration-default);
 }
 
-body {
+:global(body) {
   line-height: var(--line-height-default);
+}
+
+:global(* + *) {
+  margin-top: 1em;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-* + * {
-  margin-top: 1em;
 }
