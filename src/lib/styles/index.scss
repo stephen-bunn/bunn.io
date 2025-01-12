@@ -1,0 +1,26 @@
+@use 'animate.scss';
+@use 'color.scss';
+@use 'font.scss';
+@use 'space.scss';
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition-property: color, background-color;
+  transition-duration: var(--duration-default);
+}
+
+body {
+  line-height: var(--line-height-default);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* + * {
+  margin-top: 1em;
+}

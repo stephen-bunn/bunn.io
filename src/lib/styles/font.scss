@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('JetBrains Mono'),
+    url('/fonts/JetBrainsMono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: normal;
+  src:
+    local('JetBrains Mono'),
+    url('/fonts/JetBrainsMono-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  src:
+    local('Vollkorn'),
+    url('/fonts/Vollkorn.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  src:
+    local('Vollkorn Italic'),
+    url('/fonts/Vollkorn-Italic.ttf') format('truetype');
+}
+
+:root {
+  --font-serif: 'Vollkorn', serif;
+  --font-sans: 'JetBrains Mono', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --font-050: 0.75rem;
+  --font-075: 0.875rem;
+  --font-100: 1rem;
+  --font-200: 1.125rem;
+  --font-300: 1.25rem;
+  --font-400: 1.5rem;
+  --font-500: 2rem;
+  --font-600: 2.5rem;
+  --font-700: 3rem;
+
+  --line-height-default: 1.5;
+  --line-height-tight: 1.2;
+
+  --letter-spacing-default: 0;
+  --letter-spacing-loose: 0.125rem;
+}

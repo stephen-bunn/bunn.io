@@ -1,0 +1,13 @@
+:root {
+  --duration-short: 0.1s;
+  --duration-default: 0.2s;
+  --duration-long: 1.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-short: 0s;
+    --duration-default: 0s;
+    --duration-long: 0s;
+  }
+}
