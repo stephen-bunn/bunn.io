@@ -1,5 +1,9 @@
+<svelte:options runes />
+
 <script>
-  import ProfileImage from '$lib/components/ProfileImage.svelte'
+  import { FULL_NAME } from '$lib/constants'
 </script>
 
-<ProfileImage circle />
+<svelte:head>
+  <title>{FULL_NAME}</title>
+</svelte:head>
