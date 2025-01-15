@@ -8,20 +8,20 @@
   let skeletonStyle = $derived(`width: ${width}; height: ${height}; border-radius: ${radius};`)
 </script>
 
-<div class="Skeleton" style={skeletonStyle}></div>
+<div style={skeletonStyle}></div>
 
 <style lang="scss">
   @use '$lib/styles';
 
-  .Skeleton {
+  div {
     display: block;
     width: 100%;
     height: 100%;
     background-color: var(--color-surface-disabled);
-    animation: skeleton-pulse var(--duration-long) infinite;
+    animation: fade-in-out var(--duration-long) infinite;
   }
 
-  @keyframes skeleton-pulse {
+  @keyframes fade-in-out {
     0% {
       opacity: 1;
     }

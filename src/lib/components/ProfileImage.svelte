@@ -20,9 +20,6 @@
 
   let imageLoaded = $state(new Promise<void>(() => {}))
   let containerStyle = $derived(`width: ${size}; height: ${size};`)
-  let imageClass = $derived.by(() => {
-    return ['ProfileImage', circle && 'ProfileImage-circle'].filter(Boolean).join(' ')
-  })
   let imageStyle = $derived(`width: ${size}; height: ${size};`)
   let skeletonProps = $derived({ width: size, height: size, radius: circle ? '50%' : '0px' })
 
@@ -34,19 +31,13 @@
   })
 </script>
 
-<div class="ProfileImage_Container" style={containerStyle}>
+<div style={containerStyle}>
   {#await imageLoaded}
     <Skeleton {...skeletonProps} />
   {:then}
-    <img
-      src={IMAGE_SRC}
-      alt={IMAGE_ALT}
-      srcset={IMAGE_SRCSET}
-      class={imageClass}
-      style={imageStyle}
-    />
+    <img class:circle src={IMAGE_SRC} alt={IMAGE_ALT} srcset={IMAGE_SRCSET} style={imageStyle} />
   {:catch}
-    <div class="ProfileImage_Error">
+    <div class="error">
       <ImageIcon />
       <span>{IMAGE_ALT}</span>
     </div>
@@ -56,23 +47,21 @@
 <style lang="scss">
   @use '$lib/styles';
 
-  .ProfileImage {
-    &_Container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &_Error {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: var(--font-mono);
-      font-size: var(--font-050);
-    }
+  .circle {
+    border-radius: var(--radius-circle);
+  }
 
-    &-circle {
-      border-radius: var(--radius-circle);
-    }
+  .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: var(--font-050);
   }
 </style>
