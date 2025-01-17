@@ -5,7 +5,8 @@
 
   const navigationItems = [
     { text: 'About', href: '/' },
-    { text: 'Resume', href: '/resume' }
+    { text: 'Resume', href: '/resume' },
+    { text: 'Contact', href: '/contact' }
   ]
 </script>
 
