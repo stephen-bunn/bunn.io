@@ -4,6 +4,7 @@
   import { MetaTags, deepMerge, type MetaTagsProps } from 'svelte-meta-tags'
   import { page } from '$app/state'
   import '$lib/styles/index.scss'
+  import Footer from '$lib/components/Footer.svelte'
 
   let { data, children } = $props()
   let metaTags: MetaTagsProps = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags))
@@ -14,13 +15,12 @@
 <div>
   {@render children()}
 </div>
+<Footer />
 
 <style lang="scss">
   @use '$lib/styles' as *;
 
   div {
-    display: flex;
-    height: 100%;
     width: var(--content-width);
     margin: 0 var(--space-8x);
 
