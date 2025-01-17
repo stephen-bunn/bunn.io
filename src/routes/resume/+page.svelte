@@ -46,18 +46,20 @@
 
 <main>
   {#if resume.basics}
-    <h1>{resume.basics.name ?? FULL_NAME}</h1>
-    {#if resume.basics.label}
-      <p class="label">{resume.basics.label}</p>
-    {/if}
-    {#if resume.basics.summary}
-      <p class="summary">{resume.basics.summary}</p>
-    {/if}
-    {#if resume.basics.location?.city && resume.basics.location?.region}
-      <p class="location">
-        Located in {resume.basics.location.city}, {resume.basics.location.region}
-      </p>
-    {/if}
+    <div class="basics">
+      <h1>{resume.basics.name ?? FULL_NAME}</h1>
+      {#if resume.basics.label}
+        <p class="label">{resume.basics.label}</p>
+      {/if}
+      {#if resume.basics.summary}
+        <p class="summary">{resume.basics.summary}</p>
+      {/if}
+      {#if resume.basics.location?.city && resume.basics.location?.region}
+        <p class="location">
+          Located in {resume.basics.location.city}, {resume.basics.location.region}
+        </p>
+      {/if}
+    </div>
   {/if}
 
   {#if work.length > 0}
@@ -206,12 +208,26 @@
 </main>
 
 <style lang="scss">
+  h1 {
+    margin-bottom: 0;
+    line-height: var(--line-height-tight);
+  }
+
+  .basics {
+    margin-bottom: var(--space-8x);
+  }
+
   .label {
+    font-size: var(--font-200);
     font-family: var(--font-serif);
   }
 
   .summary {
-    margin-bottom: var(--space-8x);
+    margin-bottom: var(--space-2x);
+  }
+
+  .location {
+    font-weight: bold;
   }
 
   .dim {
