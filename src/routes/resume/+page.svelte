@@ -2,19 +2,42 @@
 
 <script lang="ts">
   import dayjs from 'dayjs'
-  import type { ResumeSchema } from '$lib/types/Resume'
   import { FULL_NAME } from '$lib/constants'
   import { truncate } from '$lib/utils/truncate'
-  import { isValidEducation, isValidPublication, isValidWork } from '$lib/utils/resume'
-  import RESUME_DATA from '$lib/data/resume.json'
+  import {
+    ResumeAwardSchema,
+    ResumeCertificateSchema,
+    ResumeEducationSchema,
+    ResumePublicationSchema,
+    ResumeSkillSchema,
+    ResumeWorkSchema,
+    validateResumeSchema
+  } from '$lib/utils/resume'
+  import * as resume from '$lib/data/resume.json'
   import ResumeSection from '$lib/components/ResumeSection.svelte'
   import ResumeItem from '$lib/components/ResumeItem.svelte'
   import Link from '$lib/components/Link.svelte'
 
-  const resume: ResumeSchema = RESUME_DATA
-  const work = $derived((resume?.work ?? []).filter(isValidWork))
-  const education = $derived((resume?.education ?? []).filter(isValidEducation))
-  const publications = $derived((resume?.publications ?? []).filter(isValidPublication))
+  const work = $derived(
+    resume?.work?.filter((value) => validateResumeSchema(value, ResumeWorkSchema)) ?? []
+  )
+  const education = $derived(
+    resume?.education?.filter((value) => validateResumeSchema(value, ResumeEducationSchema)) ?? []
+  )
+  const publications = $derived(
+    resume?.publications?.filter((value) => validateResumeSchema(value, ResumePublicationSchema)) ??
+      []
+  )
+  const certificates = $derived(
+    resume?.certificates?.filter((value) => validateResumeSchema(value, ResumeCertificateSchema)) ??
+      []
+  )
+  const awards = $derived(
+    resume?.awards?.filter((value) => validateResumeSchema(value, ResumeAwardSchema)) ?? []
+  )
+  const skills = $derived(
+    resume?.skills?.filter((value) => validateResumeSchema(value, ResumeSkillSchema)) ?? []
+  )
 </script>
 
 <svelte:head>
@@ -120,6 +143,66 @@
       {/each}
     </ResumeSection>
   {/if}
+
+  {#if certificates.length > 0}
+    <ResumeSection name="Certifications">
+      {#each certificates as certificate}
+        <ResumeItem>
+          {#snippet name()}
+            {#if certificate.url}
+              <Link href={certificate.url} target="_blank">
+                {certificate.name}
+              </Link>
+            {:else}
+              {certificate.name}
+            {/if}
+          {/snippet}
+          {#snippet detail()}
+            {certificate.issuer}
+            {#if certificate.date}
+              <span class="dim">
+                <span class="delimiter">&bull;</span>
+                {dayjs(certificate.date).format('MMM D YYYY')}
+              </span>
+            {/if}
+          {/snippet}
+        </ResumeItem>
+      {/each}
+    </ResumeSection>
+  {/if}
+
+  {#if awards.length > 0}
+    <ResumeSection name="Awards">
+      {#each awards as award}
+        <ResumeItem name={award.title}>
+          {#snippet detail()}
+            {award.awarder}
+            {#if award.date}
+              <span class="dim">
+                <span class="delimiter">&bull;</span>
+                {dayjs(award.date).format('MMM D YYYY')}
+              </span>
+            {/if}
+          {/snippet}
+          <p>{award.summary}</p>
+        </ResumeItem>
+      {/each}
+    </ResumeSection>
+  {/if}
+
+  {#if skills.length > 0}
+    <ResumeSection name="Skills">
+      {#each skills as skill}
+        <ResumeItem name={skill.name} dense>
+          <ul class="skills">
+            {#each skill.keywords as keyword}
+              <li class="skills-keyword">{keyword}</li>
+            {/each}
+          </ul>
+        </ResumeItem>
+      {/each}
+    </ResumeSection>
+  {/if}
 </main>
 
 <style lang="scss">
@@ -139,17 +222,17 @@
     margin: 0 calc(var(--space-1x) / 2);
   }
 
-  // .skills {
-  //   list-style: none;
-  //   margin: 0;
+  .skills {
+    list-style: none;
+    margin: 0;
 
-  //   &-keyword {
-  //     display: inline-block;
-  //     padding: var(--space-halfx) var(--space-2x);
-  //     margin-left: var(--space-2x);
-  //     border-radius: var(--radius-hard);
-  //     background-color: var(--color-text);
-  //     color: var(--color-surface);
-  //   }
-  // }
+    &-keyword {
+      display: inline-block;
+      padding: calc(var(--space-1x) / 2) var(--space-2x);
+      margin-left: var(--space-2x);
+      border-radius: var(--radius-hard);
+      background-color: var(--color-text);
+      color: var(--color-surface);
+    }
+  }
 </style>

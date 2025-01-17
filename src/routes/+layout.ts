@@ -7,7 +7,7 @@ export const trailingSlash = 'always'
 export const load = ({ url }) => {
   const baseMetaTags = Object.freeze({
     title: FULL_NAME,
-    titleTemplate: `${FULL_NAME} &ndash; %s`,
+    titleTemplate: `${FULL_NAME} - %s`,
     description: SITE_DESCRIPTION,
     canonical: new URL(url.pathname, url.origin).href,
     keywords: [],

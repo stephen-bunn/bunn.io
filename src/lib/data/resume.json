@@ -1,0 +1,240 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Stephen Bunn",
+    "label": "Software Engineer",
+    "picture": "https://gravatar.com/avatar/02651d15ffdc3bb8e7cb4d20b33b7f1c?s=512",
+    "email": "hiring@bunn.io",
+    "website": "https://bunn.io/",
+    "summary": "Highly driven software engineer, passionate about building easily sustainable solutions. Experienced with system engineering, web development, and team leadership. Seeking a fulfilling role alongside a group of dedicated peers where our work with modern technology seeks to benefit others.",
+    "location": {
+      "city": "Raleigh-Durham",
+      "countryCode": "US",
+      "region": "North Carolina"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "stephen-bunn",
+        "url": "https://github.com/stephen-bunn"
+      },
+      {
+        "network": "Linkedin",
+        "username": "stephen-bunn",
+        "url": "https://linkedin.com/in/stephen-bunn"
+      },
+      {
+        "network": "Mastodon",
+        "username": "@st",
+        "url": "https://social.lol/@st"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Capital One",
+      "position": "Lead Software Engineer",
+      "url": "https://www.capitalone.com/",
+      "startDate": "2022-12-12",
+      "summary": "Working to better Capital One's ability to monitor their cloud architecture through the use of custom built solutions and vendor-bought tooling. Operating as the lead engineer for a team focused on adapting infrastructure monitoring technologies to the cloud.",
+      "highlights": []
+    },
+    {
+      "name": "Grove Collaborative",
+      "position": "Senior Software Engineer",
+      "url": "https://grove.co/",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-02",
+      "summary": "Acted as the team lead of the Growth and Web engineering teams. Planned and oversaw the implementation of technical refactors and feature improvements to Grove's web client.",
+      "highlights": [
+        "Led the design and development of a web component library. This library was engineered to meet accessibility guidelines and be extensible in any Vue-based rendering environment (SPA, SSR, static page generation).",
+        "Improved both site performance and SEO by transitioning most all landing pages to auto-generated static pages.",
+        "Key contributor in addressing web accessibility concerns and in creating guidelines for producing accessible features in the future.",
+        "Directly responsible SME in Grove's frontend guild helping to define and estimate North Stars for frontend-minded teams.",
+        "Facilitated continuous communication between stakeholders in marketing, design, analytics, and other engineering teams."
+      ]
+    },
+    {
+      "name": "Grove Collaborative",
+      "position": "Software Engineer 2",
+      "url": "https://grove.co/",
+      "startDate": "2019-04-22",
+      "endDate": "2021-01-01",
+      "summary": "Worked on a SWAT engineering team focused on building solutions for complex business requirements and investigating and solving technical issues as they arose.",
+      "highlights": [
+        "Helped to implement payment method fraud detection. Integrated with several third-party services to handle capturing payment from customers on first-time checkouts.",
+        "Constructed CMS content schemas and produced reusable presentational components to allow content managers to construct and publish web pages.",
+        "Helped to establish effective code quality tooling and style guides throughout the engineering organization."
+      ]
+    },
+    {
+      "name": "Sensus",
+      "position": "Full Stack Developer",
+      "url": "https://sensus.com/",
+      "startDate": "2017-04-14",
+      "endDate": "2019-04-08",
+      "summary": "Worked on a small team of engineers focused on building the platform and standards for creating customer-facing applications.",
+      "highlights": [
+        "Built and maintained the customer experience development platform used to consolidate user authentication, product management, and the return process for customers.",
+        "Assisted in developing tooling to aggregate internal analytics and telemetry that Sensus uses to monitor the performance of most areas of the business."
+      ]
+    },
+    {
+      "name": "Appalachian State University",
+      "position": "Web Content Manager, Office of Sustainability",
+      "url": "https://sustain.appstate.edu/",
+      "startDate": "2016-01-12",
+      "endDate": "2017-04-12",
+      "summary": "Primary content manager of the front-end of the sustain subdomain at appstate.edu. Maintained the Office of Sustainability's Google presence.",
+      "highlights": []
+    },
+    {
+      "name": "Appalachian State University",
+      "position": "Graduate Student Researcher, Department of Computer Science",
+      "url": "https://compsci.appstate.edu/",
+      "startDate": "2016-08-14",
+      "endDate": "2017-04-12",
+      "summary": "Performed research in the optimization of existing package management systems in the component, module, and software levels of package management.",
+      "highlights": []
+    },
+    {
+      "name": "East Carolina University",
+      "position": "NSF REU Researcher, Department of Computer Science",
+      "url": "https://www.ecu.edu/",
+      "startDate": "2015-04-01",
+      "endDate": "2015-08-07",
+      "summary": "Performed research in both production level testing methods and the use of sentiment analysis in data mining. Specifically perfomed sentiment analysis on textual data taken from online resources such as Twitter, Facebook, and YouTube.",
+      "highlights": []
+    },
+    {
+      "name": "North Carolina Department of Transportation",
+      "position": "Information Technology",
+      "url": "https://www.ncdot.gov/",
+      "startDate": "2014-04-07",
+      "endDate": "2014-08-07",
+      "summary": "Imaged and distributed statewide computer systems for the NC Division of Motor Vehicles. Helped with the implementation of a new security protocol for the Triangle Transportation Management Center.",
+      "highlights": [],
+      "hidden": true
+    },
+    {
+      "name": "Carney & Co",
+      "position": "Intern",
+      "url": "http://carneyco.com/",
+      "startDate": "2011-12-01",
+      "endDate": "2013-03-21",
+      "summary": "Managed the upkeep of file servers and provided customer service to clients. Contributed research for several marketing and political projects, including state conventions and political candidate campaigns.",
+      "highlights": [],
+      "hidden": true
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Appalachian State University",
+      "area": "Computer Science",
+      "studyType": "Master",
+      "startDate": "2016-08-14",
+      "endDate": "2017-04-12",
+      "courses": [
+        "CS5100 - Computer Science Seminar",
+        "CS5450 - Computer Networking",
+        "CS5530 - Advanced Databases",
+        "CS5545 - Data Programming",
+        "CS5110 - Design and Analysis of Algorithms",
+        "CS5666 - Graduate Software Engineering",
+        "CS5520 - Operating Systems",
+        "CS5998 - Graduate Thesis"
+      ]
+    },
+    {
+      "institution": "Appalachian State University",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2013-08-14",
+      "endDate": "2016-04-12",
+      "courses": [
+        "CS1100 - Discrete Mathematics",
+        "CS1440 - Computer Science I",
+        "CS2440 - Computer Science II",
+        "CS2450 - Intro to Computer Systems",
+        "CS2490 - Theoretical Computer Science",
+        "CS3430 - Databases",
+        "CS3460 - Data Structures",
+        "CS3490 - Programming Languages",
+        "CS3481 - Computer Systems I",
+        "CS3492 - Computer Systems II",
+        "CS3667 - Software Engineering",
+        "CS4740 - Digital Image Processing",
+        "CS4800 - Computer Science Capstone"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "SSTEM Scholarship Recipient",
+      "date": "2017-03-20",
+      "awarder": "Appalachian State University",
+      "summary": "Awarded the SSTEM scholarship due to strong performance in course work and extracurricular research and study groups."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Applying Package Management To Mod Installation",
+      "publisher": "Appalachian State University",
+      "releaseDate": "2017-08-24",
+      "url": "https://libres.uncg.edu/ir/asu/listing.aspx?styp=ti&id=22096",
+      "summary": "Package management automates the discovery and installation of software that can coexist within an operating system. The methods used by package management can also address other instances where the installation of software needs to be automated. One example of this is the environment produced by third party video game modifications. An adapted application of package management practices can help to solve the difficult problem of finding and installing a set of video game modifications that do not conflict with each other. This greatly benefits the environment by allowing third party contributions to be easily installed which fosters growth in both the developer and user community surrounding the environment. This thesis presents the theory and complexities behind package management and shows how it can be effectively applied to managing video game modifications by presenting examples of software that can extract relevant metadata from video game modifications and discover conflict free installation solutions."
+    }
+  ],
+  "certificates": [
+    {
+      "issuer": "Amazon Web Services",
+      "name": "AWS Certified Solutions Architect - Associate",
+      "date": "2023-08-30",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Vue",
+        "Nuxt",
+        "Svelte",
+        "React"
+      ]
+    },
+    {
+      "name": "API Development",
+      "keywords": [
+        "REST",
+        "GraphQL",
+        "OpenAPI",
+        "FastAPI",
+        "Django"
+      ]
+    },
+    {
+      "name": "Software Development",
+      "keywords": [
+        "Python",
+        "Rust",
+        "Java",
+        "PostgreSQL",
+        "MySQL"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [],
+  "references": []
+}
