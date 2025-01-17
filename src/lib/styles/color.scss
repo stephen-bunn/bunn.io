@@ -17,3 +17,19 @@
     --color-link-active: #babbf1;
   }
 }
+
+:global(html.light) {
+  --color-surface: #faf9f5;
+  --color-text: #2c251d;
+  --color-text-disabled: #858585;
+  --color-link: #2c251d;
+  --color-link-active: #1e66f5;
+}
+
+:global(html.dark) {
+  --color-surface: #1f1f1f;
+  --color-text: #faf9f5;
+  --color-text-disabled: #858585;
+  --color-link: #faf9f5;
+  --color-link-active: #babbf1;
+}

@@ -13,6 +13,7 @@
   import Initials from '$lib/components/Initials.svelte'
   import Navigation from '$lib/components/Navigation.svelte'
   import NavigationItem from '$lib/components/NavigationItem.svelte'
+  import ThemeToggle from '$lib/components/ThemeToggle.svelte'
   import GithubIcon from '$lib/components/icons/GithubIcon.svelte'
   import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte'
   import MastodonIcon from '$lib/components/icons/MastodonIcon.svelte'
@@ -128,6 +129,7 @@
     </div>
   {/if}
   <div class="actions-container">
+    <ThemeToggle />
     <NavigationItem href={SOCIALS.github.url} target="_blank">
       <GithubIcon />
     </NavigationItem>
@@ -203,9 +205,7 @@
   }
 
   .menu-container {
-    & {
-      @include dashed-outline;
-    }
+    @include dashed-outline;
 
     transition: all var(--duration-default);
     position: fixed;
