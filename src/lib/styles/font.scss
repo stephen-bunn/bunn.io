@@ -1,19 +1,44 @@
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
   src:
-    local('JetBrains Mono'),
-    url('/fonts/JetBrainsMono.ttf') format('truetype');
+    local('Fira Sans'),
+    url('/fonts/FiraSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'Fira Sans';
   font-style: italic;
   font-weight: normal;
   src:
-    local('JetBrains Mono'),
-    url('/fonts/JetBrainsMono-Italic.ttf') format('truetype');
+    local('Fira Sans'),
+    url('/fonts/FiraSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Fira Sans'),
+    url('/fonts/FiraSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: bold;
+  src:
+    local('Fira Sans'),
+    url('/fonts/FiraSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src:
+    local('Fira Code'),
+    url('/fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
@@ -34,8 +59,8 @@
 
 :root {
   --font-serif: 'Vollkorn', serif;
-  --font-sans: 'JetBrains Mono', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Fira Sans', sans-serif;
+  --font-mono: 'Fira Mono', monospace;
 
   --font-050: 0.75rem;
   --font-075: 0.875rem;
