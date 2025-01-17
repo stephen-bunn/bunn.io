@@ -34,5 +34,9 @@ export const SOCIALS = {
   bluesky: {
     name: '@stephen-bunn.bsky.social',
     url: 'https://bsky.app/profile/stephen-bunn.bsky.social'
+  },
+  linktree: {
+    name: 'stephen.bunn',
+    url: 'https://linktr.ee/stephen.bunn'
   }
 }
