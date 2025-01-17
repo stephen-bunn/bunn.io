@@ -11,4 +11,21 @@
 
 <MetaTags {...metaTags} />
 
-{@render children()}
+<div>
+  {@render children()}
+</div>
+
+<style lang="scss">
+  @use '$lib/styles' as *;
+
+  div {
+    display: flex;
+    height: 100%;
+    width: var(--content-width);
+    margin: 0 var(--space-8x);
+
+    @include md {
+      margin: 0 auto;
+    }
+  }
+</style>
