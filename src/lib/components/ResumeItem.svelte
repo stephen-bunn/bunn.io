@@ -35,8 +35,6 @@
 </div>
 
 <style lang="scss">
-  @use '$lib/styles';
-
   div {
     margin-bottom: var(--space-8x);
 

@@ -44,9 +44,7 @@
   {/await}
 </div>
 
-<style lang="scss">
-  @use '$lib/styles';
-
+<style>
   div {
     display: flex;
     justify-content: center;

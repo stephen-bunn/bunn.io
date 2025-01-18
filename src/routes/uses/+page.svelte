@@ -41,9 +41,7 @@
   {/each}
 </main>
 
-<style lang="scss">
-  @use '$lib/styles' as *;
-
+<style>
   div {
     margin-bottom: var(--space-8x);
   }

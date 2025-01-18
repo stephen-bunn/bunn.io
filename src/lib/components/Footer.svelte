@@ -8,7 +8,7 @@
   {SITE_COPYRIGHT}
 </footer>
 
-<style lang="scss">
+<style>
   footer {
     user-select: none;
     position: sticky;

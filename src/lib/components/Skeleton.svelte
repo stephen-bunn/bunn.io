@@ -10,9 +10,7 @@
 
 <div style={skeletonStyle}></div>
 
-<style lang="scss">
-  @use '$lib/styles';
-
+<style>
   div {
     display: block;
     width: 100%;
