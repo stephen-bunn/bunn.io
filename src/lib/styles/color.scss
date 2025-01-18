@@ -1,8 +1,8 @@
 :root {
   --color-surface: #faf9f5;
-  --color-surface-disabled: #f0f0f0;
+  --color-surface-muted: #f0f0f0;
   --color-text: #2c251d;
-  --color-text-disabled: #858585;
+  --color-text-muted: #858585;
   --color-link: #2c251d;
   --color-link-active: #1e66f5;
 }
@@ -10,9 +10,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-surface: #1f1f1f;
-    --color-surface-disabled: #2c2c2c;
+    --color-surface-muted: #2c2c2c;
     --color-text: #faf9f5;
-    --color-text-disabled: #858585;
+    --color-text-muted: #858585;
     --color-link: #faf9f5;
     --color-link-active: #babbf1;
   }
@@ -20,16 +20,18 @@
 
 :global(html.light) {
   --color-surface: #faf9f5;
+  --color-surface-muted: #f0f0f0;
   --color-text: #2c251d;
-  --color-text-disabled: #858585;
+  --color-text-muted: #858585;
   --color-link: #2c251d;
   --color-link-active: #1e66f5;
 }
 
 :global(html.dark) {
   --color-surface: #1f1f1f;
+  --color-surface-muted: #2c2c2c;
   --color-text: #faf9f5;
-  --color-text-disabled: #858585;
+  --color-text-muted: #858585;
   --color-link: #faf9f5;
   --color-link-active: #babbf1;
 }

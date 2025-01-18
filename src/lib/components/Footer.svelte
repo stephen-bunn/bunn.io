@@ -18,6 +18,6 @@
     font-family: var(--font-serif);
     font-size: var(--font-050);
     font-weight: normal;
-    color: var(--color-text-disabled);
+    color: var(--color-text-muted);
   }
 </style>

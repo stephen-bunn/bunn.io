@@ -25,7 +25,7 @@
     padding: var(--space-3x) 0;
     transition: color var(--duration-default);
     display: inline-block;
-    color: var(--color-text-disabled);
+    color: var(--color-text-muted);
     font-size: var(--font-400);
     font-family: var(--font-serif);
     font-weight: bold;

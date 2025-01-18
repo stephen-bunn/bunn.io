@@ -231,7 +231,7 @@
   }
 
   .dim {
-    color: var(--color-text-disabled);
+    color: var(--color-text-muted);
   }
 
   .delimiter {

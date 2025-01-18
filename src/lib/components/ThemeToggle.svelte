@@ -57,7 +57,7 @@
     padding: var(--space-3x) 0;
     transition: color var(--duration-default);
     display: inline-block;
-    color: var(--color-text-disabled);
+    color: var(--color-text-muted);
     text-decoration: none;
 
     &:hover,
