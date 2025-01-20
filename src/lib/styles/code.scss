@@ -1,0 +1,134 @@
+/**
+ * PrismJS Cattpuccin Frappe Theme
+ * https://github.com/catppuccin/prismjs
+ */
+
+:global(code[class*='language-'], pre[class*='language-']) {
+  color: #c6d0f5;
+}
+
+:global(:not(pre) > code[class*='language-'], pre[class*='language-']) {
+  background: #292c3c;
+}
+
+/* https://prismjs.com/tokens.html */
+
+:global(.token.keyword) {
+  color: #ca9ee6;
+}
+
+:global(.token.builtin) {
+  color: #e78284;
+}
+
+:global(.token.class-name) {
+  color: #e5c890;
+}
+
+:global(.token.function) {
+  color: #8caaee;
+}
+
+:global(.token.boolean, .token.number) {
+  color: #ef9f76;
+}
+
+:global(.token.string, .token.char) {
+  color: #a6d189;
+}
+
+:global(.token.symbol) {
+  color: #e5c890;
+}
+
+:global(.token.regex) {
+  color: #f4b8e4;
+}
+
+:global(.token.url) {
+  color: #a6d189;
+}
+
+:global(.token.operator) {
+  color: #99d1db;
+}
+
+:global(.token.variable) {
+  color: #c6d0f5;
+}
+
+:global(.token.constant) {
+  color: #ef9f76;
+}
+
+:global(.token.property) {
+  color: #8caaee;
+}
+
+:global(.token.punctuation) {
+  color: #949cbb;
+}
+
+:global(.token.important) {
+  color: #ca9ee6;
+}
+
+:global(.token.comment) {
+  color: #949cbb;
+}
+
+:global(.token.tag) {
+  color: #8caaee;
+}
+
+:global(.token.attr-name) {
+  color: #e5c890;
+}
+
+:global(.token.attr-value) {
+  color: #a6d189;
+}
+
+:global(.token.namespace) {
+  color: #e5c890;
+}
+
+:global(.token.prolog, .token.doctype) {
+  color: #ca9ee6;
+}
+
+:global(.token.cdata) {
+  color: #81c8be;
+}
+
+:global(.token.entity) {
+  color: #e78284;
+}
+
+:global(.token.atrule) {
+  color: #ca9ee6;
+}
+
+:global(.token.selector) {
+  color: #8caaee;
+}
+
+/* Diff */
+
+:global(.token.deleted) {
+  color: #e78284;
+}
+
+:global(.token.inserted) {
+  color: #a6d189;
+}
+
+/* Other */
+
+:global(.token.important, .token.bold) {
+  font-weight: bold;
+}
+
+:global(.token.italic) {
+  font-style: italic;
+}

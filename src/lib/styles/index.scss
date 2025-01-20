@@ -1,4 +1,5 @@
 @use 'animate.scss';
+@use 'code.scss';
 @use 'color.scss';
 @use 'font.scss';
 @use 'space.scss';
@@ -97,7 +98,9 @@
   font-style: italic;
 }
 
-:global(code, pre) {
+:global(pre) {
+  padding: var(--space-2x);
+  border-radius: var(--radius-hard);
   font-family: var(--font-mono);
 }
 
