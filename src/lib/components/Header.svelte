@@ -151,6 +151,7 @@
   header {
     transition: background-color var(--duration-default);
     position: sticky;
+    width: 100%;
     top: 0;
     padding: var(--space-4x);
     display: flex;

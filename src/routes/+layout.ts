@@ -5,7 +5,7 @@ export const prerender = true
 export const trailingSlash = 'always'
 
 export const load = ({ url }) => {
-  const baseMetaTags = Object.freeze({
+  const baseMetaTags: MetaTagsProps = {
     title: FULL_NAME,
     titleTemplate: `${FULL_NAME} - %s`,
     description: SITE_DESCRIPTION,
@@ -16,7 +16,7 @@ export const load = ({ url }) => {
       url: new URL(url.pathname, url.origin).href,
       locale: 'en_US',
       title: FULL_NAME,
-      site_name: SITE_NAME,
+      siteName: SITE_NAME,
       description: SITE_DESCRIPTION,
       profile: {
         firstName: FIRST_NAME,
@@ -24,6 +24,6 @@ export const load = ({ url }) => {
       }
     },
     additionalMetaTags: [{ property: 'proven.lol', content: 'proven3f2375' }]
-  }) satisfies MetaTagsProps
+  }
   return { baseMetaTags }
 }
