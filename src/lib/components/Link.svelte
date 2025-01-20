@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import type { Snippet } from 'svelte'
+  import type { SvelteHTMLElements } from 'svelte/elements'
 
   let {
     href,
@@ -9,7 +10,13 @@
     small = false,
     target,
     ...props
-  }: { href: string; children: Snippet; small?: boolean; target?: string } = $props()
+  }: {
+    href: string
+    children: Snippet
+    small?: boolean
+    target?: string
+    props?: SvelteHTMLElements['a']
+  } = $props()
 </script>
 
 <a class:small {href} {target} {...props}>

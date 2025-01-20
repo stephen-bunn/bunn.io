@@ -31,8 +31,6 @@ export type Post = Readonly<{
   updated?: Date
   /** Any metadata associated to the post. */
   metadata?: PostMetadata
-  /** The rendered and sanitized HTML of the post. */
-  content?: string
   /** The Svelte component of the post. */
   component: Component
 }>

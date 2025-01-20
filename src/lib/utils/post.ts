@@ -62,3 +62,40 @@ export function buildPostPageLoad(options: { post: Post }): PostPageLoad {
     postComponent: post.component
   }
 }
+
+export function sortPosts(a: Post, b: Post): number {
+  if (!a.published && !b.published) return 0
+  if (!a.published) return 1
+  if (!b.published) return -1
+  return new Date(b.published).getTime() - new Date(a.published).getTime()
+}
+
+export async function getPosts(options?: {
+  limit?: number
+  sort?: (a: Post, b: Post) => number
+}): Promise<Post[]> {
+  const { limit, sort } = options ?? {}
+  // This is a dynamic import that will be resolved at build time, so it needs to be included as a
+  // literal string (not abstracted as a variable) and must be relative to the location of the file
+  // that imports it.
+  const filepaths = import.meta.glob('../../routes/posts/[slug]/*.svx')
+  const posts = []
+
+  for (const filepath in filepaths) {
+    try {
+      const postContent = await import(/* @vite-ignore */ filepath)
+      const post = await buildPost({ filepath, postContent })
+      if (!post) continue
+
+      posts.push(post)
+    } catch (e) {
+      console.error(`Failed to import post content from ${filepath}`, { error: e })
+      continue
+    }
+  }
+
+  posts.sort(sort ?? sortPosts)
+  if (limit) return posts.slice(0, limit)
+
+  return posts
+}
