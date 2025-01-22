@@ -1,23 +1,36 @@
 import type { MetaTagsProps } from 'svelte-meta-tags'
 
 import { FULL_NAME, SITE_DOMAIN } from '$lib/constants'
-import type { Post, PostContentImport, PostPageLoad } from '$lib/types/Post'
+import type { Post, PostContentImport, PostJson, PostPageLoad } from '$lib/types/Post'
+import type { Component } from 'svelte'
 
+/** Parses the appropriate slug from a given filename. */
+export function parseSlug(filename: string): string | undefined {
+  return filename.match(/\/([^/]+)\.svx$/)?.[1]
+}
+
+/** Parses a JSON representation of a post. */
+export function parsePostJson(postJson: PostJson): Post {
+  return {
+    ...postJson,
+    published: postJson.published ? new Date(postJson.published) : undefined,
+    updated: postJson.updated ? new Date(postJson.updated) : undefined
+  }
+}
+
+/** Builds a post from its imported content. */
 export async function buildPost(options: {
-  filepath: string
   postContent: PostContentImport
+  slug: string
 }): Promise<Post | undefined> {
-  const { filepath, postContent } = options
+  const { postContent, slug } = options
   const { metadata } = postContent
 
   // Skip unpublished and untitled posts
   if (!metadata || !metadata?.published || !metadata?.title) {
-    console.warn(`Skipping post with missing title or published date at ${filepath}`)
+    console.warn(`Skipping post with missing title or published date with slug ${slug}`)
     return
   }
-
-  const slug = /^\/?.*\/(.*)\.svx$/.exec(filepath)?.at(1)
-  if (!slug) return
 
   return {
     title: metadata.title,
@@ -25,13 +38,13 @@ export async function buildPost(options: {
     href: `/posts/${slug}`,
     published: new Date(metadata.published),
     updated: new Date(metadata.updated ?? metadata.published),
-    metadata,
-    component: postContent.default
+    metadata
   }
 }
 
-export function buildPostPageLoad(options: { post: Post }): PostPageLoad {
-  const { post } = options
+/** Builds a post page load object. */
+export function buildPostPageLoad(options: { post: Post; postComponent: Component }): PostPageLoad {
+  const { post, postComponent } = options
 
   const canonical = `${SITE_DOMAIN}${post.href}`
   const pageMetaTags: MetaTagsProps = {
@@ -59,43 +72,13 @@ export function buildPostPageLoad(options: { post: Post }): PostPageLoad {
   return {
     post,
     pageMetaTags,
-    postComponent: post.component
+    postComponent
   }
 }
 
-export function sortPosts(a: Post, b: Post): number {
-  if (!a.published && !b.published) return 0
-  if (!a.published) return 1
-  if (!b.published) return -1
+/** Sorts posts by their published date. */
+export function sortPosts(a?: Post, b?: Post): number {
+  if (!a || !b) return !a ? 1 : -1
+  if (!a.published || !b.published) return !a.published ? 1 : -1
   return new Date(b.published).getTime() - new Date(a.published).getTime()
-}
-
-export async function getPosts(options?: {
-  limit?: number
-  sort?: (a: Post, b: Post) => number
-}): Promise<Post[]> {
-  const { limit, sort } = options ?? {}
-  // This is a dynamic import that will be resolved at build time, so it needs to be included as a
-  // literal string (not abstracted as a variable) and must be relative to the location of the file
-  // that imports it.
-  const filepaths = import.meta.glob('../../routes/posts/[slug]/*.svx')
-  const posts = []
-
-  for (const filepath in filepaths) {
-    try {
-      const postContent = await import(/* @vite-ignore */ filepath)
-      const post = await buildPost({ filepath, postContent })
-      if (!post) continue
-
-      posts.push(post)
-    } catch (e) {
-      console.error(`Failed to import post content from ${filepath}`, { error: e })
-      continue
-    }
-  }
-
-  posts.sort(sort ?? sortPosts)
-  if (limit) return posts.slice(0, limit)
-
-  return posts
 }

@@ -1,4 +1,3 @@
-import { render } from 'svelte/server'
 import { Feed, type FeedOptions } from 'feed'
 import {
   CONTACT_EMAIL,
@@ -10,6 +9,7 @@ import {
 } from '$lib/constants'
 import type { Post } from '$lib/types/Post'
 
+/** Builds an RSS feed from the given posts. */
 export const buildFeed = (options: {
   posts: ReadonlyArray<Post>
   feedOptions?: Partial<FeedOptions>
@@ -39,7 +39,7 @@ export const buildFeed = (options: {
       id: link,
       published: post.published,
       category: post.metadata?.tags?.map((tag) => ({ name: tag })) ?? [],
-      content: render(post.component, {}).body,
+      content: undefined, // TODO: Determine a way to render the content for the feed
       copyright: SITE_COPYRIGHT,
       image: post.metadata?.imageSrc && {
         url: post.metadata.imageSrc,

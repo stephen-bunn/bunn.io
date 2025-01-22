@@ -39,7 +39,11 @@
     const bodyEl = document.querySelector('body')
     scrollLock.subscribe((isLocked: boolean) => {
       if (!bodyEl) return
-      isLocked ? disableBodyScroll(bodyEl) : enableBodyScroll(bodyEl)
+      if (isLocked) {
+        disableBodyScroll(bodyEl)
+      } else {
+        enableBodyScroll(bodyEl)
+      }
     })
 
     const headerEl = document.querySelector('header')

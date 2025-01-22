@@ -31,12 +31,29 @@ export type Post = Readonly<{
   updated?: Date
   /** Any metadata associated to the post. */
   metadata?: PostMetadata
-  /** The Svelte component of the post. */
-  component: Component
 }>
 
-export type PostContentImport = {
+/** Describes the JSON representation of a post. */
+export type PostJson = Readonly<{
+  /** The post's title. */
+  title: string
+  /** The post's tags. */
+  tags: string[]
+  /** The post's absolute href. */
+  href: string
+  /** The post's published date. */
+  published?: string
+  /** The post's updated date. */
+  updated?: string
+  /** Any metadata associated to the post. */
   metadata?: PostMetadata
+}>
+
+/** Describes the import of a post's content. */
+export type PostContentImport = {
+  /** The post's metadata */
+  metadata?: PostMetadata
+  /** The post's Svelte component */
   default: Component
 }
 

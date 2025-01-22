@@ -11,9 +11,10 @@
 
 <main>
   <h1>Posts</h1>
+  <p>Here I write short thoughts on whatever catches my attention.</p>
   <Link small href="/feed.xml">
     <span class="feed">
-      <RssIcon size="1em" /> Feed
+      <RssIcon size="1em" /> RSS
     </span>
   </Link>
   <div class="posts">

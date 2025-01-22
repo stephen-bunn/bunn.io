@@ -1,9 +1,12 @@
 import type { MetaTagsProps } from 'svelte-meta-tags'
-import { getPosts } from '$lib/utils/post'
+import type { Post } from '$lib/types/Post'
+import { parsePostJson } from '$lib/utils/post.js'
 
-export const load = async () => {
+export const load = async ({ fetch }): Promise<{ posts: Post[]; pageMetaTags: MetaTagsProps }> => {
+  // The full list of posts must be fetched from the server at build time in order to generate the
+  // appropriate static pages for each post.
+  const posts: Post[] = (await (await fetch('/api/posts')).json()).map(parsePostJson)
   const pageMetaTags: MetaTagsProps = { title: 'Posts' }
 
-  const posts = await getPosts()
   return { posts, pageMetaTags }
 }
