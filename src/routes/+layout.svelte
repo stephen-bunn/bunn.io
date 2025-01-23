@@ -6,6 +6,7 @@
   import '$lib/styles/index.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import ToTopButton from '$lib/components/ToTopButton.svelte'
 
   let { data, children } = $props()
   let metaTags: MetaTagsProps = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags))
@@ -17,6 +18,7 @@
 <div>
   {@render children()}
 </div>
+<ToTopButton />
 <Footer />
 
 <style lang="scss">

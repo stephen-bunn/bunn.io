@@ -214,7 +214,7 @@
     // y padding of header + initials container height
     top: calc((var(--space-4x) * 2) + 48px);
     // 100vh - y padding of header - initials container height - y drawer container padding
-    height: calc(100vh - (var(--space-4x) * 2) - 48px - var(--space-8x));
+    height: 100vh;
     margin-left: var(--space-8x);
     padding-top: var(--space-8x);
     width: calc((100% - (var(--space-8x) * 2)));
