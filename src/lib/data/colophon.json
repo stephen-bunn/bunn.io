@@ -1,0 +1,39 @@
+{
+  "resources": [
+    {
+      "text": "Svelte",
+      "url": "https://svelte.dev/",
+      "description": "for a fast and simple modern web framework"
+    },
+    {
+      "text": "GitHub Pages",
+      "url": "https://pages.github.com/",
+      "description": "for free static site hosting"
+    },
+    {
+      "text": "Vollkorn",
+      "url": "https://fonts.google.com/specimen/Vollkorn",
+      "description": "for a classic serif font"
+    },
+    {
+      "text": "Fira Sans",
+      "url": "https://fonts.google.com/specimen/Fira+Sans",
+      "description": "for a clean sans-serif font"
+    },
+    {
+      "text": "Fira Code",
+      "url": "https://fonts.google.com/specimen/Fira+Code",
+      "description": "for a monospace font with ligatures"
+    },
+    {
+      "text": "Lucide",
+      "url": "https://lucide.dev/",
+      "description": "for consistent iconography"
+    },
+    {
+      "text": "Tom Chalky",
+      "url": "https://tomchalky.com",
+      "description": "for aesthetically pleasing vector art"
+    }
+  ]
+}

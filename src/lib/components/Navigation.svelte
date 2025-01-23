@@ -8,7 +8,8 @@
     { text: 'Resume', href: '/resume' },
     { text: 'Posts', href: '/posts' },
     { text: 'Uses', href: '/uses' },
-    { text: 'Contact', href: '/contact' }
+    { text: 'Contact', href: '/contact' },
+    { text: 'Colophon', href: '/colophon' }
   ]
 </script>
 
