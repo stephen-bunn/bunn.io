@@ -1,7 +1,7 @@
 import { parseSlug } from '$lib/utils/post'
 import type { EntryGenerator } from './$types'
 
-export const prerender = true
+export const prerender = 'auto'
 
 /**
  * Entry generator for the posts route.

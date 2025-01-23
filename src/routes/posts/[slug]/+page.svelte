@@ -22,7 +22,10 @@
   </article>
 </main>
 
-<style>
+<!-- svelte-ignore css_unused_selector -->
+<style lang="scss">
+  @use '$lib/styles/code';
+
   h1 {
     margin-bottom: 0;
   }
