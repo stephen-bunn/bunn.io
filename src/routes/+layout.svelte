@@ -23,11 +23,13 @@
   @use '$lib/styles' as *;
 
   div {
-    width: var(--content-width);
-    margin: 0 var(--space-8x);
+    width: 100%;
+    padding: 0 var(--space-8x);
 
     @include md {
+      width: var(--content-width);
       margin: 0 auto;
+      padding: 0;
     }
   }
 </style>

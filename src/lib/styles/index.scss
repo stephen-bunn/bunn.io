@@ -1,6 +1,6 @@
 @use 'animate.scss';
-@use 'code.scss';
 @use 'color.scss';
+@use 'elevation.scss';
 @use 'font.scss';
 @use 'space.scss';
 
@@ -31,7 +31,9 @@
   border: 0;
 }
 
-:global(*, *::before, *::after) {
+:global(*),
+:global(*::before),
+:global(*::after) {
   box-sizing: inherit;
 }
 
@@ -51,7 +53,12 @@
   line-height: var(--line-height-default);
 }
 
-:global(h1, h2, h3, h4, h5, h6) {
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
   font-family: var(--font-serif);
   font-weight: bold;
 }
@@ -65,7 +72,10 @@
   font-size: var(--font-500);
 }
 
-:global(h3, h4, h5, h6) {
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
   font-size: var(--font-300);
 }
 
