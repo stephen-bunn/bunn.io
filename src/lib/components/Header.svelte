@@ -14,16 +14,15 @@
   import Navigation from '$lib/components/Navigation.svelte'
   import NavigationItem from '$lib/components/NavigationItem.svelte'
   import ThemeToggle from '$lib/components/ThemeToggle.svelte'
-  import GithubIcon from '$lib/components/icons/GithubIcon.svelte'
-  import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte'
-  import MastodonIcon from '$lib/components/icons/MastodonIcon.svelte'
   import LinktreeIcon from '$lib/components/icons/LinktreeIcon.svelte'
 
   const scrollLock = writable(false)
 
   let clientWidth: number | undefined = $state(undefined)
+  let scrollY: number | undefined = $state(undefined)
   let isReady = $state(false)
   let isDesktopWidth = $derived(!!clientWidth && clientWidth >= breakpoints.lg)
+  let isShadowVisible = $derived(!isDesktopWidth && (scrollY ?? 0) > 0)
   let isMenuOpen = $state(false)
 
   let isHeaderVisible = $state(true)
@@ -98,7 +97,9 @@
   }
 </script>
 
-<header bind:clientWidth>
+<svelte:window bind:scrollY />
+
+<header bind:clientWidth class:shadow={isShadowVisible}>
   {#if isReady && !isDesktopWidth}
     <button
       class="menu-button"
@@ -134,15 +135,6 @@
   {/if}
   <div class="actions-container">
     <ThemeToggle />
-    <NavigationItem href={SOCIALS.github.url} target="_blank">
-      <GithubIcon />
-    </NavigationItem>
-    <NavigationItem href={SOCIALS.linkedin.url} target="_blank">
-      <LinkedinIcon />
-    </NavigationItem>
-    <NavigationItem href={SOCIALS.mastodon.url} target="_blank" rel="me">
-      <MastodonIcon />
-    </NavigationItem>
     <NavigationItem href={SOCIALS.linktree.url} target="_blank">
       <LinktreeIcon />
     </NavigationItem>
@@ -160,6 +152,10 @@
     padding: var(--space-4x);
     display: flex;
     background-color: var(--color-surface);
+
+    &.shadow {
+      box-shadow: var(--shadow-hard);
+    }
 
     @include lg {
       background-color: transparent;
