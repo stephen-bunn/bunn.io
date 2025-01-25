@@ -222,7 +222,7 @@
     // y padding of header + initials container height
     top: calc((var(--space-4x) * 2) + 48px);
     height: 100vh;
-    margin-left: var(--space-8x);
+    padding-left: var(--space-8x);
     padding-top: var(--space-8x);
     width: calc((100% - (var(--space-8x) * 2)));
     background: var(--color-surface);

@@ -29,8 +29,10 @@
     right: var(--space-2x);
     padding: var(--space-2x) var(--space-3x);
     border-radius: var(--radius-soft);
-    background-color: hsl(from var(--color-text) h s l / 0.5);
-    color: var(--color-surface);
-    backdrop-filter: blur(4px);
+    border: 1px solid var(--color-text-muted);
+    background: var(--color-surface);
+    color: var(--color-text);
+    box-shadow: var(--shadow-soft);
+    z-index: var(--z-index-floating);
   }
 </style>

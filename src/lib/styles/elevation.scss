@@ -1,4 +1,7 @@
 :root {
+  --z-index-content: 10;
+  --z-index-floating: 20;
+
   --shadow-soft: 0 2px 4px 0 var(--color-shadow);
   --shadow-hard: 0 4px 8px 0 var(--color-shadow);
 }
