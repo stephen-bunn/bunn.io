@@ -1,5 +1,5 @@
-import { FIRST_NAME, FULL_NAME, LAST_NAME, SITE_DESCRIPTION, SITE_NAME } from '$lib/constants'
 import type { MetaTagsProps } from 'svelte-meta-tags'
+import { FIRST_NAME, FULL_NAME, LAST_NAME, SITE_DESCRIPTION, SITE_NAME } from '$lib/constants'
 
 export const prerender = true
 export const trailingSlash = 'always'
