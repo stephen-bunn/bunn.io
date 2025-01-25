@@ -16,7 +16,7 @@
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "prepare": "husky",
-    "postbuild": "npx svelte-sitemap --domain https://bunn.io --trailing-slashes --reset-time --ignore 200.html"
+    "postbuild": "npx svelte-sitemap --domain https://bunn.io --trailing-slashes --reset-time --ignore 404.html"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
