@@ -1,11 +1,12 @@
-import type { Post } from '$lib/types/Post'
 import { buildFeed } from '$lib/utils/feed'
-import { parsePostJson } from '$lib/utils/post.js'
+import { fetchPosts } from '$lib/api/posts'
 
-export const GET = async ({ fetch }) => {
+export const prerender = true
+
+export const GET = async () => {
   // The full list of posts must be fetched from the server at build time in order to generate the
   // appropriate static pages for each post.
-  const posts: Post[] = (await (await fetch('/api/posts')).json()).map(parsePostJson)
+  const posts = await fetchPosts()
   const feed = buildFeed({ posts })
   return new Response(feed.rss2(), {
     headers: {
