@@ -1,4 +1,4 @@
 :root {
-  --shadow-soft: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  --shadow-hard: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 2px 4px 0 var(--color-shadow);
+  --shadow-hard: 0 4px 8px 0 var(--color-shadow);
 }

@@ -5,6 +5,7 @@
   --color-text-muted: #858585;
   --color-link: #2c251d;
   --color-link-active: #1e66f5;
+  --color-shadow: hsl(from var(--color-text) h s l / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --color-text-muted: #858585;
     --color-link: #faf9f5;
     --color-link-active: #babbf1;
+    --color-shadow: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -25,6 +27,7 @@
   --color-text-muted: #858585;
   --color-link: #2c251d;
   --color-link-active: #1e66f5;
+  --color-shadow: hsl(from var(--color-text) h s l / 0.1);
 }
 
 :global(html.dark) {
@@ -34,4 +37,5 @@
   --color-text-muted: #858585;
   --color-link: #faf9f5;
   --color-link-active: #babbf1;
+  --color-shadow: rgba(0, 0, 0, 0.1);
 }
