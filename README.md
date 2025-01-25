@@ -1,38 +1,40 @@
-# sv
+# bunn.io
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+My personal site available at [bunn.io](https://bunn.io/).
 
-## Creating a project
+## Development
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Automation is provided through [just](https://github.com/casey/just) recipes.
 
 ```bash
-npm run dev
+# Setup the development environment
+just setup
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Spin up the local development server
+just serve
+
+# Spin up the local development server and open it up in the default browser
+just dev
 ```
 
-## Building
-
-To create a production version of your app:
+### Building for production
 
 ```bash
-npm run build
+# Build the site assets to the /build directory
+just build
+
+# Build and run a local server for the assets in the /build directory
+just preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Writing
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Posts should be created as `{slug}.svx` files within the `/src/routes/posts` directory.
+This is where the entry crawler will be able to find dynamically created markdown files (using the `.svx` extension) and appropriately register them for static page generation.
+
+For a post to be considered valid and published it must contain YAML frontmatter entries for both `title` and `published` (ISO8601 UTC).
+
+```yaml
+title: My post title
+published: 2025-01-25T13:00:00
+```

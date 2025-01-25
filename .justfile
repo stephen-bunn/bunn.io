@@ -1,7 +1,19 @@
 _default: dev
 
+env := '''
+CI=false
+GITHUB_RUN_ID=""
+GITHUB_SERVER_URL=""
+GITHUB_REPOSITORY=""
+'''
+
+# Write the default environment variables to .env
+setup-env:
+  @echo "{{BOLD}}Writing .env"
+  @echo "{{env}}" > .env
+
 # Initial project setup
-setup:
+setup: setup-env
   npm install
 
 # Run the development application
@@ -25,6 +37,6 @@ check:
 build: format check
   npm run build
 
-# Build and preview the production application
-preview: build
+# Preview the production application
+preview:
   npm run preview -- --open
