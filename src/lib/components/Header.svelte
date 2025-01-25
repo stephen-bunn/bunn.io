@@ -14,7 +14,8 @@
   import Navigation from '$lib/components/Navigation.svelte'
   import NavigationItem from '$lib/components/NavigationItem.svelte'
   import ThemeToggle from '$lib/components/ThemeToggle.svelte'
-  import LinktreeIcon from '$lib/components/icons/LinktreeIcon.svelte'
+  import LinkedinIcon from './icons/LinkedinIcon.svelte'
+  import GithubIcon from './icons/GithubIcon.svelte'
 
   const scrollLock = writable(false)
 
@@ -139,8 +140,11 @@
   {/if}
   <div class="actions-container">
     <ThemeToggle />
-    <NavigationItem href={SOCIALS.linktree.url} target="_blank">
-      <LinktreeIcon />
+    <NavigationItem href={SOCIALS.github.url} target="_blank">
+      <GithubIcon />
+    </NavigationItem>
+    <NavigationItem href={SOCIALS.linkedin.url} target="_blank">
+      <LinkedinIcon />
     </NavigationItem>
   </div>
 </header>
@@ -217,7 +221,6 @@
     left: 0;
     // y padding of header + initials container height
     top: calc((var(--space-4x) * 2) + 48px);
-    // 100vh - y padding of header - initials container height - y drawer container padding
     height: 100vh;
     margin-left: var(--space-8x);
     padding-top: var(--space-8x);

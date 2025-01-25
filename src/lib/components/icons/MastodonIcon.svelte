@@ -1,9 +1,13 @@
+<script lang="ts">
+  let { size = '24' }: { size?: string } = $props()
+</script>
+
 <svg
   role="img"
   viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
+  width={size}
+  height={size}
   fill="currentColor"
 >
   <title>Mastodon</title>

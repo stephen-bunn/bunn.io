@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none" height="24">
+<script lang="ts">
+  let { size = '24' }: { size?: string } = $props()
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none" height={size} width={size}>
   <title>Linktree Logo</title>
   <desc>Linktree Logo Symbol</desc>
   <path
