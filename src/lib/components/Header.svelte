@@ -30,6 +30,10 @@
   let gesture: TinyGesture
 
   $effect(() => scrollLock.set(!isDesktopWidth && isMenuOpen))
+  $effect(() => {
+    // Reset the menu open state when the window is resized
+    isMenuOpen = isDesktopWidth
+  })
 
   onMount(() => {
     isMenuOpen = isDesktopWidth
