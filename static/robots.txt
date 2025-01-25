@@ -1,3 +1,5 @@
 # Allow all user agents to crawl the entire site by default
 User-agent: *
 Allow: /
+
+Sitemap: https://bunn.io/sitemap.xml
