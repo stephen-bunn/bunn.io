@@ -31,6 +31,8 @@ export type Post = Readonly<{
   updated?: Date
   /** Any metadata associated to the post. */
   metadata?: PostMetadata
+  /** The post's component. */
+  component?: Component
 }>
 
 /** Describes the JSON representation of a post. */

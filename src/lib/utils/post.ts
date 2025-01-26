@@ -38,7 +38,8 @@ export async function buildPost(options: {
     href: `/posts/${slug}`,
     published: new Date(metadata.published),
     updated: new Date(metadata.updated ?? metadata.published),
-    metadata
+    metadata,
+    component: postContent.default
   }
 }
 
