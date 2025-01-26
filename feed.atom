@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>Stephen Bunn</id>
+    <title>Stephen Bunn</title>
+    <updated>2025-01-26T14:31:34.755Z</updated>
+    <generator>https://github.com/stephen-bunn/bunn.io</generator>
+    <author>
+        <name>Stephen Bunn</name>
+        <email>hey@bunn.io</email>
+        <uri>https://bunn.io</uri>
+    </author>
+    <link rel="alternate" href="https://bunn.io"/>
+    <link rel="self" href="https://bunn.io/feed.atom"/>
+    <subtitle>Build as intuitively as possible.</subtitle>
+    <icon>https://bunn.io/favicon.png</icon>
+    <rights>2025 © Stephen Bunn</rights>
+</feed>

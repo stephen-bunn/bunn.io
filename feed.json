@@ -1,0 +1,12 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Stephen Bunn",
+    "home_page_url": "https://bunn.io",
+    "feed_url": "https://bunn.io/feed.json",
+    "description": "Build as intuitively as possible.",
+    "author": {
+        "name": "Stephen Bunn",
+        "url": "https://bunn.io"
+    },
+    "items": []
+}
