@@ -37,7 +37,7 @@
   }
 </script>
 
-<button onclick={handleToggleTheme}>
+<button onclick={handleToggleTheme} aria-label="Toggle theme">
   {#if isDarkMode}
     <SunIcon />
   {:else}

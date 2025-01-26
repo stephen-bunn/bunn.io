@@ -110,6 +110,7 @@
       class="menu-button"
       onclick={toggleMenuOpen}
       transition:slide={{ duration: 200, axis: 'x' }}
+      aria-label="Toggle menu"
     >
       {#if isMenuOpen}
         <XIcon />
