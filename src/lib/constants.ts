@@ -10,6 +10,9 @@ export const SITE_NAME = FULL_NAME
 export const SITE_DESCRIPTION = 'Build as intuitively as possible.'
 export const SITE_COPYRIGHT = `${new Date().getFullYear()} © ${FULL_NAME}`
 
+export const REPOSITORY_URL = 'https://github.com/stephen-bunn/bunn.io'
+export const REPOSITORY_NAME = new URL(REPOSITORY_URL).pathname.trim().replace(/^\//, '')
+
 export const SOCIALS = {
   github: {
     name: 'stephen-bunn',

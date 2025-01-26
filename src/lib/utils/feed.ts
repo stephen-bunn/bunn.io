@@ -3,6 +3,7 @@ import { Feed, type FeedOptions } from 'feed'
 import {
   CONTACT_EMAIL,
   FULL_NAME,
+  REPOSITORY_URL,
   SITE_COPYRIGHT,
   SITE_DESCRIPTION,
   SITE_DOMAIN,
@@ -19,13 +20,21 @@ export const buildFeed = async (options: {
   const feed = new Feed({
     title: FULL_NAME,
     description: SITE_DESCRIPTION,
+    favicon: `${SITE_DOMAIN}/favicon.png`,
+    language: 'en',
     id: SITE_NAME,
     link: SITE_DOMAIN,
     copyright: SITE_COPYRIGHT,
+    generator: REPOSITORY_URL,
     author: {
       name: FULL_NAME,
       email: CONTACT_EMAIL,
       link: SITE_DOMAIN
+    },
+    feedLinks: {
+      rss: `${SITE_DOMAIN}/feed.xml`,
+      json: `${SITE_DOMAIN}/feed.json`,
+      atom: `${SITE_DOMAIN}/feed.atom`
     },
     ...(feedOptions ?? {})
   })
@@ -45,7 +54,14 @@ export const buildFeed = async (options: {
       image: post.metadata?.imageSrc && {
         url: post.metadata.imageSrc,
         title: post.metadata.imageAlt
-      }
+      },
+      author: [
+        {
+          name: FULL_NAME,
+          email: CONTACT_EMAIL,
+          link: SITE_DOMAIN
+        }
+      ]
     })
   })
 

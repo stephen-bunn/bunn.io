@@ -3,7 +3,7 @@
 <script lang="ts">
   import dayjs from 'dayjs'
   import { page } from '$app/state'
-  import { FULL_NAME } from '$lib/constants'
+  import { FULL_NAME, REPOSITORY_NAME, REPOSITORY_URL } from '$lib/constants'
   import Link from '$lib/components/Link.svelte'
   import { resources } from '$lib/data/colophon.json'
 
@@ -45,10 +45,8 @@
       <em>in development</em>.
     {/if}
     <br class="detail-break" />
-    Source code is viewable on GitHub at <Link
-      small
-      href="https://github.com/stephen-bunn/bunn.io"
-      target="_blank">stephen-bunn/bunn.io</Link
+    Source code is viewable on GitHub at <Link small href={REPOSITORY_URL} target="_blank"
+      >{REPOSITORY_NAME}</Link
     >.
   </div>
 </main>
