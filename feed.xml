@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Stephen Bunn</title>
         <link>https://bunn.io</link>
         <description>Build as intuitively as possible.</description>
-        <lastBuildDate>Sat, 25 Jan 2025 14:53:26 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Jan 2025 14:10:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>2025 © Stephen Bunn</copyright>
+        <item>
+            <title><![CDATA[Test Article]]></title>
+            <link>https://bunn.io/posts/welcome</link>
+            <guid>https://bunn.io/posts/welcome</guid>
+            <pubDate>Fri, 01 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is a test article]]></description>
+            <content:encoded><![CDATA[<!--[--><p>This is a test article.
+Testing content such as <strong>bold</strong> and <em>italic</em> text.</p><!--]-->]]></content:encoded>
+        </item>
     </channel>
 </rss>
