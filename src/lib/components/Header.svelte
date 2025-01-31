@@ -167,6 +167,7 @@
     }
 
     @include lg {
+      position: fixed;
       background-color: transparent;
       pointer-events: none;
     }

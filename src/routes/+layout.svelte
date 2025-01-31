@@ -33,5 +33,9 @@
       margin: 0 auto;
       padding: 0;
     }
+
+    @include lg {
+      padding-top: var(--space-24x);
+    }
   }
 </style>
