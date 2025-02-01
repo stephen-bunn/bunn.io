@@ -127,7 +127,7 @@
   {#if isMenuOpen}
     <div
       class="menu-container"
-      transition:fly={{ duration: 200, x: 0 }}
+      transition:fly={{ duration: 200, y: 0, x: isDesktopWidth ? 0 : -100 }}
       onclick={toggleMenuOpen}
       onkeyup={handleMenuKeyUp}
       class:menu-container-full={!isHeaderVisible}
