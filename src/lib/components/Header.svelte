@@ -14,8 +14,8 @@
   import Navigation from '$lib/components/Navigation.svelte'
   import NavigationItem from '$lib/components/NavigationItem.svelte'
   import ThemeToggle from '$lib/components/ThemeToggle.svelte'
-  import LinkedinIcon from './icons/LinkedinIcon.svelte'
-  import GithubIcon from './icons/GithubIcon.svelte'
+  import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte'
+  import GithubIcon from '$lib/components/icons/GithubIcon.svelte'
 
   const scrollLock = writable(false)
 

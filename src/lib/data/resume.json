@@ -4,7 +4,7 @@
     "name": "Stephen Bunn",
     "label": "Software Engineer",
     "picture": "https://gravatar.com/avatar/02651d15ffdc3bb8e7cb4d20b33b7f1c?s=512",
-    "email": "hiring@bunn.io",
+    "email": "hey@bunn.io",
     "website": "https://bunn.io/",
     "summary": "Highly driven software engineer, passionate about building easily sustainable solutions. Experienced with system engineering, web development, and team leadership. Seeking a fulfilling role alongside a group of dedicated peers where our work with modern technology seeks to benefit others.",
     "location": {
@@ -36,8 +36,11 @@
       "position": "Lead Software Engineer",
       "url": "https://www.capitalone.com/",
       "startDate": "2022-12-12",
-      "summary": "Working to better Capital One's ability to monitor their cloud architecture through the use of custom built solutions and vendor-bought tooling. Operating as the lead engineer for a team focused on adapting infrastructure monitoring technologies to the cloud.",
-      "highlights": []
+      "summary": "Key contributing engineer within Capital One Shopping team focused on increasing adoption and user satisfaction of their cardholder offers platform. Also worked within the Capital One Cloud Engineering team to help establish best practices for deploying network monitoring software to AWS cloud environments.",
+      "highlights": [
+        "Led the development of the system that allows Capital One cardholders to receive rewards for offers directly tied to their credit card transactions.",
+        "Designed and implemented the deployment methodology of non-cloud off-the-shelf network topology software to AWS cloud environments."
+      ]
     },
     {
       "name": "Grove Collaborative",
@@ -196,16 +199,38 @@
   ],
   "skills": [
     {
+      "name": "Familar Languages",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Rust",
+        "Java"
+      ]
+    },
+    {
       "name": "Web Development",
-      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "Nuxt", "Svelte", "React"]
+      "keywords": [
+        "HTML",
+        "CSS",
+        "OpenAPI",
+        "Vue",
+        "Svelte",
+        "React",
+        "Django",
+        "Express",
+        "Hono"
+      ]
     },
     {
-      "name": "API Development",
-      "keywords": ["REST", "GraphQL", "OpenAPI", "FastAPI", "Django"]
-    },
-    {
-      "name": "Software Development",
-      "keywords": ["Python", "Rust", "Java", "PostgreSQL", "MySQL"]
+      "name": "Database Management",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "DynamoDB",
+        "Redis"
+      ]
     }
   ],
   "languages": [

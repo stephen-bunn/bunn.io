@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import dayjs from 'dayjs'
+  import { FileJsonIcon, FileTextIcon } from 'lucide-svelte'
   import { FULL_NAME } from '$lib/constants'
   import { truncate } from '$lib/utils/truncate'
   import {
@@ -9,7 +10,7 @@
     ResumeCertificateSchema,
     ResumeEducationSchema,
     ResumePublicationSchema,
-    ResumeSkillSchema,
+    // ResumeSkillSchema,
     ResumeWorkSchema,
     validateResumeSchema
   } from '$lib/utils/resume'
@@ -35,9 +36,9 @@
   const awards = $derived(
     resume?.awards?.filter((value) => validateResumeSchema(value, ResumeAwardSchema)) ?? []
   )
-  const skills = $derived(
-    resume?.skills?.filter((value) => validateResumeSchema(value, ResumeSkillSchema)) ?? []
-  )
+  // const skills = $derived(
+  //   resume?.skills?.filter((value) => validateResumeSchema(value, ResumeSkillSchema)) ?? []
+  // )
 </script>
 
 <svelte:head>
@@ -59,6 +60,20 @@
           Located in {resume.basics.location.city}, {resume.basics.location.region}
         </p>
       {/if}
+      <span class="assets">
+        <Link small href="/resume.pdf" target="_blank">
+          <div class="assets-link">
+            <FileTextIcon size="1em" />
+            <code>resume.pdf</code>
+          </div>
+        </Link>
+        <Link small href="/resume.json" target="_blank">
+          <div class="assets-link">
+            <FileJsonIcon size="1em" />
+            <code>resume.json</code>
+          </div>
+        </Link>
+      </span>
     </div>
   {/if}
 
@@ -192,7 +207,7 @@
     </ResumeSection>
   {/if}
 
-  {#if skills.length > 0}
+  <!-- {#if skills.length > 0}
     <ResumeSection name="Skills">
       {#each skills as skill}
         <ResumeItem name={skill.name} dense>
@@ -204,7 +219,7 @@
         </ResumeItem>
       {/each}
     </ResumeSection>
-  {/if}
+  {/if} -->
 </main>
 
 <style lang="scss">
@@ -238,17 +253,28 @@
     margin: 0 calc(var(--space-1x) / 2);
   }
 
-  .skills {
-    list-style: none;
-    margin: 0;
+  .assets {
+    display: flex;
+    gap: var(--space-3x);
 
-    &-keyword {
-      display: inline-block;
-      padding: calc(var(--space-1x) / 2) var(--space-2x);
-      margin-left: var(--space-2x);
-      border-radius: var(--radius-hard);
-      background-color: var(--color-text);
-      color: var(--color-surface);
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--space-1x) / 2);
     }
   }
+
+  // .skills {
+  //   list-style: none;
+  //   margin: 0;
+
+  //   &-keyword {
+  //     display: inline-block;
+  //     padding: calc(var(--space-1x) / 2) var(--space-2x);
+  //     margin-left: var(--space-2x);
+  //     border-radius: var(--radius-hard);
+  //     background-color: var(--color-text);
+  //     color: var(--color-surface);
+  //   }
+  // }
 </style>
