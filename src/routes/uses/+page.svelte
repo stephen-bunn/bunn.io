@@ -42,6 +42,10 @@
 </main>
 
 <style>
+  h1 {
+    margin-bottom: 0;
+  }
+
   div {
     margin-bottom: var(--space-8x);
   }

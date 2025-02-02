@@ -1,21 +1,13 @@
 <svelte:options runes />
 
 <script lang="ts">
+  import NAVIGATION from '$lib/data/navigation.json'
   import NavigationItem from '$lib/components/NavigationItem.svelte'
-
-  const navigationItems = [
-    { text: 'About', href: '/' },
-    { text: 'Resume', href: '/resume' },
-    { text: 'Posts', href: '/posts' },
-    { text: 'Uses', href: '/uses' },
-    { text: 'Contact', href: '/contact' },
-    { text: 'Colophon', href: '/colophon' }
-  ]
 </script>
 
 <nav>
   <ul>
-    {#each navigationItems as item}
+    {#each NAVIGATION as item}
       <li>
         <NavigationItem href={item.href}>
           {item.text}

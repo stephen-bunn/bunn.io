@@ -1,0 +1,30 @@
+[
+  {
+    "text": "About",
+    "href": "/"
+  },
+  {
+    "text": "Resume",
+    "href": "/resume"
+  },
+  {
+    "text": "Posts",
+    "href": "/posts"
+  },
+  {
+    "text": "Uses",
+    "href": "/uses"
+  },
+  {
+    "text": "Now",
+    "href": "/now"
+  },
+  {
+    "text": "Contact",
+    "href": "/contact"
+  },
+  {
+    "text": "Colophon",
+    "href": "/colophon"
+  }
+]
