@@ -1,10 +1,11 @@
 import type { MetaTagsProps } from 'svelte-meta-tags'
+import type { LoadEvent } from '@sveltejs/kit'
 import { FIRST_NAME, FULL_NAME, LAST_NAME, SITE_DESCRIPTION, SITE_NAME } from '$lib/constants'
 
 export const prerender = true
 export const trailingSlash = 'always'
 
-export const load = ({ url }) => {
+export const load = ({ url }: LoadEvent) => {
   const baseMetaTags: MetaTagsProps = {
     title: FULL_NAME,
     titleTemplate: `${FULL_NAME} - %s`,
