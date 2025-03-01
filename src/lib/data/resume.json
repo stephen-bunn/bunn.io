@@ -200,37 +200,15 @@
   "skills": [
     {
       "name": "Familar Languages",
-      "keywords": [
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "Rust",
-        "Java"
-      ]
+      "keywords": ["JavaScript", "TypeScript", "Python", "Rust", "Java"]
     },
     {
       "name": "Web Development",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "OpenAPI",
-        "Vue",
-        "Svelte",
-        "React",
-        "Django",
-        "Express",
-        "Hono"
-      ]
+      "keywords": ["HTML", "CSS", "OpenAPI", "Vue", "Svelte", "React", "Django", "Express", "Hono"]
     },
     {
       "name": "Database Management",
-      "keywords": [
-        "PostgreSQL",
-        "MySQL",
-        "SQLite",
-        "DynamoDB",
-        "Redis"
-      ]
+      "keywords": ["PostgreSQL", "MySQL", "SQLite", "DynamoDB", "Redis"]
     }
   ],
   "languages": [

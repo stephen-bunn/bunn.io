@@ -3,6 +3,7 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
   import type { HTMLAnchorAttributes } from 'svelte/elements'
+  import { ExternalLinkIcon } from 'lucide-svelte'
 
   let {
     href,
@@ -17,10 +18,21 @@
     target?: string
     props?: HTMLAnchorAttributes
   } = $props()
+
+  let isExternal = $derived(href.startsWith('http'))
+  let attributes = $derived({
+    rel: isExternal ? 'noopener noreferrer' : undefined,
+    'aria-label': isExternal ? 'Open in new tab' : undefined,
+    ...props
+  })
 </script>
 
-<a class="link" class:small {href} {target} {...props}>
-  {@render children()}
+<a class="link" class:small {href} {target} {...attributes}>
+  {@render children()}{#if isExternal}
+    <span class="icon-container">
+      <ExternalLinkIcon class="icon icon-external-link" />
+    </span>
+  {/if}
 </a>
 
 <style lang="scss">
@@ -51,5 +63,9 @@
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
+  }
+
+  .icon-container {
+    padding-left: calc(var(--space-1x) / 2);
   }
 </style>
