@@ -152,6 +152,7 @@
 
 <style lang="scss">
   @use '$lib/styles' as *;
+  @use '$lib/styles/mixins' as *;
 
   header {
     transition: background-color var(--duration-default);

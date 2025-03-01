@@ -23,6 +23,7 @@
 
 <style lang="scss">
   @use '$lib/styles' as *;
+  @use '$lib/styles/mixins' as *;
 
   div {
     width: 100%;

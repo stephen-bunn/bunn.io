@@ -1,0 +1,20 @@
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin dashed-outline($color: currentColor) {
+  outline: none;
+
+  &:focus-visible {
+    outline: calc(var(--space-1x) / 2) dotted $color;
+    outline-offset: var(--space-1x);
+  }
+}

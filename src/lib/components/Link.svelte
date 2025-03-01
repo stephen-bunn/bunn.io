@@ -19,14 +19,15 @@
   } = $props()
 </script>
 
-<a class:small {href} {target} {...props}>
+<a class="link" class:small {href} {target} {...props}>
   {@render children()}
 </a>
 
 <style lang="scss">
   @use '$lib/styles' as *;
+  @use '$lib/styles/mixins' as *;
 
-  a {
+  a.link {
     @include dashed-outline;
 
     color: currentColor;

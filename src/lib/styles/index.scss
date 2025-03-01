@@ -3,27 +3,7 @@
 @use 'elevation.scss';
 @use 'font.scss';
 @use 'space.scss';
-
-@mixin md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin dashed-outline($color: currentColor) {
-  outline: none;
-
-  &:focus-visible {
-    outline: calc(var(--space-1x) / 2) dotted $color;
-    outline-offset: var(--space-1x);
-  }
-}
+@use 'mixins.scss' as *;
 
 :global(*) {
   margin: 0;
@@ -93,6 +73,34 @@
   }
 }
 
+:global(a) {
+  @include dashed-outline;
+
+  color: currentColor;
+  transition: color var(--duration-default);
+  text-decoration: underline dotted currentColor 2px;
+  text-underline-offset: 3px;
+
+  &:link,
+  &:visited {
+    color: var(--color-link);
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    color: var(--color-link-active);
+  }
+}
+
+:global(a.footnote-ref) {
+  text-decoration: none;
+}
+
+:global(a.footnote-backref) {
+  margin-left: var(--space-1x);
+}
+
 :global(p) {
   font-family: var(--font-sans);
   font-size: var(--font-100);
@@ -103,6 +111,11 @@
 :global(ul) {
   margin-left: var(--space-4x);
   list-style: disc;
+}
+
+:global(ol) {
+  margin-left: var(--space-4x);
+  list-style: decimal;
 }
 
 :global(li) {
@@ -121,10 +134,30 @@
   padding: var(--space-2x);
   border-radius: var(--radius-hard);
   font-family: var(--font-mono);
+  margin-bottom: var(--space-4x);
 }
 
 :global(blockquote) {
   color: var(--color-text-muted);
   padding-left: var(--space-4x);
   border-left: 4px solid var(--color-text-muted);
+}
+
+:global(.icon.icon-section) {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0;
+  margin-left: var(--space-1x);
+  transition: opacity var(--duration-default);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+:global(.icon.icon-external-link) {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  padding-left: 0.1rem;
 }

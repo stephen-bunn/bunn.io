@@ -53,6 +53,7 @@
 
 <style lang="scss">
   @use '$lib/styles' as *;
+  @use '$lib/styles/mixins' as *;
 
   p {
     font-size: var(--font-300);

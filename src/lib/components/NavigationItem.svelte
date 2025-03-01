@@ -12,14 +12,15 @@
   let active = $derived(hrefPattern.test(page.url.pathname))
 </script>
 
-<a {href} class:active tabindex={active ? -1 : 0} {...rest}>
+<a class="navigation-link" {href} class:active tabindex={active ? -1 : 0} {...rest}>
   {@render children()}
 </a>
 
 <style lang="scss">
   @use '$lib/styles' as *;
+  @use '$lib/styles/mixins' as *;
 
-  a {
+  a.navigation-link {
     @include dashed-outline;
 
     padding: var(--space-3x) 0;
