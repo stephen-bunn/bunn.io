@@ -30,7 +30,7 @@
 <a class="link" class:small {href} {target} {...attributes}>
   {@render children()}{#if isExternal}
     <span class="icon-container">
-      <ExternalLinkIcon class="icon icon-external-link" />
+      <ExternalLinkIcon class="icon icon-external-link" aria-hidden="true" />
     </span>
   {/if}
 </a>
